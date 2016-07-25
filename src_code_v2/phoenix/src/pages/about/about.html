@@ -3,7 +3,7 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>A propos</ion-title>
+    <ion-title>{{ 'about' | translate }}</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -38,10 +38,10 @@
     <ion-item>
       <ion-card>
         <ion-card-header>
-          <h2>Aide:</h2>
+          <h2>{{ 'help' | translate }}:</h2>
         </ion-card-header>
         <ion-card-content>
-          <h3><a (click)="GotoLink('https://blackksoulls.github.io/phoenix3/')" style="text-decoration: none;">Documentation</a></h3>
+          <h3><a (click)="GotoLink('https://doc-p3.kuro.ml')" style="text-decoration: none;">Documentation</a></h3>
         </ion-card-content>
       </ion-card>
     </ion-item>

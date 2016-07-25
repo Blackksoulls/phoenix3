@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Editer {{item.textcontent}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <form (ngSubmit)="edit()">
+    <ion-item>
+      <ion-label floating>Nom produit: {{item.textcontent}}</ion-label>
+      <ion-input [(ngModel)]="item.textcontent" type="text" [ngModelOptions]="{standalone: true}"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Prix du produit: {{item.price}}</ion-label>
+      <ion-input [(ngModel)]="item.price" type="number" [ngModelOptions]="{standalone: true}"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Nombre de produits: {{item.nb}}</ion-label>
+      <ion-input [(ngModel)]="item.nb" type="number" [ngModelOptions]="{standalone: true}"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Date péremption: {{item.datevalue}}</ion-label>
+      <ion-input [(ngModel)]="item.datevalue" type="date" [ngModelOptions]="{standalone: true}"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Lien image produit: {{item.pic}}</ion-label>
+      <ion-input [(ngModel)]="item.pic" type="url" [ngModelOptions]="{standalone: true}"></ion-input>
+    </ion-item>
+    <ion-item>
+      <button ion-button block type="submit" color="primary">Enregistrer</button>
+    </ion-item>
+  </form>
+</ion-content>

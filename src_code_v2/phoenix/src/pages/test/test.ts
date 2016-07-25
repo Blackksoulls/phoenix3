@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 
 import { NavController } from 'ionic-angular';
 
-import { Add_entry } from '../addentry/addentry';
+import { Data } from '../../providers/data';
+import { Options } from '../option/option';
 
 @Component({
   selector: 'page-test',
@@ -10,10 +11,16 @@ import { Add_entry } from '../addentry/addentry';
 })
 export class Test {
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public data: Data) {
   }
-  GotoAddItem() {
-  	this.navCtrl.push(Add_entry);
+
+  // ionViewDidEnter() {
+  //   this.navCtrl.setRoot(Data);
+  // }
+  nya() {
+    this.navCtrl.insert(0,Options).then(()=>{
+      this.navCtrl.pop();
+    });
   }
 
 }
