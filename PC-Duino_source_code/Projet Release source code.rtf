@@ -1,0 +1,92 @@
+#include <SPI.h>
+#include <MFRC522.h>
+
+#define SS_PIN 10
+#define RST_PIN 9
+MFRC522 mfrc522(SS_PIN, RST_PIN);
+
+const int rel1 = 2;
+const int BP1 = 4;
+const int LED1 = 8;
+int PosBP1 = 0;
+int p1 = 6;
+
+//char key = 0;
+
+void setup()
+{
+  Serial.begin(250000);
+  pinMode(BP1, INPUT);
+  pinMode(rel1, OUTPUT);
+  pinMode(LED1,OUTPUT);
+  SPI.begin();
+  mfrc522.PCD_Init();
+}
+
+void loop()
+{
+  digitalWrite(rel1, HIGH);
+  //key = Serial.read();
+  //switch (key)
+  //{
+    //case 'r':
+    //p1 = 6;
+    //Serial.println("VR");
+    //break;
+  //}
+
+  if ( ! mfrc522.PICC_IsNewCardPresent())
+  {
+    return;
+  }
+
+  if ( ! mfrc522.PICC_ReadCardSerial())
+  {
+    return;
+  }
+
+  if ((mfrc522.uid.uidByte[0] == 0x30 && mfrc522.uid.uidByte[1] == 0x09 && mfrc522.uid.uidByte[2] == 0xF7 && mfrc522.uid.uidByte[3] == 0x79))
+  {
+    //Carte client du self (mfrc522.uid.uidByte[0] == 0xEE && mfrc522.uid.uidByte[1] == 0xB8 && mfrc522.uid.uidByte[2] == 0x2E && mfrc522.uid.uidByte[3] == 0xFD)
+    Serial.println("Card Registred !");
+    p1 = p1 - 1;
+    if(p1 <= 0){
+      Serial.println("VIDE P1");
+    }else if(p1 > 0){
+      digitalWrite(rel1, LOW);
+      delay(1000);
+      digitalWrite(rel1, HIGH);
+      PosBP1 = digitalRead(BP1);
+      Serial.println("READ");
+      while(PosBP1 == LOW)
+      {
+        PosBP1 = digitalRead(BP1);
+        digitalWrite(rel1, LOW);
+        Serial.println("WHILE");
+        }
+        digitalWrite(rel1, HIGH);
+     }
+  }else{
+    if ((mfrc522.uid.uidByte[0] == 0xE0 && mfrc522.uid.uidByte[1] == 0x27 && mfrc522.uid.uidByte[2] == 0x37 && mfrc522.uid.uidByte[3] == 0x83))
+    {
+      Serial.println("Acess Granted !");
+      p1 = 6;
+      Serial.println("VR");
+      digitalWrite(LED1, HIGH);
+    }else{
+      Serial.println("Card Not Registred !");
+    }
+  }
+
+  Serial.println();
+
+  delay(5000);
+  digitalWrite(LED1, LOW);
+
+  mfrc522.PICC_HaltA();
+  if ( ! mfrc522.PICC_IsNewCardPresent()) {
+    return;
+  }
+
+  delay(2000);
+}}
