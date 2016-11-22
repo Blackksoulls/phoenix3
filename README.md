@@ -29,7 +29,7 @@ Les données de la machine seront envoyés sur une carte de traitement interne �
 	- [x] Diagramme Exigences
 	- [ ] Diagramme Définition de Blocks
 	- [ ] Diagramme de Blocks Interne
-	- [ ] Diagramme de cas d'utilisation
+	- [x] Diagramme de cas d'utilisation
 	- [ ] Diagramme de séquence
 	- [ ] Diagramme d'état
 - [x] **Carte mentale du projet**
@@ -52,6 +52,7 @@ Les données de la machine seront envoyés sur une carte de traitement interne �
 		* [Anthony][eantho]
 		* [Johan][ejohan]
 	* [Carte mentale][cm]
+	* [Cas utilisation][cu]
 	
 <!-- 3. [Documentation]()
 4. [Contact](#contact)
@@ -93,6 +94,10 @@ Les données de la machine seront envoyés sur une carte de traitement interne �
 ## Carte mentale
 ![CM](diagrams/mental-card-project.jpg)
 
+## Cas utilisation
+![CU](diagrams/cas-utils.png)
+
+
 [gant]: #gantt
 [exi]: #exigences
 [emax]: #exigences-maxime
@@ -104,3 +109,4 @@ Les données de la machine seront envoyés sur une carte de traitement interne �
 [BDD]: #definition-de-blocs
 [IBD]: #blocs-internes
 [cm]: #carte-mentale
+[cu]: #cas-utilisation
