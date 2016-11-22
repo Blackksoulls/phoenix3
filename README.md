@@ -11,18 +11,18 @@ Les données de la machine seront envoyés sur une carte de traitement interne �
 - *Interaction Serveur:*
 
 ### **Ou nous en sommes:**
-- [ ] Diagramme Gantt
-- [ ] Diagrammes SysML
+- [ ] **Diagramme Gantt**
+- [ ] **Diagrammes SysML**
 	- [x] Diagramme Exigences
 	- [ ] Diagramme Définition de Blocks
 	- [ ] Diagramme de Blocks Interne
 	- [ ] Diagramme de cas d'utilisation
 	- [ ] Diagramme de séquence
 	- [ ] Diagramme d'état
-- [ ] Revue de Projet 1
-- [ ] Revue de Projet 2
-- [ ] Prototypes
-- [ ] *Projet fini*
+- [ ] **Revue de Projet 1**
+- [ ] **Revue de Projet 2**
+- [ ] **Prototypes**
+- [ ] __*Projet fini*__
 
 ## Sommaire
 1. [Logbook](#logbook)
