@@ -26,6 +26,11 @@ Les données de la machine seront envoyés sur une carte de traitement interne �
 	* [Partie 2 après 1er revue](#partie2) -->
 2. [Différents diagrammes](#diagrammes)
 	* [Gantt][gant]
+	* [Exigences][exi]
+		* [Maxime][emax]
+		* [Louis][elouis]
+		* [Anthony][eantho]
+		* [Johan][ejohan]
 	
 <!-- 3. [Documentation]()
 4. [Contact](#contact)
@@ -35,8 +40,9 @@ Les données de la machine seront envoyés sur une carte de traitement interne �
 
 # Logbook
 ## Avant projet
-- [15/11/2016] - Organisation du projet, fait le diagramme de [Gantt][gant], le diagramme d'exigences et listé les différentes taches à faire.
+- [15/11/2016] - Organisation du projet, fait le diagramme de [Gantt][gant], le diagramme [d'exigences][exi] et listé les différentes taches à faire.
 
+- [22/11/2016] - Ajout de la partie de Louis au diagramme des [exigences][exi], ajout des différents diagrammes d'exigences.
 <!-- ## Partie1 -->
 
 <!-- ## Partie2 -->
@@ -50,8 +56,24 @@ Les données de la machine seront envoyés sur une carte de traitement interne �
 ## Exigences
 ![Exi Diag](diagrams/exi.png)
 
+### Exigences Maxime
+![Exi Max](diagrams/exigence-maxime.png)
+
+### Exigences Louis
+![Exi Louis](diagrams/exigence-louis.png)
+
+### Exigences Anthony
+![Exi Antho](diagrams/exigence-anthony.png)
+
+### Exigences Johan
+![Exi Johan](diagrams/exigence-johan.png)
+
 [gant]: #gantt
 [exi]: #exigences
+[emax]: #exigences-maxime
+[elouis]: #exigences-louis
+[eantho]: #exigences-anthony
+[ejohan]: #exigences-johan
 [state]: #etat
 [seq]: #sequence
 [BDD]: #definition-de-blocs
