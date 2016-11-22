@@ -46,12 +46,13 @@ Les données de la machine seront envoyés sur une carte de traitement interne �
 
 # Logbook
 ## Avant projet
-- [15/11/2016] - Organisation du projet, fait le diagramme de [Gantt][gant], le diagramme [d'exigences][exi] et listé les différentes taches à faire.
+- [15/11/2016] - Organisation du projet, fait le gros du diagramme de [Gantt][gant] (il reste à découper les parties/taches), le diagramme [d'exigences][exi] et listé les différentes taches à faire.
 
 - [22/11/2016] - Ajout de la partie de Louis au diagramme des [exigences][exi], ajout des différents diagrammes d'exigences.
-<!-- ## Partie1 -->
 
-<!-- ## Partie2 -->
+<!-- ## Partie 1 -->
+
+<!-- ## Partie 2 -->
 
 ---
 
