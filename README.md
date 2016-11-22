@@ -19,6 +19,7 @@ Les données de la machine seront envoyés sur une carte de traitement interne �
 	- [ ] Diagramme de cas d'utilisation
 	- [ ] Diagramme de séquence
 	- [ ] Diagramme d'état
+- [x] **Carte mentale du projet**
 - [ ] **Revue de Projet 1**
 - [ ] **Revue de Projet 2**
 - [ ] **Prototypes**
@@ -37,6 +38,7 @@ Les données de la machine seront envoyés sur une carte de traitement interne �
 		* [Louis][elouis]
 		* [Anthony][eantho]
 		* [Johan][ejohan]
+	* [Carte mentale][cm]
 	
 <!-- 3. [Documentation]()
 4. [Contact](#contact)
@@ -48,7 +50,7 @@ Les données de la machine seront envoyés sur une carte de traitement interne �
 ## Avant projet
 - [15/11/2016] - Organisation du projet, fait le gros du diagramme de [Gantt][gant] (il reste à découper les parties/taches), le diagramme [d'exigences][exi] et listé les différentes taches à faire.
 
-- [22/11/2016] - Ajout de la partie de Louis au diagramme des [exigences][exi], ajout des différents diagrammes d'exigences.
+- [22/11/2016] - Ajout de la partie de Louis au diagramme des [exigences][exi], ajout des différents diagrammes d'exigences. Fin de la carte mentale du projet par Anthony, ajout en ligne, définition du besoin et de la fonction par johan.
 
 <!-- ## Partie 1 -->
 
@@ -75,6 +77,9 @@ Les données de la machine seront envoyés sur une carte de traitement interne �
 ### Exigences Johan
 ![Exi Johan](diagrams/exigence-johan.png)
 
+## Carte mentale
+![CM](diagrams/mental-card-project.jpg)
+
 [gant]: #gantt
 [exi]: #exigences
 [emax]: #exigences-maxime
@@ -85,3 +90,4 @@ Les données de la machine seront envoyés sur une carte de traitement interne �
 [seq]: #sequence
 [BDD]: #definition-de-blocs
 [IBD]: #blocs-internes
+[cm]: #carte-mentale
