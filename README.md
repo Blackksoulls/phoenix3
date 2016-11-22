@@ -60,7 +60,7 @@ Les données de la machine seront envoyés sur une carte de traitement interne �
 ![Gantt Diag](diagrams/gantt.png)
 
 ## Exigences
-![Exi Diag](diagrams/exi.png)
+![Exi Diag](diagrams/exi.bmp)
 
 ### Exigences Maxime
 ![Exi Max](diagrams/exigence-maxime.png)
