@@ -10,6 +10,19 @@ Les données de la machine seront envoyés sur une carte de traitement interne �
 - *Interaction Machine:* Nous allons travailler sur une interaction entre le serveur et des moteurs pas à pas, grâce à un module arduino intégré à la motherboard, nous avons choisi une alimentation 5V 2A qui est adapter à l'alimentation usb.
 - *Interaction Serveur:*
 
+### Besoin: 
+**Pourquoi avoir besoin de notre module de distributeur ?**
+- Pour mieux exploiter son distributeur en auto-gestion
+- Eviter les pertes de consommables
+- Un contrôle d'un simple coup d'oeil sur son smartphone (*et pas au volant !*)
+- Le tout en restant à moindre coût ! 
+
+### Fonction:
+**Mais que donc sera capable de faire notre module ?**
+- Il sera capable de modifier une base de données en fonction des produits restants
+- Avertissement lors de manque de stock, d'approche de péremption de produits
+- Modifier les prix à tout moment depuis une application android (et depuis une interface web *optionnel*)
+
 ### **Ou nous en sommes:**
 - [ ] **Diagramme Gantt**
 - [ ] **Diagrammes SysML**
