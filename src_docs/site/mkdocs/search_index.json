@@ -1,69 +1,174 @@
 {
     "docs": [
         {
-            "location": "/",
-            "text": "Kuro AutoIt bundle ~\n\n\nProject by \nBlackksoulls\n, this project can be found here: \nGitHub\n\n\nDocumentation in construction.\n\n\nContent ~\n\n\n\n\nAbout\n\n\nCommands\n\n\nPrograms\n\n\nWget Source code",
+            "location": "/", 
+            "text": "Phoenix 3 project\n\n\nDocs by \nBlackksoulls\n, this project can be found here: \nGitHub\n\n\n! Documentation in construction !\n\n\nSummary\n\n\n\n\nAbout\n\n\nRack\n\n\nDocs", 
             "title": "Home"
-        },
+        }, 
         {
-            "location": "/#kuro-autoit-bundle",
-            "text": "Project by  Blackksoulls , this project can be found here:  GitHub  Documentation in construction.",
-            "title": "Kuro AutoIt bundle ~"
-        },
+            "location": "/#phoenix-3-project", 
+            "text": "Docs by  Blackksoulls , this project can be found here:  GitHub  ! Documentation in construction !", 
+            "title": "Phoenix 3 project"
+        }, 
         {
-            "location": "/#content",
-            "text": "About  Commands  Programs  Wget Source code",
-            "title": "Content ~"
-        },
+            "location": "/#summary", 
+            "text": "About  Rack  Docs", 
+            "title": "Summary"
+        }, 
         {
-            "location": "/about/",
-            "text": "Illis quid\n\n\nSensi furenti adhuc lilia\n\n\nLorem markdownum licet guttura \nverba peragebant pectora\n. Si saxoque nymphe!\nCura partus parentem tantum postquam bracchia pater. Humi pedes plectrumque\ncaelo regimen, venias maneat illos in o artus actis metu, coepi alimentaque\nScylla ut.\n\n\nCorythi Achilli verba\n\n\nRedditque postque silvae nec Pagasaea neque chrysolithi duxit molimine Achilles,\nfeci mortisque falso, lanam. Nono ferre illis silva fatali solitis inque. Illis\nagro viasque cervice partibus et, ipse latens certum parte lux est voti hospitio\nsi nectar erat Phoenix.\n\n\n\n\nPoenarum iuvenci passis audacem; est saxa nascendi, certa nec. O negabo\n\ncortex\n, firmat. Cepit nec Sparte est: \nsub\n corpore horret finierat\nrenovata valido, anhelis.\n\n\n\n\nConiunx ortus curaque\n\n\nUnda Mavortis silvarum in dulces vetusque voces matrem, prohibetque Scythiae\nprocul vertatur culpa Hippomenen paveant et forte. Egressa arce, aqua insano,\nerat nos nulli cui parenti geniti, delapsaque Achilles. Verus vulnere quemquam\nnumquam novos sunt! Si sacra religaret collo donec exspectant trahit. Exue sum\ndixit.\n\n\nslashdotPersonalRaw(hddSslKilobyte, metalHtml, hsf -\n        multiplatformRightSram.snippet_friendly_boot(5, ugc,\n        typePhreakingSearch));\nvar kerning_requirements_nat = 82 - component + digital_gui - remote + 3;\nif (edutainmentE(speakers(1, 5, 431849), simplexCodeScroll, 73)) {\n    file_digital = aluSystem(pramClient);\n    userRemote += map_heat;\n    hyperMarkupStick += agp_brouter(keyRepeaterSuperscalar,\n            unicodeCyberbullying(power_process_ssid, 1));\n} else {\n    biometrics.cifsCard *= pimFaqFlops(piconetRateDac + eBcc);\n    boot(networking_page_system + cybersquatterInput);\n    padFile.twitter_box(megahertz_mask, prebindingLossyCybersquatter);\n}\nflatMinisiteYottabyte.jsp(frequency_ip_eps);\nif (switchWindows(5 - reciprocalIscsi, keywords_zebibyte, 5 + 35 +\n        namespace_pup_system(netiquetteFavicon))) {\n    listserv_client_responsive = 2 - linkedin_kibibyte_denial;\n    motherboard_wireless_executable = dllFileSymbolic;\n    panel(rpmView(readme), system, ddr_analyst);\n}\n\n\n\nCui prohibente super omnia haec nec\n\n\nScitatur exiguam quoque victor Veneri licuit taedasque raptas Iolciacos silices.\nNocet quod aequoreos laeta, quo aetate videri, Venus Oceanus,\n\nire\n! Totis metuendus erat relaxant difficilis\nadmiremur corpore animus \ncum etiam\n sola dat crocique temptata aestus.\n\n\n\n\nNunc nulli\n\n\nUnumque cum acumine tamen tollens natisque matribus\n\n\nManus vultum\n\n\nSpectabere filia\n\n\nHostem reges liquidis rector inpar non forti\n\n\n\n\nNido vidit haec amando inque ille lunaria post. De orbe neque velocius nequeunt\natque mortisque volatile coniecta attrahitur dextram: nervi.",
+            "location": "/about/", 
+            "text": "Phoenix3\n\n\nPresentation:\n\n\nNotre projet porte sur un distributeur automatique de nourriture, la diff\u00e9rence  qu'il a avec un distributeur quelquonque,  est qu'il est g\u00e9r\u00e9 par une application smartphone de maintenance qui communique \u00e0 l'agent les dates de p\u00e9remption des produit ainsi que la quantit\u00e9 actuel des produit de la machine.\nNotre machine se veut actuelle avec une interface homme-machine tactile et intuitive  avec une prise en main facile.\nLes donn\u00e9es de la machine seront envoy\u00e9s sur une carte de traitement interne \u00e0 la machine puis ces donn\u00e9es seront retransmis \u00e0 un serveur et enfin \u00e0 l'application, quand un produit commence \u00e0 manquer ou qu'un produit atteint sa date de p\u00e9remption.\n\n\nDetails de chaques parties:\n\n\n\n\nApplication Android:\n Nous allons coder l'application android \u00e0 l'aide des languages HTML/JS/CSS ; puis la compiler en un apk (gr\u00e2ce \u00e0 Android-SDK, Ionic et Cordova) qui est le format natif des application sur des smartphone android.\n\n\nInterface Homme-Machine:\n Nous avons choisi un \u00e9cran tactile pour l'interface homme-machine pour la facilit\u00e9e et la modernit\u00e9e de cette technologie, qui est facile \u00e0 prendre en main, nous allons coder sur la motherboard en arduino sous le syst\u00e8me windows. L'interface sera faite avec Visual Basic qui est un language facile \u00e0 apprendre.\n\n\nInteraction Machine:\n Nous allons travailler sur une interaction entre le serveur et des moteurs pas \u00e0 pas, gr\u00e2ce \u00e0 un module arduino int\u00e9gr\u00e9 \u00e0 la motherboard, nous avons choisi une alimentation 5V 2A qui est adapter \u00e0 l'alimentation usb.\n\n\nInteraction Serveur:\n Nous avons choisi d\u2019utiliser le syst\u00e8me de base de donn\u00e9es MySQL pour la gestion des stocks et de la tr\u00e9sorerie de la machine. L\u2019application Android et l\u2019interface homme-machine se connecteront et utiliserons cette base de donn\u00e9es.\n\n\n\n\nBesoin:\n\n\nPourquoi avoir besoin de notre module de distributeur ?\n\n- Pour mieux exploiter son distributeur en auto-gestion\n- Eviter les pertes de consommables\n- Un contr\u00f4le d'un simple coup d'oeil sur son smartphone (\net pas au volant !\n)\n- Le tout en restant \u00e0 moindre co\u00fbt ! \n\n\nFonction:\n\n\nMais que donc sera capable de faire notre module ?\n\n- Il sera capable de modifier une base de donn\u00e9es en fonction des produits restants\n- Avertissement lors de manque de stock, d'approche de p\u00e9remption de produits\n- Modifier les prix \u00e0 tout moment depuis une application android (et depuis une interface web \noptionnel\n)\n\n\nSommaire\n\n\n\n\nDiff\u00e9rents diagrammes\n\n\nGantt\n\n\nExigences\n\n\nCarte mentale\n\n\nCas utilisation\n\n\n\n\n\n\n\n\n\n\nDiagrammes\n\n\nGantt\n\n\n\n\nExigences\n\n\n\n\nCarte mentale\n\n\n\n\nCas utilisation", 
             "title": "About"
-        },
+        }, 
         {
-            "location": "/about/#illis-quid",
-            "text": "",
-            "title": "Illis quid"
-        },
+            "location": "/about/#phoenix3", 
+            "text": "", 
+            "title": "Phoenix3"
+        }, 
         {
-            "location": "/about/#sensi-furenti-adhuc-lilia",
-            "text": "Lorem markdownum licet guttura  verba peragebant pectora . Si saxoque nymphe!\nCura partus parentem tantum postquam bracchia pater. Humi pedes plectrumque\ncaelo regimen, venias maneat illos in o artus actis metu, coepi alimentaque\nScylla ut.",
-            "title": "Sensi furenti adhuc lilia"
-        },
+            "location": "/about/#presentation", 
+            "text": "Notre projet porte sur un distributeur automatique de nourriture, la diff\u00e9rence  qu'il a avec un distributeur quelquonque,  est qu'il est g\u00e9r\u00e9 par une application smartphone de maintenance qui communique \u00e0 l'agent les dates de p\u00e9remption des produit ainsi que la quantit\u00e9 actuel des produit de la machine.\nNotre machine se veut actuelle avec une interface homme-machine tactile et intuitive  avec une prise en main facile.\nLes donn\u00e9es de la machine seront envoy\u00e9s sur une carte de traitement interne \u00e0 la machine puis ces donn\u00e9es seront retransmis \u00e0 un serveur et enfin \u00e0 l'application, quand un produit commence \u00e0 manquer ou qu'un produit atteint sa date de p\u00e9remption.", 
+            "title": "Presentation:"
+        }, 
         {
-            "location": "/about/#corythi-achilli-verba",
-            "text": "Redditque postque silvae nec Pagasaea neque chrysolithi duxit molimine Achilles,\nfeci mortisque falso, lanam. Nono ferre illis silva fatali solitis inque. Illis\nagro viasque cervice partibus et, ipse latens certum parte lux est voti hospitio\nsi nectar erat Phoenix.   Poenarum iuvenci passis audacem; est saxa nascendi, certa nec. O negabo cortex , firmat. Cepit nec Sparte est:  sub  corpore horret finierat\nrenovata valido, anhelis.",
-            "title": "Corythi Achilli verba"
-        },
+            "location": "/about/#details-de-chaques-parties", 
+            "text": "Application Android:  Nous allons coder l'application android \u00e0 l'aide des languages HTML/JS/CSS ; puis la compiler en un apk (gr\u00e2ce \u00e0 Android-SDK, Ionic et Cordova) qui est le format natif des application sur des smartphone android.  Interface Homme-Machine:  Nous avons choisi un \u00e9cran tactile pour l'interface homme-machine pour la facilit\u00e9e et la modernit\u00e9e de cette technologie, qui est facile \u00e0 prendre en main, nous allons coder sur la motherboard en arduino sous le syst\u00e8me windows. L'interface sera faite avec Visual Basic qui est un language facile \u00e0 apprendre.  Interaction Machine:  Nous allons travailler sur une interaction entre le serveur et des moteurs pas \u00e0 pas, gr\u00e2ce \u00e0 un module arduino int\u00e9gr\u00e9 \u00e0 la motherboard, nous avons choisi une alimentation 5V 2A qui est adapter \u00e0 l'alimentation usb.  Interaction Serveur:  Nous avons choisi d\u2019utiliser le syst\u00e8me de base de donn\u00e9es MySQL pour la gestion des stocks et de la tr\u00e9sorerie de la machine. L\u2019application Android et l\u2019interface homme-machine se connecteront et utiliserons cette base de donn\u00e9es.", 
+            "title": "Details de chaques parties:"
+        }, 
         {
-            "location": "/about/#coniunx-ortus-curaque",
-            "text": "Unda Mavortis silvarum in dulces vetusque voces matrem, prohibetque Scythiae\nprocul vertatur culpa Hippomenen paveant et forte. Egressa arce, aqua insano,\nerat nos nulli cui parenti geniti, delapsaque Achilles. Verus vulnere quemquam\nnumquam novos sunt! Si sacra religaret collo donec exspectant trahit. Exue sum\ndixit.  slashdotPersonalRaw(hddSslKilobyte, metalHtml, hsf -\n        multiplatformRightSram.snippet_friendly_boot(5, ugc,\n        typePhreakingSearch));\nvar kerning_requirements_nat = 82 - component + digital_gui - remote + 3;\nif (edutainmentE(speakers(1, 5, 431849), simplexCodeScroll, 73)) {\n    file_digital = aluSystem(pramClient);\n    userRemote += map_heat;\n    hyperMarkupStick += agp_brouter(keyRepeaterSuperscalar,\n            unicodeCyberbullying(power_process_ssid, 1));\n} else {\n    biometrics.cifsCard *= pimFaqFlops(piconetRateDac + eBcc);\n    boot(networking_page_system + cybersquatterInput);\n    padFile.twitter_box(megahertz_mask, prebindingLossyCybersquatter);\n}\nflatMinisiteYottabyte.jsp(frequency_ip_eps);\nif (switchWindows(5 - reciprocalIscsi, keywords_zebibyte, 5 + 35 +\n        namespace_pup_system(netiquetteFavicon))) {\n    listserv_client_responsive = 2 - linkedin_kibibyte_denial;\n    motherboard_wireless_executable = dllFileSymbolic;\n    panel(rpmView(readme), system, ddr_analyst);\n}",
-            "title": "Coniunx ortus curaque"
-        },
+            "location": "/about/#besoin", 
+            "text": "Pourquoi avoir besoin de notre module de distributeur ? \n- Pour mieux exploiter son distributeur en auto-gestion\n- Eviter les pertes de consommables\n- Un contr\u00f4le d'un simple coup d'oeil sur son smartphone ( et pas au volant ! )\n- Le tout en restant \u00e0 moindre co\u00fbt !", 
+            "title": "Besoin:"
+        }, 
         {
-            "location": "/about/#cui-prohibente-super-omnia-haec-nec",
-            "text": "Scitatur exiguam quoque victor Veneri licuit taedasque raptas Iolciacos silices.\nNocet quod aequoreos laeta, quo aetate videri, Venus Oceanus, ire ! Totis metuendus erat relaxant difficilis\nadmiremur corpore animus  cum etiam  sola dat crocique temptata aestus.   Nunc nulli  Unumque cum acumine tamen tollens natisque matribus  Manus vultum  Spectabere filia  Hostem reges liquidis rector inpar non forti   Nido vidit haec amando inque ille lunaria post. De orbe neque velocius nequeunt\natque mortisque volatile coniecta attrahitur dextram: nervi.",
-            "title": "Cui prohibente super omnia haec nec"
-        },
+            "location": "/about/#fonction", 
+            "text": "Mais que donc sera capable de faire notre module ? \n- Il sera capable de modifier une base de donn\u00e9es en fonction des produits restants\n- Avertissement lors de manque de stock, d'approche de p\u00e9remption de produits\n- Modifier les prix \u00e0 tout moment depuis une application android (et depuis une interface web  optionnel )", 
+            "title": "Fonction:"
+        }, 
         {
-            "location": "/programs/commands/",
-            "text": "Commands ~\n\n\n\n\n\n\n\n\nCommand and aliases\n\n\nDescription\n\n\nUsage\n\n\n\n\n\n\n\n\n\n\nwget\n\n\nDownload anything from a direct url\n\n\nwget <url to download> <output>",
-            "title": "Commands"
-        },
+            "location": "/about/#sommaire", 
+            "text": "Diff\u00e9rents diagrammes  Gantt  Exigences  Carte mentale  Cas utilisation", 
+            "title": "Sommaire"
+        }, 
         {
-            "location": "/programs/commands/#commands",
-            "text": "Command and aliases  Description  Usage      wget  Download anything from a direct url  wget <url to download> <output>",
-            "title": "Commands ~"
-        },
+            "location": "/about/#diagrammes", 
+            "text": "", 
+            "title": "Diagrammes"
+        }, 
         {
-            "location": "/programs/wget/source/",
-            "text": "Source code:\n\n\nmain()\n\nFunc main()\n   If $CmdLine[0] = 2  Then\n      Local $param1 = $CmdLine[1] ;\"https://dyrk.org/wp-content/uploads/2016/08/Capture-19.png\"\n      Local $param2 = $CmdLine[2] ;\"test.png\"\n      Run(@ComSpec & \" /c \" & 'powershell \"& {$url=' & \"'\" & $param1 & \"'\" & ';$clnt=new-object System.Net.WebClient;$clnt.DownloadFile($url,' & \"'\" & @ScriptDir & \"/\" & $param2 & \"'\" & ')}\"', \"\", @SW_HIDE)\n   Else\n      MsgBox(0 + 16, \"Error Wget\", \"Syntax: wget %url% %name of dl file%\")\n   EndIf\nEndFunc",
-            "title": "Wget"
-        },
+            "location": "/about/#gantt", 
+            "text": "", 
+            "title": "Gantt"
+        }, 
         {
-            "location": "/programs/wget/source/#source-code",
-            "text": "main()\n\nFunc main()\n   If $CmdLine[0] = 2  Then\n      Local $param1 = $CmdLine[1] ;\"https://dyrk.org/wp-content/uploads/2016/08/Capture-19.png\"\n      Local $param2 = $CmdLine[2] ;\"test.png\"\n      Run(@ComSpec & \" /c \" & 'powershell \"& {$url=' & \"'\" & $param1 & \"'\" & ';$clnt=new-object System.Net.WebClient;$clnt.DownloadFile($url,' & \"'\" & @ScriptDir & \"/\" & $param2 & \"'\" & ')}\"', \"\", @SW_HIDE)\n   Else\n      MsgBox(0 + 16, \"Error Wget\", \"Syntax: wget %url% %name of dl file%\")\n   EndIf\nEndFunc",
-            "title": "Source code:"
+            "location": "/about/#exigences", 
+            "text": "", 
+            "title": "Exigences"
+        }, 
+        {
+            "location": "/about/#carte-mentale", 
+            "text": "", 
+            "title": "Carte mentale"
+        }, 
+        {
+            "location": "/about/#cas-utilisation", 
+            "text": "", 
+            "title": "Cas utilisation"
+        }, 
+        {
+            "location": "/docs/rack/", 
+            "text": "Documentation du rack\n\n\nListe des fils et position sur la prise\n\n\n\n\nFil orange\n\n\n\n\n. Fil bleu clair\n\n\n. Fil blanc\n\n\n. Fil gris\n\n\n. Fil jaune\n\n\n. Fil bleu fonc\u00e9\n\n\n. Fil rose\n\n\n. Fil noir\n\n\n. Fil marron\n\n\n. Fil ~~O~~\n\n\n. Fil ~~O~~\n\n\n. Fil ~~O~~\n\n\nVue de haut du rack\n\n\n![Top view][src/top-view.jpg]\n\n\nVue de la prise du rack\n\n\n![Prise view][src/prise.jpg]\n\n\nPr\u00e9sentation du bloc moteur\n\n\nArri\u00e8re\n\n\n![Back view][src/back.jpg]\n\n\nCarte \u00e9lectrique\n\n\n![Electronic card][src/electronic.jpg]", 
+            "title": "Documentation"
+        }, 
+        {
+            "location": "/docs/rack/#documentation-du-rack", 
+            "text": "", 
+            "title": "Documentation du rack"
+        }, 
+        {
+            "location": "/docs/rack/#liste-des-fils-et-position-sur-la-prise", 
+            "text": "Fil orange", 
+            "title": "Liste des fils et position sur la prise"
+        }, 
+        {
+            "location": "/docs/rack/#fil-bleu-clair", 
+            "text": "", 
+            "title": ". Fil bleu clair"
+        }, 
+        {
+            "location": "/docs/rack/#fil-blanc", 
+            "text": "", 
+            "title": ". Fil blanc"
+        }, 
+        {
+            "location": "/docs/rack/#fil-gris", 
+            "text": "", 
+            "title": ". Fil gris"
+        }, 
+        {
+            "location": "/docs/rack/#fil-jaune", 
+            "text": "", 
+            "title": ". Fil jaune"
+        }, 
+        {
+            "location": "/docs/rack/#fil-bleu-fonce", 
+            "text": "", 
+            "title": ". Fil bleu fonc\u00e9"
+        }, 
+        {
+            "location": "/docs/rack/#fil-rose", 
+            "text": "", 
+            "title": ". Fil rose"
+        }, 
+        {
+            "location": "/docs/rack/#fil-noir", 
+            "text": "", 
+            "title": ". Fil noir"
+        }, 
+        {
+            "location": "/docs/rack/#fil-marron", 
+            "text": "", 
+            "title": ". Fil marron"
+        }, 
+        {
+            "location": "/docs/rack/#fil-o", 
+            "text": "", 
+            "title": ". Fil ~~O~~"
+        }, 
+        {
+            "location": "/docs/rack/#fil-o_1", 
+            "text": "", 
+            "title": ". Fil ~~O~~"
+        }, 
+        {
+            "location": "/docs/rack/#fil-o_2", 
+            "text": "", 
+            "title": ". Fil ~~O~~"
+        }, 
+        {
+            "location": "/docs/rack/#vue-de-haut-du-rack", 
+            "text": "![Top view][src/top-view.jpg]", 
+            "title": "Vue de haut du rack"
+        }, 
+        {
+            "location": "/docs/rack/#vue-de-la-prise-du-rack", 
+            "text": "![Prise view][src/prise.jpg]", 
+            "title": "Vue de la prise du rack"
+        }, 
+        {
+            "location": "/docs/rack/#presentation-du-bloc-moteur", 
+            "text": "", 
+            "title": "Pr\u00e9sentation du bloc moteur"
+        }, 
+        {
+            "location": "/docs/rack/#arriere", 
+            "text": "![Back view][src/back.jpg]", 
+            "title": "Arri\u00e8re"
+        }, 
+        {
+            "location": "/docs/rack/#carte-electrique", 
+            "text": "![Electronic card][src/electronic.jpg]", 
+            "title": "Carte \u00e9lectrique"
         }
     ]
 }

@@ -2,29 +2,29 @@
 
 ## Liste des fils et position sur la prise
 
-1. Fil orange
-#. Fil bleu clair
-#. Fil blanc
-#. Fil gris
-#. Fil jaune
-#. Fil bleu foncé
-#. Fil rose
-#. Fil noir
-#. Fil marron
-#. Fil ~~O~~
-#. Fil ~~O~~
-#. Fil ~~O~~
+1. Fil: orange
+2. Fil: bleu clair
+3. Fil: blanc
+4. Fil: gris
+5. Fil: jaune
+6. Fil: bleu foncé
+7. Fil: rose
+8. Fil: noir
+9. Fil: marron
+10. Fil: **none**
+11. Fil: **none**
+12. Fil: **none**
 
 ## Vue de haut du rack
-![Top view][src/top-view.jpg]
+![Top view](src/top-view.jpg)
 
 ## Vue de la prise du rack
-![Prise view][src/prise.jpg]
+![Prise view](src/prise.jpg)
 
 ## Présentation du bloc moteur
 
 ### Arrière
-![Back view][src/back.jpg]
+![Back view](src/back.jpg)
 
 ### Carte électrique
-![Electronic card][src/electronic.jpg]
+![Electronic card](src/electronic.jpg)

@@ -3,24 +3,16 @@
 
     
     <url>
-     <loc>None/</loc>
-     <lastmod>2016-09-19</lastmod>
+     <loc>/</loc>
+     <lastmod>2016-11-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
 
     
     <url>
-     <loc>None/about/</loc>
-     <lastmod>2016-09-19</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>None/programs/commands/</loc>
-     <lastmod>2016-09-19</lastmod>
+     <loc>/about/</loc>
+     <lastmod>2016-11-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -28,8 +20,8 @@
     
         
     <url>
-     <loc>None/programs/wget/source/</loc>
-     <lastmod>2016-09-19</lastmod>
+     <loc>/docs/rack/</loc>
+     <lastmod>2016-11-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
