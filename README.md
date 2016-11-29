@@ -1,6 +1,6 @@
 # Phoenix3
 
-[Documentation](https://blackksoulls.github.io/phoenix3/s)
+[Documentation](https://blackksoulls.github.io/phoenix3/)
 
 ---
 
