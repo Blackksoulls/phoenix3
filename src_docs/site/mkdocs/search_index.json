@@ -77,7 +77,7 @@
         }, 
         {
             "location": "/docs/rack/", 
-            "text": "Documentation du rack\n\n\nListe des fils et position sur la prise\n\n\n\n\nFil orange\n\n\n\n\n. Fil bleu clair\n\n\n. Fil blanc\n\n\n. Fil gris\n\n\n. Fil jaune\n\n\n. Fil bleu fonc\u00e9\n\n\n. Fil rose\n\n\n. Fil noir\n\n\n. Fil marron\n\n\n. Fil ~~O~~\n\n\n. Fil ~~O~~\n\n\n. Fil ~~O~~\n\n\nVue de haut du rack\n\n\n![Top view][src/top-view.jpg]\n\n\nVue de la prise du rack\n\n\n![Prise view][src/prise.jpg]\n\n\nPr\u00e9sentation du bloc moteur\n\n\nArri\u00e8re\n\n\n![Back view][src/back.jpg]\n\n\nCarte \u00e9lectrique\n\n\n![Electronic card][src/electronic.jpg]", 
+            "text": "Documentation du rack\n\n\nListe des fils et position sur la prise\n\n\n\n\nFil: orange\n\n\nFil: bleu clair\n\n\nFil: blanc\n\n\nFil: gris\n\n\nFil: jaune\n\n\nFil: bleu fonc\u00e9\n\n\nFil: rose\n\n\nFil: noir\n\n\nFil: marron\n\n\nFil: \nnone\n\n\nFil: \nnone\n\n\nFil: \nnone\n\n\n\n\nVue de haut du rack\n\n\n\n\nVue de la prise du rack\n\n\n\n\nPr\u00e9sentation du bloc moteur\n\n\nArri\u00e8re\n\n\n\n\nCarte \u00e9lectrique", 
             "title": "Documentation"
         }, 
         {
@@ -87,72 +87,17 @@
         }, 
         {
             "location": "/docs/rack/#liste-des-fils-et-position-sur-la-prise", 
-            "text": "Fil orange", 
+            "text": "Fil: orange  Fil: bleu clair  Fil: blanc  Fil: gris  Fil: jaune  Fil: bleu fonc\u00e9  Fil: rose  Fil: noir  Fil: marron  Fil:  none  Fil:  none  Fil:  none", 
             "title": "Liste des fils et position sur la prise"
         }, 
         {
-            "location": "/docs/rack/#fil-bleu-clair", 
-            "text": "", 
-            "title": ". Fil bleu clair"
-        }, 
-        {
-            "location": "/docs/rack/#fil-blanc", 
-            "text": "", 
-            "title": ". Fil blanc"
-        }, 
-        {
-            "location": "/docs/rack/#fil-gris", 
-            "text": "", 
-            "title": ". Fil gris"
-        }, 
-        {
-            "location": "/docs/rack/#fil-jaune", 
-            "text": "", 
-            "title": ". Fil jaune"
-        }, 
-        {
-            "location": "/docs/rack/#fil-bleu-fonce", 
-            "text": "", 
-            "title": ". Fil bleu fonc\u00e9"
-        }, 
-        {
-            "location": "/docs/rack/#fil-rose", 
-            "text": "", 
-            "title": ". Fil rose"
-        }, 
-        {
-            "location": "/docs/rack/#fil-noir", 
-            "text": "", 
-            "title": ". Fil noir"
-        }, 
-        {
-            "location": "/docs/rack/#fil-marron", 
-            "text": "", 
-            "title": ". Fil marron"
-        }, 
-        {
-            "location": "/docs/rack/#fil-o", 
-            "text": "", 
-            "title": ". Fil ~~O~~"
-        }, 
-        {
-            "location": "/docs/rack/#fil-o_1", 
-            "text": "", 
-            "title": ". Fil ~~O~~"
-        }, 
-        {
-            "location": "/docs/rack/#fil-o_2", 
-            "text": "", 
-            "title": ". Fil ~~O~~"
-        }, 
-        {
             "location": "/docs/rack/#vue-de-haut-du-rack", 
-            "text": "![Top view][src/top-view.jpg]", 
+            "text": "", 
             "title": "Vue de haut du rack"
         }, 
         {
             "location": "/docs/rack/#vue-de-la-prise-du-rack", 
-            "text": "![Prise view][src/prise.jpg]", 
+            "text": "", 
             "title": "Vue de la prise du rack"
         }, 
         {
@@ -162,12 +107,12 @@
         }, 
         {
             "location": "/docs/rack/#arriere", 
-            "text": "![Back view][src/back.jpg]", 
+            "text": "", 
             "title": "Arri\u00e8re"
         }, 
         {
             "location": "/docs/rack/#carte-electrique", 
-            "text": "![Electronic card][src/electronic.jpg]", 
+            "text": "", 
             "title": "Carte \u00e9lectrique"
         }
     ]
