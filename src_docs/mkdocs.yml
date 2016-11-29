@@ -1,0 +1,9 @@
+site_name: Phoenix3 Project
+repo_url: https://github.com/Blackksoulls/phoenix3
+pages: 
+ - Home: index.md
+ - About: about.md
+ - Rack:
+   - Documentation: docs/rack.md
+
+theme: readthedocs
