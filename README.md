@@ -1,4 +1,9 @@
 # Phoenix3
+
+[Documentation](https://blackksoulls.github.io/phoenix3/s)
+
+---
+
 ### **Presentation:**
 Notre projet porte sur un distributeur automatique de nourriture, la différence  qu'il a avec un distributeur quelquonque,  est qu'il est géré par une application smartphone de maintenance qui communique à l'agent les dates de péremption des produit ainsi que la quantité actuel des produit de la machine.
 Notre machine se veut actuelle avec une interface homme-machine tactile et intuitive  avec une prise en main facile.
