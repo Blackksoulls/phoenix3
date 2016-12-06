@@ -2,7 +2,7 @@
     "docs": [
         {
             "location": "/", 
-            "text": "Phoenix 3 project\n\n\nDocs by \nBlackksoulls\n, this project can be found here: \nGitHub\n\n\n! Documentation in construction !\n\n\nSummary\n\n\n\n\nAbout\n\n\nRack / moteur\n\n\nDocumentation rack\n\n\nDocumentation moteur\n\n\n\n\n\n\nApplication android\n\n\nPhase recherche", 
+            "text": "Phoenix 3 project\n\n\nDocs by \nBlackksoulls\n, this project can be found here: \nGitHub\n\n\n! Documentation in construction !\n\n\nSommaire\n\n\n\n\nA propos\n\n\nRack / moteur\n\n\nDocumentation rack\n\n\nDocumentation moteur\n\n\n\n\n\n\nApplication android\n\n\nPhase recherche", 
             "title": "Menu"
         }, 
         {
@@ -11,9 +11,9 @@
             "title": "Phoenix 3 project"
         }, 
         {
-            "location": "/#summary", 
-            "text": "About  Rack / moteur  Documentation rack  Documentation moteur    Application android  Phase recherche", 
-            "title": "Summary"
+            "location": "/#sommaire", 
+            "text": "A propos  Rack / moteur  Documentation rack  Documentation moteur    Application android  Phase recherche", 
+            "title": "Sommaire"
         }, 
         {
             "location": "/about/", 
