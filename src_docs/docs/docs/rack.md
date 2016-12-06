@@ -20,11 +20,3 @@
 
 ## Vue de la prise du rack
 ![Prise view](src/prise.jpg)
-
-## Présentation du bloc moteur
-
-### Arrière
-![Back view](src/back.jpg)
-
-### Carte électrique
-![Electronic card](src/electronic.jpg)
