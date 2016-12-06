@@ -80,6 +80,10 @@ Les données de la machine seront envoyés sur une carte de traitement interne �
 
 - [22/11/2016] - Ajout de la partie de Louis au diagramme des [exigences][exi], ajout des différents diagrammes d'exigences. Fin de la carte mentale du projet par Anthony, ajout en ligne, définition du besoin et de la fonction par johan.
 
+- [6/12/2016] - Recherche des contraintes socio-économiques, multiples tests sur les moteurs et essais de commande. Recherches sur l'application android (interface) et listage des composants possibles et nécessaires.
+[![Test commande moteur](https://img.youtube.com/vi/rHw17omR3Cg/0.jpg)](https://www.youtube.com/watch?v=rHw17omR3Cg) 
+[![Test commande moteur](https://img.youtube.com/vi/24ID1GINns0/0.jpg)](https://www.youtube.com/watch?v=24ID1GINns0)
+
 <!-- ## Partie 1 -->
 
 <!-- ## Partie 2 -->
