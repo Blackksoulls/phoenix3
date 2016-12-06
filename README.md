@@ -28,6 +28,15 @@ Les données de la machine seront envoyés sur une carte de traitement interne �
 - Avertissement lors de manque de stock, d'approche de péremption de produits
 - Modifier les prix à tout moment depuis une application android (et depuis une interface web *optionnel*)
 
+### Contraintes:
+**Sociales:**
+- Les couleurs doivent être classiques, ou adaptées à l'environnement ambiant, ou a la machine.
+- L'interface doit être facile à comprendre et à utiliser, peut importe l'âge.
+- Le produit doit être adapté à la vente (nourriture)
+
+**Economiques:**
+- L'entretient doit être régulier ainsi que la vérification des pièce moteur.
+
 ### **Ou nous en sommes:**
 - [ ] **Diagramme Gantt**
 - [ ] **Diagrammes SysML**
