@@ -2,8 +2,8 @@
     "docs": [
         {
             "location": "/", 
-            "text": "Phoenix 3 project\n\n\nDocs by \nBlackksoulls\n, this project can be found here: \nGitHub\n\n\n! Documentation in construction !\n\n\nSummary\n\n\n\n\nAbout\n\n\nRack\n\n\nDocs", 
-            "title": "Home"
+            "text": "Phoenix 3 project\n\n\nDocs by \nBlackksoulls\n, this project can be found here: \nGitHub\n\n\n! Documentation in construction !\n\n\nSommaire\n\n\n\n\nA propos\n\n\nRack / moteur\n\n\nDocumentation rack\n\n\nDocumentation moteur\n\n\n\n\n\n\nApplication android\n\n\nPhase recherche", 
+            "title": "Menu"
         }, 
         {
             "location": "/#phoenix-3-project", 
@@ -11,14 +11,14 @@
             "title": "Phoenix 3 project"
         }, 
         {
-            "location": "/#summary", 
-            "text": "About  Rack  Docs", 
-            "title": "Summary"
+            "location": "/#sommaire", 
+            "text": "A propos  Rack / moteur  Documentation rack  Documentation moteur    Application android  Phase recherche", 
+            "title": "Sommaire"
         }, 
         {
             "location": "/about/", 
             "text": "Phoenix3\n\n\nPresentation:\n\n\nNotre projet porte sur un distributeur automatique de nourriture, la diff\u00e9rence  qu'il a avec un distributeur quelquonque,  est qu'il est g\u00e9r\u00e9 par une application smartphone de maintenance qui communique \u00e0 l'agent les dates de p\u00e9remption des produit ainsi que la quantit\u00e9 actuel des produit de la machine.\nNotre machine se veut actuelle avec une interface homme-machine tactile et intuitive  avec une prise en main facile.\nLes donn\u00e9es de la machine seront envoy\u00e9s sur une carte de traitement interne \u00e0 la machine puis ces donn\u00e9es seront retransmis \u00e0 un serveur et enfin \u00e0 l'application, quand un produit commence \u00e0 manquer ou qu'un produit atteint sa date de p\u00e9remption.\n\n\nDetails de chaques parties:\n\n\n\n\nApplication Android:\n Nous allons coder l'application android \u00e0 l'aide des languages HTML/JS/CSS ; puis la compiler en un apk (gr\u00e2ce \u00e0 Android-SDK, Ionic et Cordova) qui est le format natif des application sur des smartphone android.\n\n\nInterface Homme-Machine:\n Nous avons choisi un \u00e9cran tactile pour l'interface homme-machine pour la facilit\u00e9e et la modernit\u00e9e de cette technologie, qui est facile \u00e0 prendre en main, nous allons coder sur la motherboard en arduino sous le syst\u00e8me windows. L'interface sera faite avec Visual Basic qui est un language facile \u00e0 apprendre.\n\n\nInteraction Machine:\n Nous allons travailler sur une interaction entre le serveur et des moteurs pas \u00e0 pas, gr\u00e2ce \u00e0 un module arduino int\u00e9gr\u00e9 \u00e0 la motherboard, nous avons choisi une alimentation 5V 2A qui est adapter \u00e0 l'alimentation usb.\n\n\nInteraction Serveur:\n Nous avons choisi d\u2019utiliser le syst\u00e8me de base de donn\u00e9es MySQL pour la gestion des stocks et de la tr\u00e9sorerie de la machine. L\u2019application Android et l\u2019interface homme-machine se connecteront et utiliserons cette base de donn\u00e9es.\n\n\n\n\nBesoin:\n\n\nPourquoi avoir besoin de notre module de distributeur ?\n\n- Pour mieux exploiter son distributeur en auto-gestion\n- Eviter les pertes de consommables\n- Un contr\u00f4le d'un simple coup d'oeil sur son smartphone (\net pas au volant !\n)\n- Le tout en restant \u00e0 moindre co\u00fbt ! \n\n\nFonction:\n\n\nMais que donc sera capable de faire notre module ?\n\n- Il sera capable de modifier une base de donn\u00e9es en fonction des produits restants\n- Avertissement lors de manque de stock, d'approche de p\u00e9remption de produits\n- Modifier les prix \u00e0 tout moment depuis une application android (et depuis une interface web \noptionnel\n)\n\n\nSommaire\n\n\n\n\nDiff\u00e9rents diagrammes\n\n\nGantt\n\n\nExigences\n\n\nCarte mentale\n\n\nCas utilisation\n\n\n\n\n\n\n\n\n\n\nDiagrammes\n\n\nGantt\n\n\n\n\nExigences\n\n\n\n\nCarte mentale\n\n\n\n\nCas utilisation", 
-            "title": "About"
+            "title": "A propos"
         }, 
         {
             "location": "/about/#phoenix3", 
@@ -77,8 +77,8 @@
         }, 
         {
             "location": "/docs/rack/", 
-            "text": "Documentation du rack\n\n\nListe des fils et position sur la prise\n\n\n\n\nFil: orange\n\n\nFil: bleu clair\n\n\nFil: blanc\n\n\nFil: gris\n\n\nFil: jaune\n\n\nFil: bleu fonc\u00e9\n\n\nFil: rose\n\n\nFil: noir\n\n\nFil: marron\n\n\nFil: \nnone\n\n\nFil: \nnone\n\n\nFil: \nnone\n\n\n\n\nVue de haut du rack\n\n\n\n\nVue de la prise du rack\n\n\n\n\nPr\u00e9sentation du bloc moteur\n\n\nArri\u00e8re\n\n\n\n\nCarte \u00e9lectrique", 
-            "title": "Documentation"
+            "text": "Documentation du rack\n\n\nListe des fils et position sur la prise\n\n\n\n\nFil: orange\n\n\nFil: bleu clair\n\n\nFil: blanc\n\n\nFil: gris\n\n\nFil: jaune\n\n\nFil: bleu fonc\u00e9\n\n\nFil: rose\n\n\nFil: noir\n\n\nFil: marron\n\n\nFil: \nnone\n\n\nFil: \nnone\n\n\nFil: \nnone\n\n\n\n\nVue de haut du rack\n\n\n\n\nVue de la prise du rack", 
+            "title": "Documentation rack"
         }, 
         {
             "location": "/docs/rack/#documentation-du-rack", 
@@ -101,19 +101,54 @@
             "title": "Vue de la prise du rack"
         }, 
         {
-            "location": "/docs/rack/#presentation-du-bloc-moteur", 
-            "text": "", 
-            "title": "Pr\u00e9sentation du bloc moteur"
+            "location": "/docs/moteur/", 
+            "text": "Documentation des moteurs\n\n\nPartie moteurs:\n\n\nArri\u00e8re\n\n\n\n\nCarte \u00e9lectrique\n\n\n\n\nPartie commande:\n\n\nSch\u00e9ma circuit", 
+            "title": "Documentation moteur"
         }, 
         {
-            "location": "/docs/rack/#arriere", 
+            "location": "/docs/moteur/#documentation-des-moteurs", 
+            "text": "", 
+            "title": "Documentation des moteurs"
+        }, 
+        {
+            "location": "/docs/moteur/#partie-moteurs", 
+            "text": "", 
+            "title": "Partie moteurs:"
+        }, 
+        {
+            "location": "/docs/moteur/#arriere", 
             "text": "", 
             "title": "Arri\u00e8re"
         }, 
         {
-            "location": "/docs/rack/#carte-electrique", 
+            "location": "/docs/moteur/#carte-electrique", 
             "text": "", 
             "title": "Carte \u00e9lectrique"
+        }, 
+        {
+            "location": "/docs/moteur/#partie-commande", 
+            "text": "", 
+            "title": "Partie commande:"
+        }, 
+        {
+            "location": "/docs/moteur/#schema-circuit", 
+            "text": "", 
+            "title": "Sch\u00e9ma circuit"
+        }, 
+        {
+            "location": "/docs/app/", 
+            "text": "Traces de recherche pour l'application android\n\n\nListes des \"Activity\" (v1.0)", 
+            "title": "Recherche application"
+        }, 
+        {
+            "location": "/docs/app/#traces-de-recherche-pour-lapplication-android", 
+            "text": "", 
+            "title": "Traces de recherche pour l'application android"
+        }, 
+        {
+            "location": "/docs/app/#listes-des-activity-v10", 
+            "text": "", 
+            "title": "Listes des \"Activity\" (v1.0)"
         }
     ]
 }

@@ -4,8 +4,11 @@ Docs by [Blackksoulls](http://blackksoulls.github.io/), this project can be foun
 
 **! Documentation in construction !**
 
-## Summary
+## Sommaire
 
- - [About](about.md)
- - Rack
- 	- [Docs](docs/rack.md)
+ - [A propos](about.md)
+ - Rack / moteur
+ 	- [Documentation rack](docs/rack.md)
+ 	- [Documentation moteur](docs/moteur.md)
+ - Application android
+    - [Phase recherche](docs/app.md)
