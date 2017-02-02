@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Parametres</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+      <ion-card>
+        <ion-card-header class="kuro_bold">
+          Base de donnees:
+        </ion-card-header>
+        <ion-list>
+          <ion-item>
+            <ion-label floating>URL:</ion-label>
+            <ion-input type="url"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label floating>Nom utilisateur:</ion-label>
+            <ion-input type="text"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label floating>Mot de passe:</ion-label>
+            <ion-input type="password"></ion-input>
+          </ion-item>
+          <ion-item>
+            <button ion-button block color="primary">
+              Valider
+            </button>
+          </ion-item>
+        </ion-list>
+      </ion-card>
+      <ion-item>
+        <ion-label>Dark theme</ion-label>
+        <ion-toggle color="primary" checked="false"></ion-toggle>
+      </ion-item>
+  </ion-list>
+</ion-content>

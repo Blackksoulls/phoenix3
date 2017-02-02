@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>A propos</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <img id="logo-about" src="../../assets/img/icon.png" />
+    </ion-item>
+    <ion-item>
+      <ion-card>
+        <ion-card-header>
+          <h2>Phoenix 3</h2>
+          <p>com.blackksoulls.phoenix3</p>
+        </ion-card-header>
+        <ion-card-content>
+          <h3><span class="kuro_bold">• Dev. app:</span> Johan Planchon</h3>
+        </ion-card-content>
+      </ion-card>
+    </ion-item>
+    <ion-item>
+      <ion-card>
+        <ion-card-header>
+          <h2>Contact:</h2>
+        </ion-card-header>
+        <ion-card-content>
+          <h3><a (click)="GotoLink('https://discordapp.com/invite/aNn9hCj')" style="text-decoration: none;">▶ Discord</a></h3>
+          <h3><a (click)="GotoLink('https://github.com/blackksoulls/phoenix3')" style="text-decoration: none;">▶ Github</a></h3>
+          <h3><a (click)="GotoLink('mailto:johan.planchon@gmail.com')" style="text-decoration: none;">▶ Mail</a></h3>
+        </ion-card-content>
+      </ion-card>
+    </ion-item>
+    <ion-item>
+      <ion-card>
+        <ion-card-header>
+          <h2>Aide:</h2>
+        </ion-card-header>
+        <ion-card-content>
+          <h3><a (click)="GotoLink('https://blackksoulls.github.io/phoenix3/')" style="text-decoration: none;">Documentation</a></h3>
+        </ion-card-content>
+      </ion-card>
+    </ion-item>
+  </ion-list>
+</ion-content>
