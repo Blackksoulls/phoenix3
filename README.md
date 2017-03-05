@@ -1,6 +1,6 @@
 # Phoenix3
 
-[Documentation](https://blackksoulls.github.io/phoenix3/)
+[Documentation](https://doc-p3.kuro.ml)
 
 ---
 
