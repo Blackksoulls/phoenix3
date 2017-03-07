@@ -4,15 +4,7 @@
     
     <url>
      <loc>/</loc>
-     <lastmod>2016-12-06</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>/about/</loc>
-     <lastmod>2016-12-06</lastmod>
+     <lastmod>2017-03-07</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -21,13 +13,13 @@
         
     <url>
      <loc>/docs/rack/</loc>
-     <lastmod>2016-12-06</lastmod>
+     <lastmod>2017-03-07</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/docs/moteur/</loc>
-     <lastmod>2016-12-06</lastmod>
+     <lastmod>2017-03-07</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -37,7 +29,13 @@
         
     <url>
      <loc>/docs/app/</loc>
-     <lastmod>2016-12-06</lastmod>
+     <lastmod>2017-03-07</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/docs/appfunc/</loc>
+     <lastmod>2017-03-07</lastmod>
      <changefreq>daily</changefreq>
     </url>
         

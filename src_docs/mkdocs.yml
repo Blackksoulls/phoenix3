@@ -1,12 +1,12 @@
 site_name: Phoenix3 Project
 repo_url: https://github.com/Blackksoulls/phoenix3
-pages: 
+pages:
  - Menu: index.md
- - A propos: about.md
  - Rack / moteur:
    - Documentation rack: docs/rack.md
    - Documentation moteur: docs/moteur.md
  - Application android:
    - Recherche application: docs/app.md
+   - Fonctionnement application: docs/appfunc.md
 
 theme: readthedocs
