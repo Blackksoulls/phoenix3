@@ -56,8 +56,6 @@ Les données de la machine seront envoyés sur une carte de traitement interne �
 ## Sommaire
 1. [Logbook](#logbook)
 	* [Avant projet](#avant-projet)
-<!-- * [Partie 1 avant 1er revue](#partie1)
-	* [Partie 2 après 1er revue](#partie2) -->
 2. [Différents diagrammes](#diagrammes)
 	* [Gantt][gant]
 	* [Exigences][exi]
