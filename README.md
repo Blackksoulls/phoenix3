@@ -15,12 +15,12 @@ Les données de la machine seront envoyés sur une carte de traitement interne �
 - *Interaction Machine:* Nous allons travailler sur une interaction entre le serveur et des moteurs pas à pas, grâce à un module arduino intégré à la motherboard, nous avons choisi une alimentation 5V 2A qui est adapter à l'alimentation usb.
 - *Interaction Serveur:* Nous avons choisi d’utiliser le système de base de données MySQL pour la gestion des stocks et de la trésorerie de la machine. L’application Android et l’interface homme-machine se connecteront et utiliserons cette base de données.
 
-### Besoin: 
+### Besoin:
 **Pourquoi avoir besoin de notre module de distributeur ?**
 - Pour mieux exploiter son distributeur en auto-gestion
 - Eviter les pertes de consommables
 - Un contrôle d'un simple coup d'oeil sur son smartphone (*et pas au volant !*)
-- Le tout en restant à moindre coût ! 
+- Le tout en restant à moindre coût !
 
 ### Fonction:
 **Mais que donc sera capable de faire notre module ?**
@@ -38,17 +38,18 @@ Les données de la machine seront envoyés sur une carte de traitement interne �
 - L'entretient doit être régulier ainsi que la vérification des pièce moteur.
 
 ### **Ou nous en sommes:**
-- [ ] **Diagramme Gantt**
+- [x] **Diagramme Gantt**
 - [ ] **Diagrammes SysML**
 	- [x] Diagramme Exigences
 	- [ ] Diagramme Définition de Blocks
-	- [ ] Diagramme de Blocks Interne
+	- [ ] Diagrammes de Blocks Interne
 	- [x] Diagramme de cas d'utilisation
-	- [ ] Diagramme de séquence
-	- [ ] Diagramme d'état
+	- [ ] Diagrammes de séquence
+	- [ ] Diagrammes d'état
 - [x] **Carte mentale du projet**
-- [ ] **Revue de Projet 1**
+- [x] **Revue de Projet 1**
 - [ ] **Revue de Projet 2**
+- [ ] **Revue de Projet finale**
 - [ ] **Prototypes**
 - [ ] __*Projet fini*__
 
@@ -61,13 +62,9 @@ Les données de la machine seront envoyés sur une carte de traitement interne �
 2. [Différents diagrammes](#diagrammes)
 	* [Gantt][gant]
 	* [Exigences][exi]
-		* [Maxime][emax]
-		* [Louis][elouis]
-		* [Anthony][eantho]
-		* [Johan][ejohan]
 	* [Carte mentale][cm]
 	* [Cas utilisation][cu]
-	
+
 <!-- 3. [Documentation]()
 4. [Contact](#contact)
 5. [Credits](#credits) -->
@@ -81,7 +78,7 @@ Les données de la machine seront envoyés sur une carte de traitement interne �
 - [22/11/2016] - Ajout de la partie de Louis au diagramme des [exigences][exi], ajout des différents diagrammes d'exigences. Fin de la carte mentale du projet par Anthony, ajout en ligne, définition du besoin et de la fonction par johan.
 
 - [6/12/2016] - Recherche des contraintes socio-économiques, multiples tests sur les moteurs et essais de commande. Recherches sur l'application android (interface) et listage des composants possibles et nécessaires.
-[![Test commande moteur](https://img.youtube.com/vi/rHw17omR3Cg/0.jpg)](https://www.youtube.com/watch?v=rHw17omR3Cg) 
+[![Test commande moteur](https://img.youtube.com/vi/rHw17omR3Cg/0.jpg)](https://www.youtube.com/watch?v=rHw17omR3Cg)
 [![Test commande moteur](https://img.youtube.com/vi/24ID1GINns0/0.jpg)](https://www.youtube.com/watch?v=24ID1GINns0)
 
 <!-- ## Partie 1 -->
@@ -97,18 +94,6 @@ Les données de la machine seront envoyés sur une carte de traitement interne �
 ## Exigences
 ![Exi Diag](diagrams/exi.bmp)
 
-### Exigences Maxime
-![Exi Max](diagrams/exigence-maxime.png)
-
-### Exigences Louis
-![Exi Louis](diagrams/exigence-louis.png)
-
-### Exigences Anthony
-![Exi Antho](diagrams/exigence-anthony.png)
-
-### Exigences Johan
-![Exi Johan](diagrams/exigence-johan.png)
-
 ## Carte mentale
 ![CM](diagrams/mental-card-project.jpg)
 
@@ -118,10 +103,6 @@ Les données de la machine seront envoyés sur une carte de traitement interne �
 
 [gant]: #gantt
 [exi]: #exigences
-[emax]: #exigences-maxime
-[elouis]: #exigences-louis
-[eantho]: #exigences-anthony
-[ejohan]: #exigences-johan
 [state]: #etat
 [seq]: #sequence
 [BDD]: #definition-de-blocs
