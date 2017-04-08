@@ -80,6 +80,8 @@ Les données de la machine seront envoyés sur une carte de traitement interne �
 [![Test commande moteur](https://img.youtube.com/vi/rHw17omR3Cg/0.jpg)](https://www.youtube.com/watch?v=rHw17omR3Cg)
 [![Test commande moteur](https://img.youtube.com/vi/24ID1GINns0/0.jpg)](https://www.youtube.com/watch?v=24ID1GINns0)
 
+- [13/12/2016] → [28/03/2017] - L'interface homme - machine est presque terminée (il reste la couche de scripting à faire), le serveur est opérationnel, la partie de reconnaissance NFC est faite, il manque le contrôle des rouleaux en fonction de la commande. L'application est presque terminée, il manque encore la personnalisation de la BDD, la gestion de notifications push et le thème Jour / Nuit.
+
 <!-- ## Partie 1 -->
 
 <!-- ## Partie 2 -->
