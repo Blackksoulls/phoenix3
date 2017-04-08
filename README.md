@@ -1,5 +1,6 @@
 # Phoenix3
 
+![Distributeur](Dispenser.gif)
 [Documentation](https://doc-p3.kuro.ml)
 
 ---
