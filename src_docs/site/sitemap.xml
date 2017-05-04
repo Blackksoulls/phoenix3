@@ -3,8 +3,8 @@
 
     
     <url>
-     <loc>/</loc>
-     <lastmod>2017-03-07</lastmod>
+     <loc>https://doc-p3.kuro.ml//</loc>
+     <lastmod>2017-05-04</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -12,14 +12,26 @@
     
         
     <url>
-     <loc>/docs/rack/</loc>
-     <lastmod>2017-03-07</lastmod>
+     <loc>https://doc-p3.kuro.ml//API/add/</loc>
+     <lastmod>2017-05-04</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/docs/moteur/</loc>
-     <lastmod>2017-03-07</lastmod>
+     <loc>https://doc-p3.kuro.ml//API/edit/</loc>
+     <lastmod>2017-05-04</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://doc-p3.kuro.ml//API/show/</loc>
+     <lastmod>2017-05-04</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://doc-p3.kuro.ml//API/delete/</loc>
+     <lastmod>2017-05-04</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -28,17 +40,47 @@
     
         
     <url>
-     <loc>/docs/app/</loc>
-     <lastmod>2017-03-07</lastmod>
+     <loc>https://doc-p3.kuro.ml/</loc>
+     <lastmod></lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/docs/appfunc/</loc>
-     <lastmod>2017-03-07</lastmod>
+     <loc>https://doc-p3.kuro.ml/</loc>
+     <lastmod></lastmod>
      <changefreq>daily</changefreq>
     </url>
         
+    
+
+    
+        
+    <url>
+     <loc>https://doc-p3.kuro.ml//license/</loc>
+     <lastmod>2017-05-04</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://doc-p3.kuro.ml//release/</loc>
+     <lastmod>2017-05-04</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://doc-p3.kuro.ml//credit/</loc>
+     <lastmod>2017-05-04</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+    <url>
+     <loc>https://doc-p3.kuro.ml//help/</loc>
+     <lastmod>2017-05-04</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
     
 
 </urlset>

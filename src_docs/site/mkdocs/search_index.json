@@ -2,138 +2,138 @@
     "docs": [
         {
             "location": "/", 
-            "text": "Projet SIN Phoenix3\n\n\nDocumentation par \nJohan Planchon\n, ce projet peut \u00eatre trouv\u00e9 ici: \nGitHub\n\n\n! Documentation en construction !\n\n\nSommaire\n\n\n\n\nA propos\n\n\nRack / moteur\n\n\nDocumentation rack\n\n\nDocumentation moteur\n\n\n\n\n\n\nApplication android\n\n\nPhase recherche\n\n\nDetail fonctionnement Application", 
-            "title": "Menu"
+            "text": "Bienvenue !\n\n\nBienvenue sur la documentation de l\napplication mobile de Phoenix3.\n\n\nLiens utiles:\n\n- \nLicense\n\n- \nNotes de version\n\n- \nCredit\n\n\nPour me contacter:\n\n- \nGithub\n\n- \nTwitter\n\n- \n\n\nPhoenix3 Project\n\n\nLe \nPhoenix3 project\n est le projet d\nun distributeur auto-g\u00e9r\u00e9 avec une interface graphique tactile pour commander, un serveur de centralisation des donn\u00e9es et une application de maintenance.\n\n\nApplication mobile\n\n\nL\napplication mobile est d\u00e9velopp\u00e9e \u00e0 l\naide du framework \nIonic 2\n, l\nAPI \u00e0 l\naide du PHP et la base de donn\u00e9e est en MySQL.", 
+            "title": "Acceuil"
         }, 
         {
-            "location": "/#projet-sin-phoenix3", 
-            "text": "Documentation par  Johan Planchon , ce projet peut \u00eatre trouv\u00e9 ici:  GitHub  ! Documentation en construction !", 
-            "title": "Projet SIN Phoenix3"
+            "location": "/#bienvenue", 
+            "text": "Bienvenue sur la documentation de l application mobile de Phoenix3.  Liens utiles: \n-  License \n-  Notes de version \n-  Credit  Pour me contacter: \n-  Github \n-  Twitter \n-", 
+            "title": "Bienvenue !"
         }, 
         {
-            "location": "/#sommaire", 
-            "text": "A propos  Rack / moteur  Documentation rack  Documentation moteur    Application android  Phase recherche  Detail fonctionnement Application", 
-            "title": "Sommaire"
+            "location": "/#phoenix3-project", 
+            "text": "Le  Phoenix3 project  est le projet d un distributeur auto-g\u00e9r\u00e9 avec une interface graphique tactile pour commander, un serveur de centralisation des donn\u00e9es et une application de maintenance.", 
+            "title": "Phoenix3 Project"
         }, 
         {
-            "location": "/docs/rack/", 
-            "text": "Documentation du rack\n\n\nListe des fils et position sur la prise\n\n\n\n\nFil: orange\n\n\nFil: bleu clair\n\n\nFil: blanc\n\n\nFil: gris\n\n\nFil: jaune\n\n\nFil: bleu fonc\u00e9\n\n\nFil: rose\n\n\nFil: noir\n\n\nFil: marron\n\n\nFil: \nnone\n\n\nFil: \nnone\n\n\nFil: \nnone\n\n\n\n\nVue de haut du rack\n\n\n\n\nVue de la prise du rack", 
-            "title": "Documentation rack"
+            "location": "/#application-mobile", 
+            "text": "L application mobile est d\u00e9velopp\u00e9e \u00e0 l aide du framework  Ionic 2 , l API \u00e0 l aide du PHP et la base de donn\u00e9e est en MySQL.", 
+            "title": "Application mobile"
         }, 
         {
-            "location": "/docs/rack/#documentation-du-rack", 
+            "location": "/API/add/", 
+            "text": "Code source\n\n\nLien du raw sur \ngithub\n\n\nExplication du fonctionnement\n\n\nLe code est en php, pour vous remettre dedans ou pour d\u00e9buter rapidement (si vous avez d\u00e9j\u00e0 des bases en programmation) \nPHP in Ymin\n\n\n(\nLes lignes de code surlign\u00e9es sont les plus importantes\n)\n\n\nHeader\n\n\n1\n2\n3\n4\nerror_reporting\n(\n0\n);\n\n\nheader\n(\nContent-Type: application/json; charset=UTF-8\n);\n\n\nheader\n(\nAccess-Control-Allow-Origin: *\n);\n\n\nheader\n(\nAccess-Control-Allow-Methods: GET, POST\n);\n\n\n\n\n\n\n\n\n\nerror_reporting\n(\n0\n);\n D\u00e9fini le niveau d\nerreur automatiques \u00e0 0, donc aucune erreur n\nest retourn\u00e9e par php.\n\n\nheader\n(\nAccess-Control-Allow-Origin: *\n);\n  D\u00e9fini l\nacc\u00e8s au fichier par une url. Ici, autorise tout le monde \u00e0 y acc\u00e9der. \nPas super s\u00e9curis\u00e9, je sais\n \n.\n\n\nheader\n(\nAccess-Control-Allow-Methods: GET, POST\n);\n Accepte les requetes \nPOST\n et les requetes \nGET\n.\n\n\n\n\nD\u00e9coupage de la requete\n\n\n 1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n$postdata\n \n=\n \nfile_get_contents\n(\nphp://input\n);\n\n\n$request\n \n=\n \njson_decode\n(\n$postdata\n);\n\n\n$bdd_host\n \n=\n \n$request\n-\nhost\n \n?:\n \nlocalhost\n;\n\n\n$bdd_db\n \n=\n \n$request\n-\ndbdb\n \n?:\n \nphoenix3\n;\n\n\n$bdd_user\n \n=\n \n$request\n-\nusername\n \n?:\n \nroot\n;\n\n\n$bdd_password\n \n=\n \n$request\n-\npassword\n \n?:\n \n;\n\n\n$table\n \n=\n \n$request\n-\ntable\n \n?:\n \nitem_database\n;\n\n\n$textcontent\n \n=\n \n$request\n-\ntextcontent\n;\n\n\n$price\n \n=\n \n$request\n-\nprice\n;\n\n\n$nb\n \n=\n \n$request\n-\nnb\n;\n\n\n$pic\n \n=\n \n$request\n-\npic\n;\n//$donnees[\npic\n];\n\n\n$datevalue\n \n=\n \n$request\n-\ndatevalue\n;\n//$donnees[\ndate\n];", 
+            "title": "Ajouter"
+        }, 
+        {
+            "location": "/API/add/#code-source", 
+            "text": "Lien du raw sur  github", 
+            "title": "Code source"
+        }, 
+        {
+            "location": "/API/add/#explication-du-fonctionnement", 
+            "text": "Le code est en php, pour vous remettre dedans ou pour d\u00e9buter rapidement (si vous avez d\u00e9j\u00e0 des bases en programmation)  PHP in Ymin  ( Les lignes de code surlign\u00e9es sont les plus importantes )", 
+            "title": "Explication du fonctionnement"
+        }, 
+        {
+            "location": "/API/add/#header", 
+            "text": "1\n2\n3\n4 error_reporting ( 0 );  header ( Content-Type: application/json; charset=UTF-8 );  header ( Access-Control-Allow-Origin: * );  header ( Access-Control-Allow-Methods: GET, POST );     error_reporting ( 0 );  D\u00e9fini le niveau d erreur automatiques \u00e0 0, donc aucune erreur n est retourn\u00e9e par php.  header ( Access-Control-Allow-Origin: * );   D\u00e9fini l acc\u00e8s au fichier par une url. Ici, autorise tout le monde \u00e0 y acc\u00e9der.  Pas super s\u00e9curis\u00e9, je sais   .  header ( Access-Control-Allow-Methods: GET, POST );  Accepte les requetes  POST  et les requetes  GET .", 
+            "title": "Header"
+        }, 
+        {
+            "location": "/API/add/#decoupage-de-la-requete", 
+            "text": "1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12 $postdata   =   file_get_contents ( php://input );  $request   =   json_decode ( $postdata );  $bdd_host   =   $request - host   ?:   localhost ;  $bdd_db   =   $request - dbdb   ?:   phoenix3 ;  $bdd_user   =   $request - username   ?:   root ;  $bdd_password   =   $request - password   ?:   ;  $table   =   $request - table   ?:   item_database ;  $textcontent   =   $request - textcontent ;  $price   =   $request - price ;  $nb   =   $request - nb ;  $pic   =   $request - pic ; //$donnees[ pic ];  $datevalue   =   $request - datevalue ; //$donnees[ date ];", 
+            "title": "D\u00e9coupage de la requete"
+        }, 
+        {
+            "location": "/API/edit/", 
             "text": "", 
-            "title": "Documentation du rack"
+            "title": "Editer"
         }, 
         {
-            "location": "/docs/rack/#liste-des-fils-et-position-sur-la-prise", 
-            "text": "Fil: orange  Fil: bleu clair  Fil: blanc  Fil: gris  Fil: jaune  Fil: bleu fonc\u00e9  Fil: rose  Fil: noir  Fil: marron  Fil:  none  Fil:  none  Fil:  none", 
-            "title": "Liste des fils et position sur la prise"
-        }, 
-        {
-            "location": "/docs/rack/#vue-de-haut-du-rack", 
+            "location": "/API/show/", 
             "text": "", 
-            "title": "Vue de haut du rack"
+            "title": "Afficher"
         }, 
         {
-            "location": "/docs/rack/#vue-de-la-prise-du-rack", 
+            "location": "/API/delete/", 
             "text": "", 
-            "title": "Vue de la prise du rack"
+            "title": "Supprimer"
         }, 
         {
-            "location": "/docs/moteur/", 
-            "text": "Documentation des moteurs\n\n\nPartie moteurs:\n\n\nArri\u00e8re\n\n\n\n\nCarte \u00e9lectrique\n\n\n\n\nPartie commande:\n\n\nSch\u00e9ma circuit", 
-            "title": "Documentation moteur"
-        }, 
-        {
-            "location": "/docs/moteur/#documentation-des-moteurs", 
+            "location": "/APP/home/", 
             "text": "", 
-            "title": "Documentation des moteurs"
+            "title": "Acceuil"
         }, 
         {
-            "location": "/docs/moteur/#partie-moteurs", 
+            "location": "/APP/bdd/", 
             "text": "", 
-            "title": "Partie moteurs:"
+            "title": "BDD"
         }, 
         {
-            "location": "/docs/moteur/#arriere", 
+            "location": "/APP/settings/", 
             "text": "", 
-            "title": "Arri\u00e8re"
+            "title": "Params"
         }, 
         {
-            "location": "/docs/moteur/#carte-electrique", 
+            "location": "/APP/about/", 
             "text": "", 
-            "title": "Carte \u00e9lectrique"
+            "title": "A propos"
         }, 
         {
-            "location": "/docs/moteur/#partie-commande", 
+            "location": "/APP/data/", 
             "text": "", 
-            "title": "Partie commande:"
+            "title": "Data"
         }, 
         {
-            "location": "/docs/moteur/#schema-circuit", 
+            "location": "/APP/trans/", 
             "text": "", 
-            "title": "Sch\u00e9ma circuit"
+            "title": "Trans"
         }, 
         {
-            "location": "/docs/app/", 
-            "text": "Traces de recherche pour l'application android\n\n\nListes des \"Activity\" (v1.0)", 
-            "title": "Recherche application"
+            "location": "/license/", 
+            "text": "MIT License\n\n\nCopyright \n 2017 Johan Planchon\n\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \nSoftware\n), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\n\nTHE SOFTWARE IS PROVIDED \nAS IS\n, WITHOUT WARRANTY OF ANY KIND,\n EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY \nCLAIM\n, \nDAMAGES\n OR \nOTHER LIABILITY\n, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.", 
+            "title": "License"
         }, 
         {
-            "location": "/docs/app/#traces-de-recherche-pour-lapplication-android", 
-            "text": "", 
-            "title": "Traces de recherche pour l'application android"
+            "location": "/license/#mit-license", 
+            "text": "Copyright   2017 Johan Planchon  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the  Software ), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:  THE SOFTWARE IS PROVIDED  AS IS , WITHOUT WARRANTY OF ANY KIND,  EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY  CLAIM ,  DAMAGES  OR  OTHER LIABILITY , WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.", 
+            "title": "MIT License"
         }, 
         {
-            "location": "/docs/app/#listes-des-activity-v10", 
-            "text": "", 
-            "title": "Listes des \"Activity\" (v1.0)"
+            "location": "/release/", 
+            "text": "[04-05-2017]\n Cr\u00e9ation de la documentation.", 
+            "title": "Notes dev."
         }, 
         {
-            "location": "/docs/appfunc/", 
-            "text": "Description fonctionnement application\n\n\nCr\u00e9ation / d\u00e9claration des pages\n\n\nPage template\n\n\nSynchroniser avec la BDD\n\n\nAfficher la BDD\n\n\nModifier la BDD\n\n\nNotifications\n\n\nApplications / sites utilis\u00e9s\n\n\n\n\nIDE:\n \nAtom\n\n\nFramework:\n \nIonic\n\n\nDocumentation:\n \nMkDocs\n\n\nVersioning:\n \nGitHub\n\n\nH\u00e9bergement site projet:\n \nGitPage\n\n\nSoft pour les diagrammes:\n \nFlow", 
-            "title": "Fonctionnement application"
+            "location": "/credit/", 
+            "text": "Atom\n for the IDE.\n\n\nIonic 2\n for the framework of the app.\n\n\nAndroid Studio\n for the compilation to Android.\n\n\nMkDocs\n for the documentation generator.\n\n\nMartin Donath\n for the material theme of MkDocs.\n\n\nIsaac Muse\n for the amazing \n extensions of MkDocs.\n\n\nLearn X in Y minutes\n I\nve just discovered it now and it\ns just awesome \n.", 
+            "title": "Credit"
         }, 
         {
-            "location": "/docs/appfunc/#description-fonctionnement-application", 
-            "text": "", 
-            "title": "Description fonctionnement application"
+            "location": "/help/", 
+            "text": "Ou ?\n\n\n\n\nSur la page \nbegin\n de Ionic.\n\n\nSur la \ndocumentation\n de Ionic 2.\n\n\nEn ouvrant une issue sur le \ngithub\n du projet.\n\n\nOu en me contactant par un des liens sur la page \nd\nacceuil\n \n(je ne sais pas quand je pourrais r\u00e9pondre \n)\n\n\n\n\nPour t\u00e9l\u00e9charger le code depuis raw.github\n\n\n\n\nRight Button\n puis \nEnregistrer sous\n\n\nou \nCtrl\n+\nS\n\n\nou encore \nwget \nhttp://urldelapage\n\n\nou bien \ncurl -O \nhttp://urldelapage\n\n\n\n\nConseils pour la pr\u00e9paration du Project\n\n\n1.\n Installez nodejs et npm\n\n\n\n\nPar exemple pour linux: \napt install nodejs-legacy\n\n\nPour windows et mac t\u00e9l\u00e9chargez \nl\ninstaller\n\n\n\n\n2.\n Installez cordova (ouvrer un invit\u00e9 de commande, pour windows \nWin\n+\nR\n puis tapez \ncmd\n et \nEnter\n) ensuite dans l\ninvite de commande, \nnpm install cordova -g\n\n\n3.\n Ensuite au tour de Ionic (toujours dans l\ninvite de commande) \nnpm install ionic -g\n\n\n4.\n Allez \u00e0 l\nendroit ou vous avez t\u00e9l\u00e9charg\u00e9 mon code source, puis dans le dossier \nsrc_code_v2/phoenix3\n\n\n\n\nPour rappel pour le t\u00e9l\u00e9charger: \ngit clone https://github.com/blackksoulls/phoenix3.git\n\n\nOu alors vous t\u00e9l\u00e9chargez l\narchive \ndirectement\n.\n\n\n\n\n5.\n Faites un \nnpm install\n pour installer les d\u00e9pendances.\n\n\n6.\n Et enfin \nionic serve --lab\n\n\n7.\n Vous pouvez maintenant aller voir l\napplication dans votre \nnavigateur\n.\n\n\nCompiler l\napplication pour Android\n\n\nPartie pr\u00e9vue mais non termin\u00e9e", 
+            "title": "Support"
         }, 
         {
-            "location": "/docs/appfunc/#creation-declaration-des-pages", 
-            "text": "", 
-            "title": "Cr\u00e9ation / d\u00e9claration des pages"
+            "location": "/help/#ou", 
+            "text": "Sur la page  begin  de Ionic.  Sur la  documentation  de Ionic 2.  En ouvrant une issue sur le  github  du projet.  Ou en me contactant par un des liens sur la page  d acceuil   (je ne sais pas quand je pourrais r\u00e9pondre  )", 
+            "title": "Ou ?"
         }, 
         {
-            "location": "/docs/appfunc/#page-template", 
-            "text": "", 
-            "title": "Page template"
+            "location": "/help/#pour-telecharger-le-code-depuis-rawgithub", 
+            "text": "Right Button  puis  Enregistrer sous  ou  Ctrl + S  ou encore  wget  http://urldelapage  ou bien  curl -O  http://urldelapage", 
+            "title": "Pour t\u00e9l\u00e9charger le code depuis raw.github"
         }, 
         {
-            "location": "/docs/appfunc/#synchroniser-avec-la-bdd", 
-            "text": "", 
-            "title": "Synchroniser avec la BDD"
+            "location": "/help/#conseils-pour-la-preparation-du-project", 
+            "text": "1.  Installez nodejs et npm   Par exemple pour linux:  apt install nodejs-legacy  Pour windows et mac t\u00e9l\u00e9chargez  l installer   2.  Installez cordova (ouvrer un invit\u00e9 de commande, pour windows  Win + R  puis tapez  cmd  et  Enter ) ensuite dans l invite de commande,  npm install cordova -g  3.  Ensuite au tour de Ionic (toujours dans l invite de commande)  npm install ionic -g  4.  Allez \u00e0 l endroit ou vous avez t\u00e9l\u00e9charg\u00e9 mon code source, puis dans le dossier  src_code_v2/phoenix3   Pour rappel pour le t\u00e9l\u00e9charger:  git clone https://github.com/blackksoulls/phoenix3.git  Ou alors vous t\u00e9l\u00e9chargez l archive  directement .   5.  Faites un  npm install  pour installer les d\u00e9pendances.  6.  Et enfin  ionic serve --lab  7.  Vous pouvez maintenant aller voir l application dans votre  navigateur .", 
+            "title": "Conseils pour la pr\u00e9paration du Project"
         }, 
         {
-            "location": "/docs/appfunc/#afficher-la-bdd", 
-            "text": "", 
-            "title": "Afficher la BDD"
-        }, 
-        {
-            "location": "/docs/appfunc/#modifier-la-bdd", 
-            "text": "", 
-            "title": "Modifier la BDD"
-        }, 
-        {
-            "location": "/docs/appfunc/#notifications", 
-            "text": "", 
-            "title": "Notifications"
-        }, 
-        {
-            "location": "/docs/appfunc/#applications-sites-utilises", 
-            "text": "IDE:   Atom  Framework:   Ionic  Documentation:   MkDocs  Versioning:   GitHub  H\u00e9bergement site projet:   GitPage  Soft pour les diagrammes:   Flow", 
-            "title": "Applications / sites utilis\u00e9s"
+            "location": "/help/#compiler-lapplication-pour-android", 
+            "text": "Partie pr\u00e9vue mais non termin\u00e9e", 
+            "title": "Compiler l'application pour Android"
         }
     ]
 }

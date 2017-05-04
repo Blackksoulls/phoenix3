@@ -1,12 +1,74 @@
-site_name: Phoenix3 Project
-repo_url: https://github.com/Blackksoulls/phoenix3
-pages:
- - Menu: index.md
- - Rack / moteur:
-   - Documentation rack: docs/rack.md
-   - Documentation moteur: docs/moteur.md
- - Application android:
-   - Recherche application: docs/app.md
-   - Fonctionnement application: docs/appfunc.md
+site_name: Phoenix3 APP Doc
+site_author: 'Johan Planchon'
+site_description: 'Phoenix3 app documentation'
+site_url: 'https://doc-p3.kuro.ml/'
+site_favicon: 'img/phoenix.ico'
 
-theme: readthedocs
+repo_name: 'blackksoulls/phoenix3'
+repo_url: 'https://github.com/blackksoulls/phoenix3'
+
+copyright: 'Copyright &copy; 2017 Johan Planchon'
+
+theme: 'material'
+theme_dir: 'material'
+
+extra:
+  logo: 'img/phoenix-W.png'
+  palette:
+    primary: 'orange'
+    accent: 'amber'
+  font:
+    text: 'Quicksand'
+    code: 'Roboto Mono'
+  social:
+    - type: 'github'
+      link: 'https://github.com/blackksoulls'
+    - type: 'twitter'
+      link: 'https://twitter.com/blackksoulls'
+
+pages:
+  - Acceuil: 'index.md'
+  - API:
+    - Ajouter: 'API/add.md'
+    - Editer: 'API/edit.md'
+    - Afficher: 'API/show.md'
+    - Supprimer: 'API/delete.md'
+  - APP:
+    - Visible:
+      - Acceuil: 'APP/home.md'
+      - BDD: 'APP/bdd.md'
+      - Params: 'APP/settings.md'
+      - 'A propos': 'APP/about.md'
+    - Fond:
+      - 'APP/data.md'
+      - 'APP/trans.md'
+  - A propos:
+    - License: 'license.md'
+    - 'Notes dev.': 'release.md'
+    - Credit: 'credit.md'
+  - Support: 'help.md'
+
+markdown_extensions:
+  - smarty
+  - pymdownx.smartsymbols
+  - nl2br
+  - meta
+  - pymdownx.highlight:
+      linenums: true
+      extend_pygments_lang:
+        - name: php-in
+          lang: php
+          options:
+            startinline: true
+  - pymdownx.superfences:
+      css_class: codehilite
+  - pymdownx.inlinehilite:
+      css_class: codehilite
+  - pymdownx.betterem(smart_enable=all)
+  - pymdownx.tilde
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.magiclink
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.keys

@@ -1,15 +1,20 @@
-# Projet SIN Phoenix3
+title: Acceuil P3 Docs
 
-Documentation par [Johan Planchon](http://git.kuro.ml/), ce projet peut être trouvé ici: [GitHub](https://github.com/Blackksoulls/phoenix3)
+# Bienvenue !
+Bienvenue sur la documentation de l'application mobile de Phoenix3.
 
-**! Documentation en construction !**
+^^**Liens utiles:**^^
+- [License](license.md)
+- [Notes de version](release.md)
+- [Credit](credit.md)
 
-## Sommaire
+^^**Pour me contacter:**^^
+- [Github](https://github.com/Blackksoulls/)
+- [Twitter](https://twitter.com/Blackksoulls/)
+- blackksoulls@gmail.com
 
- - [A propos](https://github.com/blackksoulls/phoenix3/tree/master#phoenix3)
- - Rack / moteur
- 	- [Documentation rack](docs/rack.md)
- 	- [Documentation moteur](docs/moteur.md)
- - Application android
-    - [Phase recherche](docs/app.md)
-    - [Detail fonctionnement Application](docs/appfunc.md)
+## Phoenix3 Project
+Le [Phoenix3 project](https://github.com/blackksoulls/phoenix3/) est le projet d'un distributeur auto-géré avec une interface graphique tactile pour commander, un serveur de centralisation des données et une application de maintenance.
+
+## Application mobile
+L'application mobile est développée à l'aide du framework [Ionic 2](http://ionic.io/), l'API à l'aide du PHP et la base de donnée est en MySQL.
