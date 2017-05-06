@@ -13,13 +13,13 @@
     $item_name = $request->item_name;
 
     $con = mysql_connect($bdd_host,$bdd_user,$bdd_password) or die ("Failed to connect to MySQL: " . mysql_error());
-    mysql_select_db('phoenix3', $con);
+    mysql_select_db($bdd_db, $con);
 
-    $qry_em = 'SELECT count(*) as cnt from ' . $table . ' where textcontent="' . $textcontent . '"';
+    $qry_em = 'SELECT count(*) as cnt from ' . $table . ' where textcontent="' . $item_name . '"';
     $qry_res = mysql_query($qry_em);
     $res = mysql_fetch_assoc($qry_res);
 
-    if($res['cnt']==0){
+    if($res['cnt']==1){
         $qry = 'DELETE FROM ' . $bdd_db . '.' . $table . ' WHERE ' . $table . '.' . 'textcontent="' . $item_name . '"';
         $qry_res = mysql_query($qry);
             if ($qry_res) {

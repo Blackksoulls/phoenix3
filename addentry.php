@@ -18,7 +18,7 @@
     $datevalue = $request->datevalue;//$donnees['date'];
 
     $con = mysql_connect($bdd_host,$bdd_user,$bdd_password) or die ("Failed to connect to MySQL: " . mysql_error());
-    mysql_select_db('phoenix3', $con);
+    mysql_select_db($bdd_db, $con);
 
     $qry_em = 'SELECT count(*) as cnt from ' . $table . ' where textcontent="' . $textcontent . '"';
     $qry_res = mysql_query($qry_em);
