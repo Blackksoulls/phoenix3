@@ -21,7 +21,7 @@
     
     
       
-        <title>Afficher - Phoenix3 APP Doc</title>
+        <title>API - Afficher</title>
       
     
     
@@ -259,9 +259,75 @@
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
     
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Afficher
+      </label>
+    
     <a href="./" title="Afficher" class="md-nav__link md-nav__link--active">
       Afficher
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Sommaire</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#code-source" title="Code source" class="md-nav__link">
+    Code source
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#explication-du-fonctionnement" title="Explication du fonctionnement" class="md-nav__link">
+    Explication du fonctionnement
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#header" title="Header" class="md-nav__link">
+    Header
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#decoupage-de-la-requete" title="Découpage de la requete" class="md-nav__link">
+    Découpage de la requete
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-de-la-connection" title="Test de la connection" class="md-nav__link">
+    Test de la connection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#execution-de-notre-requete-dajout-dans-la-bdd" title="Execution de notre requete d'ajout dans la BDD" class="md-nav__link">
+    Execution de notre requete d'ajout dans la BDD
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -514,6 +580,61 @@
   
   
   
+    <label class="md-nav__title" for="toc">Sommaire</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#code-source" title="Code source" class="md-nav__link">
+    Code source
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#explication-du-fonctionnement" title="Explication du fonctionnement" class="md-nav__link">
+    Explication du fonctionnement
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#header" title="Header" class="md-nav__link">
+    Header
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#decoupage-de-la-requete" title="Découpage de la requete" class="md-nav__link">
+    Découpage de la requete
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-de-la-connection" title="Test de la connection" class="md-nav__link">
+    Test de la connection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#execution-de-notre-requete-dajout-dans-la-bdd" title="Execution de notre requete d'ajout dans la BDD" class="md-nav__link">
+    Execution de notre requete d'ajout dans la BDD
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -527,7 +648,94 @@
                 
                   <h1>Afficher</h1>
                 
-                
+                <h2 id="code-source">Code source</h2>
+<p>Lien du raw sur <a href="https://raw.githubusercontent.com/Blackksoulls/phoenix3/api/show.php">github</a> <em>(Pour le telecharger voir dans la partie <a href="../../help/">Support</a> de la doc)</em></p>
+<h2 id="explication-du-fonctionnement">Explication du fonctionnement</h2>
+<p><em>Le code est en php, pour vous remettre dedans ou pour débuter rapidement (si vous avez déjà des bases en programmation) <a href="https://learnxinyminutes.com/docs/php/">PHP in Ymin</a></em></p>
+<p>(<ins>Les lignes de code surlignées sont à ne pas oublier</ins>)</p>
+<h3 id="header">Header</h3>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="hll"><span class="nb">error_reporting</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</span><span class="nb">header</span><span class="p">(</span><span class="s2">&quot;Content-Type: application/json; charset=UTF-8&quot;</span><span class="p">);</span>
+<span class="hll"><span class="nb">header</span><span class="p">(</span><span class="s1">&#39;Access-Control-Allow-Origin: *&#39;</span><span class="p">);</span>
+</span><span class="hll"><span class="nb">header</span><span class="p">(</span><span class="s1">&#39;Access-Control-Allow-Methods: GET, POST&#39;</span><span class="p">);</span>
+</span></pre></div>
+</td></tr></table>
+
+<ul>
+<li><code class="codehilite"><span class="nb">error_reporting</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span></code> Défini le niveau d&rsquo;erreur automatiques à 0, donc aucune erreur n&rsquo;est retournée par php.</li>
+<li><code class="codehilite"><span class="nb">header</span><span class="p">(</span><span class="s1">&#39;Access-Control-Allow-Origin: *&#39;</span><span class="p">);</span></code>  Défini l&rsquo;accès au fichier par une url. Ici, autorise tout le monde à y accéder. <em>Pas super sécurisé, je sais</em> <img alt="😓" class="emojione" src="https://cdn.jsdelivr.net/emojione/assets/svg/1f613.svg" title=":sweat:" />.</li>
+<li><code class="codehilite"><span class="nb">header</span><span class="p">(</span><span class="s1">&#39;Access-Control-Allow-Methods: GET, POST&#39;</span><span class="p">);</span></code> Accepte les requetes <ins>POST</ins> et les requetes <ins>GET</ins>.</li>
+</ul>
+<h3 id="decoupage-de-la-requete">Découpage de la requete</h3>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="hll"><span class="nv">$postdata</span> <span class="o">=</span> <span class="nb">file_get_contents</span><span class="p">(</span><span class="s2">&quot;php://input&quot;</span><span class="p">);</span>
+</span><span class="hll"><span class="nv">$request</span> <span class="o">=</span> <span class="nb">json_decode</span><span class="p">(</span><span class="nv">$postdata</span><span class="p">);</span>
+</span><span class="nv">$bdd_host</span> <span class="o">=</span> <span class="nv">$request</span><span class="o">-&gt;</span><span class="na">host</span> <span class="o">?:</span> <span class="s1">&#39;localhost&#39;</span><span class="p">;</span>
+<span class="nv">$bdd_db</span> <span class="o">=</span> <span class="nv">$request</span><span class="o">-&gt;</span><span class="na">dbdb</span> <span class="o">?:</span> <span class="s1">&#39;phoenix3&#39;</span><span class="p">;</span>
+<span class="nv">$bdd_user</span> <span class="o">=</span> <span class="nv">$request</span><span class="o">-&gt;</span><span class="na">username</span> <span class="o">?:</span> <span class="s1">&#39;root&#39;</span><span class="p">;</span>
+<span class="nv">$bdd_password</span> <span class="o">=</span> <span class="nv">$request</span><span class="o">-&gt;</span><span class="na">password</span> <span class="o">?:</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+<span class="nv">$table</span> <span class="o">=</span> <span class="nv">$request</span><span class="o">-&gt;</span><span class="na">table</span> <span class="o">?:</span> <span class="s1">&#39;item_database&#39;</span><span class="p">;</span>
+<span class="nv">$show</span> <span class="o">=</span> <span class="nv">$request</span><span class="o">-&gt;</span><span class="na">show</span> <span class="o">?:</span> <span class="s1">&#39;all&#39;</span><span class="p">;</span>
+</pre></div>
+</td></tr></table>
+
+<ul>
+<li><code class="codehilite"><span class="nv">$postdata</span> <span class="nb">file_get_contents</span><span class="p">(</span><span class="s2">&quot;php://input&quot;</span><span class="p">);</span></code> Récupère le contenu brut de la requete.</li>
+<li><code class="codehilite"><span class="nv">$request</span> <span class="o">=</span> <span class="nb">json_decode</span><span class="p">(</span><span class="nv">$postdata</span><span class="p">);</span></code> Traduit le contenu de la requete pour pouvoir le traiter dans le code (requete encodée en <a href="https://learnxinyminutes.com/docs/json/">JSON</a>)</li>
+<li>Ensuite les variables sont toutes traduites de la meme façon: <code class="codehilite"><span class="nv">$nouvelleVarPhp</span> <span class="o">=</span> <span class="nv">$request</span><span class="o">-&gt;</span><span class="na">infoAretrouver</span> <span class="o">?:</span> <span class="s1">&#39;valeurParDefaut&#39;</span></code></li>
+</ul>
+<h3 id="test-de-la-connection">Test de la connection</h3>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nv">$con</span> <span class="o">=</span> <span class="nb">mysql_connect</span><span class="p">(</span><span class="nv">$bdd_host</span><span class="p">,</span><span class="nv">$bdd_user</span><span class="p">,</span><span class="nv">$bdd_password</span><span class="p">)</span> <span class="k">or</span> <span class="k">die</span> <span class="p">(</span><span class="s1">&#39;error&#39;</span><span class="p">);</span>
+<span class="nb">mysql_select_db</span><span class="p">(</span><span class="nv">$bdd_db</span><span class="p">,</span> <span class="nv">$con</span><span class="p">);</span>
+</pre></div>
+</td></tr></table>
+
+<ul>
+<li><code class="codehilite"><span class="nv">$con</span> <span class="o">=</span> <span class="nb">mysql_connect</span><span class="p">(</span><span class="nv">$bdd_host</span><span class="p">,</span><span class="nv">$bdd_user</span><span class="p">,</span><span class="nv">$bdd_password</span><span class="p">)</span></code> Tente de se connecter à la BDD à l&rsquo;aide de l&rsquo;url et des identifiants.</li>
+<li><code class="codehilite"><span class="k">or</span> <span class="k">die</span> <span class="p">(</span><span class="s2">&quot;error&quot;</span><span class="p">);</span></code> Si l&rsquo;API n&rsquo;arrive pas à s&rsquo;y connecter s&rsquo;arrete là et renvoie le code <strong>error</strong>.</li>
+<li><code class="codehilite"><span class="nb">mysql_select_db</span><span class="p">(</span><span class="nv">$bdd_db</span><span class="p">,</span> <span class="nv">$con</span><span class="p">)</span></code> Selectionne la BDD dans MySQL. (Chez nous la BDD phoenix3).</li>
+</ul>
+<h3 id="execution-de-notre-requete-dajout-dans-la-bdd">Execution de notre requete d&rsquo;ajout dans la BDD</h3>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="nv">$show</span> <span class="o">==</span> <span class="s1">&#39;all&#39;</span><span class="p">)</span> <span class="p">{</span>
+<span class="nv">$qry_res</span> <span class="o">=</span> <span class="nb">mysql_query</span><span class="p">(</span><span class="s1">&#39;SELECT * FROM &#39;</span> <span class="o">.</span> <span class="nv">$table</span><span class="p">);</span>
+<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nv">$qry_res</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">die</span><span class="p">(</span><span class="s1">&#39;error&#39;</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="nv">$rows</span> <span class="o">=</span> <span class="k">array</span><span class="p">();</span>
+<span class="k">while</span> <span class="p">(</span><span class="nv">$r</span> <span class="o">=</span> <span class="nb">mysql_fetch_assoc</span><span class="p">(</span><span class="nv">$qry_res</span><span class="p">))</span> <span class="p">{</span>
+    <span class="nv">$rows</span><span class="p">[]</span> <span class="o">=</span> <span class="nv">$r</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">echo</span> <span class="nb">json_encode</span><span class="p">(</span><span class="nv">$rows</span><span class="p">);</span>
+<span class="p">};</span>
+</pre></div>
+</td></tr></table>
+
+<ul>
+<li><code class="codehilite"><span class="nv">$qry_res</span> <span class="o">=</span> <span class="nb">mysql_query</span><span class="p">(</span><span class="s1">&#39;SELECT * FROM &#39;</span> <span class="o">.</span> <span class="nv">$table</span><span class="p">);</span></code> Construit, execute la requete SQL pour afficher la table de la BDD.</li>
+<li><code class="codehilite"><span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nv">$qry_res</span><span class="p">)</span> <span class="p">{</span></code> Si il n&rsquo;y a pas de réponse, arreter le programme et retourner le code <strong>error</strong></li>
+<li><code class="codehilite"><span class="k">while</span> <span class="p">(</span><span class="nv">$r</span> <span class="o">=</span> <span class="nb">mysql_fetch_assoc</span><span class="p">(</span><span class="nv">$qry_res</span><span class="p">))</span> <span class="p">{</span><span class="nv">$rows</span><span class="p">[]</span> <span class="o">=</span> <span class="nv">$r</span><span class="p">;}</span></code> Stocker la table récupérée dans un tableau.</li>
+<li><code class="codehilite"><span class="k">echo</span> <span class="nb">json_encode</span><span class="p">(</span><span class="nv">$rows</span><span class="p">);</span></code> Encoder le tableau en JSON et le renvoyer en retour.</li>
+</ul>
                 
                   
                 
