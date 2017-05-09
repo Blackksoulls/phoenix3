@@ -623,7 +623,22 @@
 <p><strong>6.</strong> Et enfin <code class="codehilite">ionic serve --lab</code></p>
 <p><strong>7.</strong> Vous pouvez maintenant aller voir l&rsquo;application dans votre <a href="http://127.0.0.1:8100">navigateur</a>.</p>
 <h2 id="compiler-lapplication-pour-android">Compiler l&rsquo;application pour Android</h2>
-<p><ins><strong>Partie prévue mais non terminée</strong></ins><img alt="😴" class="emojione" src="https://cdn.jsdelivr.net/emojione/assets/svg/1f634.svg" title=":sleeping:" /></p>
+<p><strong>1.</strong> Telecharger le <a href="https://developer.android.com/studio/index.html">SDK Android</a>. <em>(et l&rsquo;extraire à l&rsquo;endroit que vous preferez <mark>C:/android-sdk</mark> ou encore <mark>/home/user/android-sdk</mark>)</em></p>
+<p><strong>2.</strong> Ajouter le SDK à votre path.</p>
+<ul>
+<li>Pour linux ajoutez dans <mark>~/.bashrc</mark> <em>(ou equivalent)</em>:<br />
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">export</span> <span class="nv">ANDROID_HOME</span><span class="o">=</span><span class="s2">&quot;/path/to/android-sdk&quot;</span>
+<span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$PATH</span><span class="s2">:</span><span class="nv">$ANDROID_HOME</span><span class="s2">/tools:</span><span class="nv">$ANDROID_HOME</span><span class="s2">/platform-tools:/home/kuro/android-studio/gradle/gradle-3.2/bin/&quot;</span>
+</pre></div>
+</td></tr></table></li>
+<li>Pour window: <a href="https://www.howtogeek.com/118594/how-to-edit-your-system-path-for-easy-command-line-access/">tuto</a> et ajoutez une autre variable <em>ANDROID_HOME</em> contenant le chemin vers le sdk.</li>
+</ul>
+<p><strong>3.</strong> Ensuite allez dans le dossier de l&rsquo;application.</p>
+<p><strong>4.</strong> Executez la commande suivante: <code class="codehilite">cordova platform add android@6.2.3</code> <em>(cela ajoute la possibilite de compiler avec le dernier sdk de google)</em></p>
+<p><strong>5.</strong> Ensuite <strong>branchez votre telephone a l&rsquo;ordinateur</strong> et un petit <code class="codehilite">adb devices</code>, regardez que <ins>votre telephone soit dans la liste et marque comme &ldquo;device&rdquo;</ins> <em>(sinon acceptez la demande d&rsquo;authorisation sur votre telephone)</em>, pour activer adb sur votre telephone allez dans les options de developpement. Et activez <strong>Débogage USB</strong>. <em>(Pour activer les options de dev. c&rsquo;est <a href="http://www.frandroid.com/android/developpement/184906_comment-acceder-au-mode-developpeur-sur-android">ici</a>)</em></p>
+<p><strong>6.</strong> Vous pouvez maintenant faire un <code class="codehilite">ionic run android</code> pour installer l&rsquo;application par usb sur votre telephone.</p>
+<p><strong>7.</strong> Si vous voulez juste le fichier .apk: <code class="codehilite">ionic build android</code> et ensuite allez dans <mark>platforms/android/build/outputs/apk/</mark> c&rsquo;est le fichier <mark><ins>android-debug.apk</ins></mark> qui s&rsquo;y trouve.</p>
                 
                   
                 
