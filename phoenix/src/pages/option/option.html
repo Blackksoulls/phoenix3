@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{ 'params' | translate }}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+      <ion-card>
+        <ion-card-header class="kuro_bold">
+          Paramètres BDD:
+        </ion-card-header>
+        <ion-list>
+          <ion-item>
+            <ion-label floating>HOST:</ion-label>
+            <ion-input (input)="saveDBLogin()" [(ngModel)]="dburl"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label floating>TABLE:</ion-label>
+            <ion-input (input)="saveDBLogin()" [(ngModel)]="dbtable"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label floating>DB:</ion-label>
+            <ion-input (input)="saveDBLogin()" [(ngModel)]="dbdb"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label floating>{{ 'username' | translate }}:</ion-label>
+            <ion-input (input)="saveDBLogin()" [(ngModel)]="dbuser" type="text"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label floating>{{ 'password' | translate }}:</ion-label>
+            <ion-input (input)="saveDBLogin()" [(ngModel)]="dbpass" type="password"></ion-input>
+          </ion-item>
+          <!-- <ion-item>
+            <button ion-button block color="primary" (click)="saveDBLogin()">
+              Valider
+            </button>
+          </ion-item> -->
+        </ion-list>
+      </ion-card>
+      <ion-item>
+        <ion-label>{{ 'dark' | translate }}</ion-label>
+        <ion-toggle color="primary" (ionChange)="saveData()" [(ngModel)]="theme"></ion-toggle>
+      </ion-item>
+      <ion-item>
+        <ion-label>Langue</ion-label>
+        <ion-select (ionChange)="saveData()" [(ngModel)]="langSwitch" default="default">
+          <ion-option value="default">Default</ion-option>
+          <ion-option value="fr">Français</ion-option>
+          <ion-option value="en">Anglais</ion-option>
+        </ion-select>
+      </ion-item>
+      <!-- <ion-item>
+        <button ion-button block color="primary" (click)="saveData()">
+          Enregistrer
+        </button>
+      </ion-item> -->
+  </ion-list>
+</ion-content>
