@@ -14,10 +14,10 @@
     $textcontent = $request->textcontent;
     $price = $request->price;
     $nb = $request->nb;
-    $pic = $request->pic;//$donnees['pic'];
-    $datevalue = $request->datevalue;//$donnees['date'];
+    $pic = $request->pic;
+    $datevalue = $request->datevalue;
 
-    $con = mysql_connect($bdd_host,$bdd_user,$bdd_password) or die ("Failed to connect to MySQL: " . mysql_error());
+    $con = mysql_connect($bdd_host,$bdd_user,$bdd_password) or die ("2");
     mysql_select_db($bdd_db, $con);
 
     $qry_em = 'SELECT count(*) as cnt from ' . $table . ' where textcontent="' . $textcontent . '"';

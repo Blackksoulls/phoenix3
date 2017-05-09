@@ -12,14 +12,13 @@
     $table = $request->table ?: 'item_database';
     $show = $request->show ?: 'all';
 
-    $con = mysql_connect($bdd_host,$bdd_user,$bdd_password) or die ('error');//("Failed to connect to MySQL: " . mysql_error($con));
+    $con = mysql_connect($bdd_host,$bdd_user,$bdd_password) or die ("error");
     mysql_select_db($bdd_db, $con);
 
     if ($show == 'all') {
         $qry_res = mysql_query('SELECT * FROM ' . $table);
 
-        if (!$qry_res) { // add this check.
-            //die('Invalid query: ' . mysql_error($con));
+        if (!$qry_res) {
             die('error');
         }
 
