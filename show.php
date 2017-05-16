@@ -12,14 +12,14 @@
     $table = $request->table ?: 'item_database';
     $show = $request->show ?: 'all';
 
-    $con = mysql_connect($bdd_host,$bdd_user,$bdd_password) or die ("error");
+    $con = mysql_connect($bdd_host,$bdd_user,$bdd_password) or die (json_encode('error'));
     mysql_select_db($bdd_db, $con);
 
     if ($show == 'all') {
         $qry_res = mysql_query('SELECT * FROM ' . $table);
 
         if (!$qry_res) {
-            die('error');
+            die(json_encode('error'));
         }
 
         $rows = array();
