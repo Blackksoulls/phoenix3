@@ -41,18 +41,18 @@ Les données de la machine seront envoyés sur une carte de traitement interne �
 
 ### **Ou nous en sommes:**
 - [x] **Diagramme Gantt**
-- [ ] **Diagrammes SysML**
+- [x] **Diagrammes SysML**
 	- [x] Diagramme Exigences
-	- [ ] Diagramme Définition de Blocks
-	- [ ] Diagrammes de Blocks Interne
+	- [x] Diagramme Définition de Blocks
+	- [x] Diagrammes de Blocks Interne
 	- [x] Diagramme de cas d'utilisation
-	- [ ] Diagrammes de séquence
-	- [ ] Diagrammes d'état
+	- [x] Diagrammes de séquence
+	- [x] Diagrammes d'état
 - [x] **Carte mentale du projet**
 - [x] **Revue de Projet 1**
-- [ ] **Revue de Projet 2**
+- [x] **Revue de Projet 2**
 - [ ] **Revue de Projet finale**
-- [ ] **Prototypes**
+- [x] **Prototypes**
 - [ ] __*Projet fini*__
 
 ## Sommaire
@@ -82,24 +82,26 @@ Les données de la machine seront envoyés sur une carte de traitement interne �
 
 - [13/12/2016] → [28/03/2017] - L'interface homme - machine est presque terminée (il reste la couche de scripting à faire), le serveur est opérationnel, la partie de reconnaissance NFC est faite, il manque le contrôle des rouleaux en fonction de la commande. L'application est presque terminée, il manque encore la personnalisation de la BDD, la gestion de notifications push et le thème Jour / Nuit.
 
+- [28/03/2017] → [29/05/2017] - Le projet est en phase terminale, l'application est presque finie, quelques bugs visuels subsistes. L'interface homme - machine n'a plus besoin que d'envoyer les commandes à la BDD, la partie serveur est terminée et la partie intra-machine est presque complétée, avec quelques corrections à apporter.
+
 <!-- ## Partie 1 -->
 
 <!-- ## Partie 2 -->
 
 ---
 
-# Diagrammes
+<!--# Diagrammes
 ## Gantt
-![Gantt Diag](diagrams/gantt.png)
+![Gantt Diag](diagrams/gantt.png) -->
 
-## Exigences
-![Exi Diag](diagrams/exi.bmp)
+<!--## Exigences
+![Exi Diag](diagrams/exi.bmp) -->
 
-## Carte mentale
-![CM](diagrams/mental-card-project.jpg)
+<!--## Carte mentale
+![CM](diagrams/mental-card-project.jpg) -->
 
-## Cas utilisation
-![CU](diagrams/cas-utils.png)
+<!--## Cas utilisation
+![CU](diagrams/cas-utils.png) -->
 
 
 [gant]: #gantt
