@@ -58,12 +58,12 @@ Les données de la machine seront envoyés sur une carte de traitement interne �
 ## Sommaire
 1. [Logbook](#logbook)
 	* [Avant projet](#avant-projet)
-2. [Différents diagrammes](#diagrammes)
+<!-- 2. [Différents diagrammes](#diagrammes)
 	* [Gantt][gant]
 	* [Exigences][exi]
 	* [Carte mentale][cm]
 	* [Cas utilisation][cu]
-
+-->
 <!-- 3. [Documentation]()
 4. [Contact](#contact)
 5. [Credits](#credits) -->
