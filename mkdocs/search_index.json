@@ -2,12 +2,12 @@
     "docs": [
         {
             "location": "/", 
-            "text": "Bienvenue !\n\n\nBienvenue sur la documentation de l\napplication mobile de Phoenix3.\n\n\nLiens utiles:\n\n- \nLicense\n\n- \nNotes de version\n\n- \nCredit\n\n\nPour me contacter:\n\n- \nTwitter\n\n- \n\n\nPhoenix3 Project\n\n\nLe \nPhoenix3 project\n est le projet d\nun distributeur auto-g\u00e9r\u00e9 avec une interface graphique tactile pour commander, un serveur de centralisation des donn\u00e9es et une application de maintenance.\n\n\nApplication mobile\n\n\nL\napplication mobile est d\u00e9velopp\u00e9e \u00e0 l\naide du framework \nIonic 2\n (XHTML, \nTypescript\n, \nSASS\n), l\nAPI \u00e0 l\naide du \nPHP\n et la base de donn\u00e9e est en MySQL.", 
+            "text": "Bienvenue !\n\n\nBienvenue sur la documentation de l\napplication mobile de Phoenix3.\n\n\nLiens utiles:\n\n- \nLicense\n\n- \nNotes de version\n\n- \nCredit\n\n\nPour me contacter:\n\n- \n\n\nPhoenix3 Project\n\n\nLe \nPhoenix3 project\n est le projet d\nun distributeur auto-g\u00e9r\u00e9 avec une interface graphique tactile pour commander, un serveur de centralisation des donn\u00e9es et une application de maintenance.\n\n\nApplication mobile\n\n\nL\napplication mobile est d\u00e9velopp\u00e9e \u00e0 l\naide du framework \nIonic 2\n (XHTML, \nTypescript\n, \nSASS\n), l\nAPI \u00e0 l\naide du \nPHP\n et la base de donn\u00e9e est en MySQL.", 
             "title": "Acceuil"
         }, 
         {
             "location": "/#bienvenue", 
-            "text": "Bienvenue sur la documentation de l application mobile de Phoenix3.  Liens utiles: \n-  License \n-  Notes de version \n-  Credit  Pour me contacter: \n-  Twitter \n-", 
+            "text": "Bienvenue sur la documentation de l application mobile de Phoenix3.  Liens utiles: \n-  License \n-  Notes de version \n-  Credit  Pour me contacter: \n-", 
             "title": "Bienvenue !"
         }, 
         {
@@ -177,33 +177,233 @@
         }, 
         {
             "location": "/APP/home/", 
+            "text": "Acceuil\n\n\nCode source\n\n\nLien du raw sur \ngithub\n \n(Pour le telecharger voir dans la partie \nSupport\n de la doc)\n\n\nExplication du fonctionnement\n\n\nLe code est en typescript, pour vous remettre dedans ou pour d\u00e9buter rapidement (si vous avez d\u00e9j\u00e0 de \nbonnes\n bases en programmation) \nTypeScript in Ymin\n\n\nionViewDidEnter\n\n\n 1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\n14\n15\n16\n17\nionViewDidEnter() {\n\n    \nthis\n.\nnbadd\n \n=\n \n0\n;\n\n    \nthis\n.\nnbtot\n \n=\n \n0\n;\n\n    \nthis\n.\nstorage\n.\nget\n(\ntrigger\n).\nthen\n((\ndata\n)\n=\n{\n\n      \nif\n \n(\ndata\n)\n \n{\n\n        \nthis\n.\ndataService\n.\nshowDB\n(\nfalse\n);\n\n        \nif\n \n(\nthis\n.\ndataService\n.\nvoidReturn\n \n==\n \nworked\n)\n \n{\n\n          \nfor\n \n(\nlet\n \ni\n \nin\n \nthis\n.\ndataService\n.\nitems\n)\n \n{\n\n              \nthis\n.\nnbtot\n \n++\n;\n\n          \n}\n\n          \nfor\n \n(\nlet\n \ni\n \nin\n \nthis\n.\ndataService\n.\nitems\n)\n \n{\n\n              \nthis\n.\nnbadd\n \n=\n \nthis\n.\nnbadd\n \n+\n \nNumber\n(\nthis\n.\ndataService\n.\nitems\n[\ni\n].\nnb\n);\n\n          \n}\n\n        \n}\n\n      \n}\n\n    \n});\n\n  \n}\n\n\n\n\n\n\n\n\n\nionViewDidEnter() {\n permet que lorsque la page est charg\u00e9 et l\nutilisateur dessus executer la fonction\n\n\nthis\n.\nstorage\n.\nget\n(\ntrigger\n).\nthen\n((\ndata\n)\n=\n{\n permet de r\u00e9cuperer la valeur de \ntrigger\n stock\u00e9 en local. Grace \u00e0 la promise retourn\u00e9e par \nstorage.get\n\n\nthis\n.\ndataService\n.\nshowDB\n(\nfalse\n);\n vas actualiser la base de donn\u00e9e locale\n\n\nif\n \n(\nthis\n.\ndataService\n.\nvoidReturn\n \n==\n \nworked\n)\n \n{\n si la valeur \nvoidReturn\n du gestionnaire \ndataService\n est \u00e9gale \u00e0 \nworked\n alors execute la fonction\n\n\nfor\n \n(\nlet\n \ni\n \nin\n \nthis\n.\ndataService\n.\nitems\n)\n \n{\nthis\n.\nnbtot\n \n++\n;}\n pour chaque \u00e9l\u00e9ment dans le tableau \nitems\n du gestionnaire de donn\u00e9es (dataService) augmente le total d\n\u00e9l\u00e9ments diff\u00e9rents\n\n\nfor\n \n(...){\nthis\n.\nnbadd\n \n=\n \nthis\n.\nnbadd\n \n+\n \nNumber\n(\nthis\n.\ndataService\n.\nitems\n[\ni\n].\nnb\n);}\n pour chaque \u00e9l\u00e9ment dans le tableau \nitems\n du gestionnaire de donn\u00e9es ajoute au nombre total d\n\u00e9l\u00e9ments la valeur convertie en nombre de la cl\u00e9 nb de l\n\u00e9l\u00e9ment it\u00e9r\u00e9 par la boucle \nfor", 
+            "title": "Acceuil"
+        }, 
+        {
+            "location": "/APP/home/#acceuil", 
             "text": "", 
             "title": "Acceuil"
         }, 
         {
+            "location": "/APP/home/#code-source", 
+            "text": "Lien du raw sur  github   (Pour le telecharger voir dans la partie  Support  de la doc)", 
+            "title": "Code source"
+        }, 
+        {
+            "location": "/APP/home/#explication-du-fonctionnement", 
+            "text": "Le code est en typescript, pour vous remettre dedans ou pour d\u00e9buter rapidement (si vous avez d\u00e9j\u00e0 de  bonnes  bases en programmation)  TypeScript in Ymin", 
+            "title": "Explication du fonctionnement"
+        }, 
+        {
+            "location": "/APP/home/#ionviewdidenter", 
+            "text": "1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\n14\n15\n16\n17 ionViewDidEnter() { \n     this . nbadd   =   0 ; \n     this . nbtot   =   0 ; \n     this . storage . get ( trigger ). then (( data ) = { \n       if   ( data )   { \n         this . dataService . showDB ( false ); \n         if   ( this . dataService . voidReturn   ==   worked )   { \n           for   ( let   i   in   this . dataService . items )   { \n               this . nbtot   ++ ; \n           } \n           for   ( let   i   in   this . dataService . items )   { \n               this . nbadd   =   this . nbadd   +   Number ( this . dataService . items [ i ]. nb ); \n           } \n         } \n       } \n     }); \n   }     ionViewDidEnter() {  permet que lorsque la page est charg\u00e9 et l utilisateur dessus executer la fonction  this . storage . get ( trigger ). then (( data ) = {  permet de r\u00e9cuperer la valeur de  trigger  stock\u00e9 en local. Grace \u00e0 la promise retourn\u00e9e par  storage.get  this . dataService . showDB ( false );  vas actualiser la base de donn\u00e9e locale  if   ( this . dataService . voidReturn   ==   worked )   {  si la valeur  voidReturn  du gestionnaire  dataService  est \u00e9gale \u00e0  worked  alors execute la fonction  for   ( let   i   in   this . dataService . items )   { this . nbtot   ++ ;}  pour chaque \u00e9l\u00e9ment dans le tableau  items  du gestionnaire de donn\u00e9es (dataService) augmente le total d \u00e9l\u00e9ments diff\u00e9rents  for   (...){ this . nbadd   =   this . nbadd   +   Number ( this . dataService . items [ i ]. nb );}  pour chaque \u00e9l\u00e9ment dans le tableau  items  du gestionnaire de donn\u00e9es ajoute au nombre total d \u00e9l\u00e9ments la valeur convertie en nombre de la cl\u00e9 nb de l \u00e9l\u00e9ment it\u00e9r\u00e9 par la boucle  for", 
+            "title": "ionViewDidEnter"
+        }, 
+        {
             "location": "/APP/bdd/", 
-            "text": "", 
+            "text": "Page affichage base de donn\u00e9e\n\n\nCode source\n\n\nLien du raw sur \ngithub\n \n(Pour le telecharger voir dans la partie \nSupport\n de la doc)\n\n\nExplication du fonctionnement\n\n\nLe code est en typescript, pour vous remettre dedans ou pour d\u00e9buter rapidement (si vous avez d\u00e9j\u00e0 de \nbonnes\n bases en programmation) \nTypeScript in Ymin\n\n\nConstructeur\n\n\n1\n2\n3\n4\n5\n6\nevents\n.\nsubscribe\n(\ndbReloader\n,\n \n()\n \n=\n \n{\n\n  \nthis\n.\ndataService\n.\nshowDB\n(\ntrue\n);\n\n  \nthis\n.\nnavCtrl\n.\ninsert\n(\n0\n,\nDatabase\n).\nthen\n(()\n=\n{\n\n    \nthis\n.\nnavCtrl\n.\npop\n();\n\n  \n});\n\n\n});\n\n\n\n\n\n\n\n\n\nevents\n.\nsubscribe\n(\ndbReloader\n,\n \n()\n \n=\n \n{\n \u00e9coute les appels de l\n\u00e9venement \ndbReloader\n et execute la fonction suivante si appel\u00e9\n\n\nthis\n.\ndataService\n.\nshowDB\n(\ntrue\n);\n actualise la base de donn\u00e9e locale\n\n\nthis\n.\nnavCtrl\n.\ninsert\n(\n0\n,\nDatabase\n).\nthen\n(()\n=\n{\nthis\n.\nnavCtrl\n.\npop\n();});\n ajoute la page \nDatabase\n en premier donc sous la page actuelle et enl\u00e8ve la page actuelle (ici \nDatabase\n aussi)\n\n\n\n\nionViewWillLoad\n\n\n 1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\n14\n15\nionViewWillLoad() {\n\n  \nthis\n.\ndataService\n.\nshowDB\n(\nfalse\n);\n\n  \nthis\n.\nitems\n \n=\n \nthis\n.\ndataService\n.\nitems\n;\n\n  \nthis\n.\nstorage\n.\nget\n(\ntrigger\n).\nthen\n((\ndata\n)\n=\n{\n\n    \nif\n \n(\n!\ndata\n)\n \n{\n\n      \nthis\n.\nnavCtrl\n.\ninsert\n(\n0\n,\nTest\n).\nthen\n(()\n=\n{\n\n        \nthis\n.\nnavCtrl\n.\npop\n();\n\n      \n});\n\n    \n}\n \nelse\n \nif\n \n(\nthis\n.\ndataService\n.\nvoidReturn\n \n==\n \nerror\n){\n\n      \nthis\n.\nnavCtrl\n.\ninsert\n(\n0\n,\nTest\n).\nthen\n(()\n=\n{\n\n        \nthis\n.\nnavCtrl\n.\npop\n();\n\n      \n});\n\n    \n}\n\n  \n});\n\n\n}\n\n\n\n\n\n\n\n\n\nthis\n.\nitems\n \n=\n \nthis\n.\ndataService\n.\nitems\n;\n actualise la variable \nitems\n de la page avec la variable \nitems\n du gestionnaire de donn\u00e9es \ndataService\n\n\nthis\n.\nstorage\n.\nget\n(\ntrigger\n).\nthen\n((\ndata\n)\n=\n{\n permet de r\u00e9cuperer la valeur de \ntrigger\n stock\u00e9 en local. Grace \u00e0 la promise retourn\u00e9e par \nstorage.get\n\n\n\n\nionViewDidLoad\n\n\n 1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\nionViewDidLoad() {\n\n  \nthis\n.\ndataService\n.\nshowDB\n(\ntrue\n);\n\n  \nthis\n.\nsearch\n();\n\n  \nthis\n.\nsearchControl\n.\nvalueChanges\n.\ndebounceTime\n(\n700\n).\nsubscribe\n(\nsearch\n \n=\n \n{\n\n      \nthis\n.\nsearch\n();\n\n  \n});\n\n\n}\n\n\nsearch() {\n\n  \nthis\n.\nitems\n \n=\n \nthis\n.\ndataService\n.\nfilterItems\n(\nthis\n.\nsearchTerm\n);\n\n\n}\n\n\n\n\n\n\n\n\n\nCette fonction est appel\u00e9e une fois lorsque la page est charg\u00e9e en cache\n\n\nthis\n.\nitems\n \n=\n \nthis\n.\ndataService\n.\nfilterItems\n(\nthis\n.\nsearchTerm\n);\n assigne \u00e0 la variable \nitems\n la valeur retourn\u00e9e par le gestionnaire de donn\u00e9es en filtrant en fonction du terme entr\u00e9\n\n\nthis\n.\nsearchControl\n.\nvalueChanges\n.\ndebounceTime\n(\n700\n).\nsubscribe\n(\nsearch\n \n=\n \n{\n en cas de changement sur la variable \nsearchControl\n execute le code suivant, en ignorant tout les changement durant les prochaines 700ms (pour eviter la surcharge d\nappels sur la fonction)\n\n\n\n\nContext menu\n\n\n 1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\n14\n15\nshowAction\n(\nitem\n,\n \nitemC\n)\n \n{\n\n  \nthis\n.\nitemChoosed\n \n=\n \nitemC\n;\n\n    \nlet\n \nactionSheet\n \n=\n \nthis\n.\nactionSheetCtrl\n.\ncreate\n({\n\n    \ntitle\n:\n \ntexte nommant le menu\n,\n\n    \nbuttons\n:\n \n[\n\n    \n{\n\n        \ntext\n:\n \ntexte sur le bouton\n,\n\n        \nhandler\n:\n \n()\n \n=\n \n{\n\n            \n//something to execute\n\n        \n}\n\n        \n}\n\n        \n}]\n\n    \n});\n\n  \nactionSheet\n.\npresent\n();\n\n\n}\n\n\n\n\n\n\n\n\n\nactionSheet\n.\npresent\n();\n permet d\nactiver \nl\nactionSheet", 
             "title": "BDD"
         }, 
         {
-            "location": "/APP/settings/", 
+            "location": "/APP/bdd/#page-affichage-base-de-donnee", 
             "text": "", 
+            "title": "Page affichage base de donn\u00e9e"
+        }, 
+        {
+            "location": "/APP/bdd/#code-source", 
+            "text": "Lien du raw sur  github   (Pour le telecharger voir dans la partie  Support  de la doc)", 
+            "title": "Code source"
+        }, 
+        {
+            "location": "/APP/bdd/#explication-du-fonctionnement", 
+            "text": "Le code est en typescript, pour vous remettre dedans ou pour d\u00e9buter rapidement (si vous avez d\u00e9j\u00e0 de  bonnes  bases en programmation)  TypeScript in Ymin", 
+            "title": "Explication du fonctionnement"
+        }, 
+        {
+            "location": "/APP/bdd/#constructeur", 
+            "text": "1\n2\n3\n4\n5\n6 events . subscribe ( dbReloader ,   ()   =   { \n   this . dataService . showDB ( true ); \n   this . navCtrl . insert ( 0 , Database ). then (() = { \n     this . navCtrl . pop (); \n   });  });     events . subscribe ( dbReloader ,   ()   =   {  \u00e9coute les appels de l \u00e9venement  dbReloader  et execute la fonction suivante si appel\u00e9  this . dataService . showDB ( true );  actualise la base de donn\u00e9e locale  this . navCtrl . insert ( 0 , Database ). then (() = { this . navCtrl . pop ();});  ajoute la page  Database  en premier donc sous la page actuelle et enl\u00e8ve la page actuelle (ici  Database  aussi)", 
+            "title": "Constructeur"
+        }, 
+        {
+            "location": "/APP/bdd/#ionviewwillload", 
+            "text": "1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\n14\n15 ionViewWillLoad() { \n   this . dataService . showDB ( false ); \n   this . items   =   this . dataService . items ; \n   this . storage . get ( trigger ). then (( data ) = { \n     if   ( ! data )   { \n       this . navCtrl . insert ( 0 , Test ). then (() = { \n         this . navCtrl . pop (); \n       }); \n     }   else   if   ( this . dataService . voidReturn   ==   error ){ \n       this . navCtrl . insert ( 0 , Test ). then (() = { \n         this . navCtrl . pop (); \n       }); \n     } \n   });  }     this . items   =   this . dataService . items ;  actualise la variable  items  de la page avec la variable  items  du gestionnaire de donn\u00e9es  dataService  this . storage . get ( trigger ). then (( data ) = {  permet de r\u00e9cuperer la valeur de  trigger  stock\u00e9 en local. Grace \u00e0 la promise retourn\u00e9e par  storage.get", 
+            "title": "ionViewWillLoad"
+        }, 
+        {
+            "location": "/APP/bdd/#ionviewdidload", 
+            "text": "1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10 ionViewDidLoad() { \n   this . dataService . showDB ( true ); \n   this . search (); \n   this . searchControl . valueChanges . debounceTime ( 700 ). subscribe ( search   =   { \n       this . search (); \n   });  }  search() { \n   this . items   =   this . dataService . filterItems ( this . searchTerm );  }     Cette fonction est appel\u00e9e une fois lorsque la page est charg\u00e9e en cache  this . items   =   this . dataService . filterItems ( this . searchTerm );  assigne \u00e0 la variable  items  la valeur retourn\u00e9e par le gestionnaire de donn\u00e9es en filtrant en fonction du terme entr\u00e9  this . searchControl . valueChanges . debounceTime ( 700 ). subscribe ( search   =   {  en cas de changement sur la variable  searchControl  execute le code suivant, en ignorant tout les changement durant les prochaines 700ms (pour eviter la surcharge d appels sur la fonction)", 
+            "title": "ionViewDidLoad"
+        }, 
+        {
+            "location": "/APP/bdd/#context-menu", 
+            "text": "1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\n14\n15 showAction ( item ,   itemC )   { \n   this . itemChoosed   =   itemC ; \n     let   actionSheet   =   this . actionSheetCtrl . create ({ \n     title :   texte nommant le menu , \n     buttons :   [ \n     { \n         text :   texte sur le bouton , \n         handler :   ()   =   { \n             //something to execute \n         } \n         } \n         }] \n     }); \n   actionSheet . present ();  }     actionSheet . present ();  permet d activer  l actionSheet", 
+            "title": "Context menu"
+        }, 
+        {
+            "location": "/APP/settings/", 
+            "text": "Page des parametres\n\n\nCode source\n\n\nLien du raw sur \ngithub\n \n(Pour le telecharger voir dans la partie \nSupport\n de la doc)\n\n\nExplication du fonctionnement\n\n\nLe code est en typescript, pour vous remettre dedans ou pour d\u00e9buter rapidement (si vous avez d\u00e9j\u00e0 de \nbonnes\n bases en programmation) \nTypeScript in Ymin\n\n\nionViewDidLoad\n\n\n1\n2\n3\n4\nionViewDidLoad() {\n\n  \nthis\n.\nloadStorage\n();\n\n  \nthis\n.\nlangSelected\n();\n\n\n}\n\n\n\n\n\nLorsque la page charge en cache, actualise la langue selectionn\u00e9e et les diff\u00e9rents parametres existants\n\n\nsaveData\n\n\n1\n2\n3\n4\nsaveData() {\n\n  \nthis\n.\nstorage\n.\nset\n(\nlangSwitch\n,\n \nthis\n.\nlangSwitch\n);\n\n  \nthis\n.\nstorage\n.\nset\n(\ntheme\n,\n \nthis\n.\ntheme\n);\n\n\n}\n\n\n\n\n\nEnregistre la langue et le th\u00e8me en local\n\n\nloadStorage\n\n\n 1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\nloadStorage() {\n\n  \nthis\n.\nstorage\n.\nget\n(\nvariablelocale\n).\nthen\n((\ndata\n)\n=\n{\nthis\n.\nvariablelocale\n=\ndata\n;});\n\n\n  \nif\n \n(\nthis\n.\nvariablelocale\n \n==\n \nundefined\n)\n \n{\n\n    \nthis\n.\nvariablelocale\n \n=\n \ndefault\n;\n\n    \nthis\n.\nstorage\n.\nset\n(\nvariablelocale\n,\n \nthis\n.\nvariablelocale\n);\n\n  \n}\n \nelse\n \n{\n\n    \nthis\n.\nstorage\n.\nget\n(\nvariablelocale\n).\nthen\n((\ndata\n)\n=\n{\nthis\n.\nvariablelocale\n=\ndata\n;});\n\n  \n}\n\n\n}\n\n\n\n\n\nVoil\u00e0 comment sauvegarder les donn\u00e9es \u00e0 l\n\u00e9cran, charge la variable locale, puis regarde sa valeur si \nundefined\n alors la met \u00e0 sa valeur par d\u00e9faut et la sauvegarde en local. Sinon actualise la variable a l\n\u00e9cran\n\n\nsaveDBLogin\n\n\n1\n2\n3\n4\n5\n6\n7\nsaveDBLogin() {\n\n  \nthis\n.\nstorage\n.\nset\n(\ndburl\n,\n \nthis\n.\ndburl\n);\n\n  \nthis\n.\nstorage\n.\nset\n(\ndbtable\n,\n \nthis\n.\ndbtable\n);\n\n  \nthis\n.\nstorage\n.\nset\n(\ndbuser\n,\n \nthis\n.\ndbuser\n);\n\n  \nthis\n.\nstorage\n.\nset\n(\ndbdb\n,\n \nthis\n.\ndbdb\n);\n\n  \nthis\n.\nstorage\n.\nset\n(\ndbpass\n,\n \nthis\n.\ndbpass\n);\n\n\n}\n\n\n\n\n\nStocke les variables \u00e0 l\n\u00e9cran en local\n\n\nlangSelected (non exploit\u00e9 pour le moment)\n\n\n 1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\nlangSelected() {\n\n  \nthis\n.\nstorage\n.\nget\n(\nlangSwitch\n).\nthen\n((\ndata\n)\n=\n{\n\n    \nthis\n.\nlangSwitch\n=\ndata\n;\n\n    \nif\n \n(\nthis\n.\nlangSwitch\n \n==\n \ndefault\n)\n \n{\n\n      \nthis\n.\nlangState\n \n=\n \nthis\n.\nPlat\n.\nlang\n();\n\n      \nif\n \n(\nthis\n.\nlangState\n \n==\n \nen-US\n \n||\n \nthis\n.\nlangState\n \n==\n \nen-UK\n)\n \n{\n\n        \nthis\n.\nlangState\n \n=\n \nen\n;\n\n      \n}\n\n      \nelse\n \nif\n \n(\nthis\n.\nlangState\n \n==\n \nfr-FR\n \n||\n \nthis\n.\nlangState\n \n==\n \nfr-CA\n)\n \n{\n\n        \nthis\n.\nlangState\n \n=\n \nfr\n;\n\n      \n}\n\n      \nelse\n \n{\n\n        \nthis\n.\nlangState\n \n=\n \nen\n;\n\n      \n}\n\n    \n}\n\n    \nif\n \n(\nthis\n.\nlangSwitch\n \n==\n \nfr\n)\n \n{\n\n      \nthis\n.\nlangState\n \n=\n \nfr\n;\n\n    \n}\n\n    \nif\n \n(\nthis\n.\nlangSwitch\n \n==\n \nen\n)\n \n{\n\n      \nthis\n.\nlangState\n \n=\n \nen\n;\n\n    \n}\n\n    \nthis\n.\ntrans\n.\nlangChoose\n(\nthis\n.\nlangState\n);\n\n  \n});\n\n\n}\n\n\n\n\n\n\n\n\n\nif\n \n(\nthis\n.\nlangSwitch\n \n==\n \ndefault\n)\n \n{...}\n si l\noption de langue est \u00e0 d\u00e9faut, utilise la langue du syt\u00e8me\n\n\nif\n \n(\nthis\n.\nlangState\n \n==\n \nen-US\n \n||\n \nthis\n.\nlangState\n \n==\n \nen-UK\n)\n \n{...}\n en fonction du code de langue du syst\u00e8me d\u00e9finie \nlangState\n \u00e0 soit \nfr\n soit \nen\n\n\nthis\n.\ntrans\n.\nlangChoose\n(\nthis\n.\nlangState\n);\n d\u00e9finie les traductions \u00e0 utiliser en fonction de \nlangState\n qui est soit \u00e0 \nfr\n soit \u00e0 \nen", 
             "title": "Params"
         }, 
         {
-            "location": "/APP/about/", 
+            "location": "/APP/settings/#page-des-parametres", 
             "text": "", 
+            "title": "Page des parametres"
+        }, 
+        {
+            "location": "/APP/settings/#code-source", 
+            "text": "Lien du raw sur  github   (Pour le telecharger voir dans la partie  Support  de la doc)", 
+            "title": "Code source"
+        }, 
+        {
+            "location": "/APP/settings/#explication-du-fonctionnement", 
+            "text": "Le code est en typescript, pour vous remettre dedans ou pour d\u00e9buter rapidement (si vous avez d\u00e9j\u00e0 de  bonnes  bases en programmation)  TypeScript in Ymin", 
+            "title": "Explication du fonctionnement"
+        }, 
+        {
+            "location": "/APP/settings/#ionviewdidload", 
+            "text": "1\n2\n3\n4 ionViewDidLoad() { \n   this . loadStorage (); \n   this . langSelected ();  }   \nLorsque la page charge en cache, actualise la langue selectionn\u00e9e et les diff\u00e9rents parametres existants", 
+            "title": "ionViewDidLoad"
+        }, 
+        {
+            "location": "/APP/settings/#savedata", 
+            "text": "1\n2\n3\n4 saveData() { \n   this . storage . set ( langSwitch ,   this . langSwitch ); \n   this . storage . set ( theme ,   this . theme );  }   \nEnregistre la langue et le th\u00e8me en local", 
+            "title": "saveData"
+        }, 
+        {
+            "location": "/APP/settings/#loadstorage", 
+            "text": "1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10 loadStorage() { \n   this . storage . get ( variablelocale ). then (( data ) = { this . variablelocale = data ;}); \n\n   if   ( this . variablelocale   ==   undefined )   { \n     this . variablelocale   =   default ; \n     this . storage . set ( variablelocale ,   this . variablelocale ); \n   }   else   { \n     this . storage . get ( variablelocale ). then (( data ) = { this . variablelocale = data ;}); \n   }  }   \nVoil\u00e0 comment sauvegarder les donn\u00e9es \u00e0 l \u00e9cran, charge la variable locale, puis regarde sa valeur si  undefined  alors la met \u00e0 sa valeur par d\u00e9faut et la sauvegarde en local. Sinon actualise la variable a l \u00e9cran", 
+            "title": "loadStorage"
+        }, 
+        {
+            "location": "/APP/settings/#savedblogin", 
+            "text": "1\n2\n3\n4\n5\n6\n7 saveDBLogin() { \n   this . storage . set ( dburl ,   this . dburl ); \n   this . storage . set ( dbtable ,   this . dbtable ); \n   this . storage . set ( dbuser ,   this . dbuser ); \n   this . storage . set ( dbdb ,   this . dbdb ); \n   this . storage . set ( dbpass ,   this . dbpass );  }   \nStocke les variables \u00e0 l \u00e9cran en local", 
+            "title": "saveDBLogin"
+        }, 
+        {
+            "location": "/APP/settings/#langselected-non-exploite-pour-le-moment", 
+            "text": "1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24 langSelected() { \n   this . storage . get ( langSwitch ). then (( data ) = { \n     this . langSwitch = data ; \n     if   ( this . langSwitch   ==   default )   { \n       this . langState   =   this . Plat . lang (); \n       if   ( this . langState   ==   en-US   ||   this . langState   ==   en-UK )   { \n         this . langState   =   en ; \n       } \n       else   if   ( this . langState   ==   fr-FR   ||   this . langState   ==   fr-CA )   { \n         this . langState   =   fr ; \n       } \n       else   { \n         this . langState   =   en ; \n       } \n     } \n     if   ( this . langSwitch   ==   fr )   { \n       this . langState   =   fr ; \n     } \n     if   ( this . langSwitch   ==   en )   { \n       this . langState   =   en ; \n     } \n     this . trans . langChoose ( this . langState ); \n   });  }     if   ( this . langSwitch   ==   default )   {...}  si l option de langue est \u00e0 d\u00e9faut, utilise la langue du syt\u00e8me  if   ( this . langState   ==   en-US   ||   this . langState   ==   en-UK )   {...}  en fonction du code de langue du syst\u00e8me d\u00e9finie  langState  \u00e0 soit  fr  soit  en  this . trans . langChoose ( this . langState );  d\u00e9finie les traductions \u00e0 utiliser en fonction de  langState  qui est soit \u00e0  fr  soit \u00e0  en", 
+            "title": "langSelected (non exploit\u00e9 pour le moment)"
+        }, 
+        {
+            "location": "/APP/about/", 
+            "text": "A propos (page \ninapp\n)\n\n\nCode source\n\n\nLien du raw sur \ngithub\n \n(Pour le telecharger voir dans la partie \nSupport\n de la doc)\n\n\nExplication du fonctionnement\n\n\nLe code est en typescript, pour vous remettre dedans ou pour d\u00e9buter rapidement (si vous avez d\u00e9j\u00e0 de \nbonnes\n bases en programmation) \nTypeScript in Ymin\n\n\nLa seule fonction: GotoLink\n\n\n1\n2\n3\nGotoLink\n(\nlink\n)\n \n{\n\n  \nwindow\n.\nopen\n(\nlink\n,\n_system\n);\n\n\n};\n\n\n\n\n\nCette fonction permet d\nouvrir les liens dans l\napplication, dans le navigateur par d\u00e9faut", 
             "title": "A propos"
         }, 
         {
-            "location": "/APP/data/", 
+            "location": "/APP/about/#a-propos-page-inapp", 
             "text": "", 
+            "title": "A propos (page 'inapp')"
+        }, 
+        {
+            "location": "/APP/about/#code-source", 
+            "text": "Lien du raw sur  github   (Pour le telecharger voir dans la partie  Support  de la doc)", 
+            "title": "Code source"
+        }, 
+        {
+            "location": "/APP/about/#explication-du-fonctionnement", 
+            "text": "Le code est en typescript, pour vous remettre dedans ou pour d\u00e9buter rapidement (si vous avez d\u00e9j\u00e0 de  bonnes  bases en programmation)  TypeScript in Ymin", 
+            "title": "Explication du fonctionnement"
+        }, 
+        {
+            "location": "/APP/about/#la-seule-fonction-gotolink", 
+            "text": "1\n2\n3 GotoLink ( link )   { \n   window . open ( link , _system );  };   \nCette fonction permet d ouvrir les liens dans l application, dans le navigateur par d\u00e9faut", 
+            "title": "La seule fonction: GotoLink"
+        }, 
+        {
+            "location": "/APP/data/", 
+            "text": "Gestion des donn\u00e9es\n\n\nCode source\n\n\nLien du raw sur \ngithub\n \n(Pour le telecharger voir dans la partie \nSupport\n de la doc)\n\n\nExplication du fonctionnement\n\n\nLe code est en typescript, pour vous remettre dedans ou pour d\u00e9buter rapidement (si vous avez d\u00e9j\u00e0 de \nbonnes\n bases en programmation) \nTypeScript in Ymin\n\n\nImports\n\n\n1\n2\n3\n4\n5\n6\nimport\n \n{\n \nInjectable\n \n}\n \nfrom\n \n@angular/core\n;\n\n\nimport\n \n{\n \nHttp\n,\n \nHeaders\n \n}\n \nfrom\n \n@angular/http\n;\n\n\nimport\n \n{\n \nAlertController\n,\n \nEvents\n \n}\n \nfrom\n \nionic-angular\n;\n\n\nimport\n \nrxjs/add/operator/map\n;\n\n\nimport\n \n{\n \nDatabase\n \n}\n \nfrom\n \n../pages/database/database\n\n\nimport\n \n{\n \nStorage\n \n}\n \nfrom\n \n@ionic/storage\n;\n\n\n\n\n\n\n\n\n\nL\nensemble\n permet d\nimporter les composants n\u00e9cessaires \u00e0 la suite du code (les libs)\n\n\nimport\n \n{\n \nDatabase\n \n}\n \nfrom\n \n../pages/database/database\n pour permettre de rediriger l\nutilisateur sur la page \nDatabase\n\n\n\n\nD\u00e9clarations\n\n\n1\n2\n3\n4\n5\n6\n7\nexport\n \nclass\n \nData\n \n{\n\n  \npublic\n \nitems\n: \nany\n;\n\n  \nitemtmp\n: \nany\n;\n\n  \npublic\n \nvoidReturn\n:\nany\n;\n\n  \npublic\n \nlogin\n:\nany\n;\n\n  \npublic\n \noutput\n:\nany\n;\n\n  \npublic\n \ntrigger\n:\nboolean\n;\n\n\n\n\n\n\n\n\n\nexport\n \nclass\n \nData\n \n{\n permet de d\u00e9clarer la classe Data qui ici d\u00e9finie le module de gestion des donn\u00e9es\n\n\npublic\n ou \nprivate\n \n(si la variable est accessible partout ou pas)\n suivi du nom de la variable et de son type \nnomvariable\n: \ntype\n;\n\n\n\n\nConstruisons les modules exploit\u00e9s par la classe\n\n\n1\n2\n3\nconstructor\n(\npublic\n \nevents\n: \nEvents\n,\n \npublic\n \nhttp\n: \nHttp\n,\n \npublic\n \nalertCtrl\n: \nAlertController\n,\n \npublic\n \nstorage\n: \nStorage\n)\n \n{\n\n  \nthis\n.\nshowDB\n(\nfalse\n);\n\n\n}\n\n\n\n\n\n\n\n\n\nconstructor\n(\npublic\n \nnomModule\n: \nnomImporte\n,...){\n permet de d\u00e9finir un surnom pour les modules utilis\u00e9s dans la classe\n\n\nthis\n.\nshowDB\n(\nfalse\n);\n appelle la fonction \nshowDB\n de la classe actuelle, avec le parametre \nfalse\n pour ne pas r\u00e9initialiser le tableau des donn\u00e9es (\na voir apr\u00e8s\n)\n\n\n\n\nD\u00e9finition des fonctions\n\n\nitemChoose\n\n\n1\n2\n3\nitemChoose\n(\nitem\n)\n \n{\n\n  \nthis\n.\nitemtmp\n \n=\n \nitem\n;\n\n\n}\n\n\n\n\n\n\n\n\n\nthis\n.\nitemtmp\n \n=\n \nitem\n transforme le parametre item en variable globale appartenant \u00e0 la classe \nData\n\n\nC\nest une petite astuce pour sortir une variable d\nune promise (\nne fonctionne pas tout le temps\n et est \nd\u00e9conseill\u00e9\n)\n\n\n\n\nfilterItems\n\n\n1\n2\n3\n4\n5\nfilterItems\n(\nsearchTerm\n){\n\n    \nreturn\n \nthis\n.\nitems\n.\nfilter\n((\nitem\n)\n \n=\n \n{\n\n        \nreturn\n \nitem\n.\ntextcontent\n.\ntoLowerCase\n().\nindexOf\n(\nsearchTerm\n.\ntoLowerCase\n())\n \n \n-\n1\n;\n\n    \n});\n\n\n}\n\n\n\n\n\n\n\n\n\nreturn\n \nthis\n.\nitems\n.\nfiler\n((\nitem\n)\n \n=\n \n{\n retourne un nouveau tableau contenant les \u00e9l\u00e9ments qui passent le teste de la Promise\n\n\nreturn\n \nitem\n.\ntextcontent\n.\ntoLowerCase\n().\nindexOf\n(\nsearchTerm\n.\ntoLowerCase\n())\n \n \n-\n1\n;\n valide la promise pour les \u00e9l\u00e9ments o\u00f9 \ntextcontent\n \n(peut importe majuscule ou miniscule)\n est \u00e9gal \u00e0 \nsearchTerm\n \n(toujours peut importe maj ou min)\n\n\n\n\nshowDB\n\n\nLe code source \u00e9tant trop grand a mettre ici, il a \u00e9t\u00e9 d\u00e9plac\u00e9 \nici\n\n\nPartie 1 - recuperer les donn\u00e9es\n\n\n 1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\nfunction\n \nshowDB\n(\ntest\n)\n \n{\n\n  \nlet\n \nvoidReturn\n \n=\n \n;\n\n  \nlet\n \nitems\n \n=\n \n[{}];\n\n  \nvar\n \ndburlPromise\n \n=\n \nthis\n.\nstorage\n.\nget\n(\ndburl\n);\n\n  \nvar\n \ndbtablePromise\n \n=\n \nthis\n.\nstorage\n.\nget\n(\ndbtable\n);\n\n  \nvar\n \ndbuserPromise\n \n=\n \nthis\n.\nstorage\n.\nget\n(\ndbuser\n);\n\n  \nvar\n \ndbpassPromise\n \n=\n \nthis\n.\nstorage\n.\nget\n(\ndbpass\n);\n\n  \nvar\n \ndbdbPromise\n \n=\n \nthis\n.\nstorage\n.\nget\n(\ndbdb\n);\n\n\n  \nif\n \n(\ntest\n \n==\n \ntrue\n \n||\n \nthis\n.\nitems\n \n==\n \nundefined\n)\n \n{\n\n    \nthis\n.\nitems\n \n=\n \n[{}];\n\n  \n}\n\n\n\n\n\n\n\n\n\nvar\n \npromiseName\n \n=\n \nthis\n.\nstorage\n.\nget\n(\nvariable\n);\n associe la promise retourn\u00e9e par \nthis\n.\nstorage\n.\nget\n(\nvar\n);\n \n(qui r\u00e9cup\u00e8re la valeur de \nvar\n dans les donn\u00e9es locales de l\napplication)\n \u00e0 une variable plus facile \u00e0 manipuler\n\n\nif\n(\ntest\n \n==\n \ntrue\n \n||\n \nthis\n.\nitems\n \n==\n \nundefined\n)\n \n{\n \nthis\n.\nitems\n \n=\n \n[{}];\n \n}\n si le parametre de \nshowDB\n est \ntrue\n ou que \nthis.items\n n\na pas de valeur ; d\u00e9finie \nthis.items\n \u00e0 un tableau vide.\n\n\n\n\nPartie 2 - Se pr\u00e9parer \u00e0 communiquer\n\n\n 1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\nthis\n.\nstorage\n.\nget\n(\ntrigger\n).\nthen\n((\ntrigger\n)\n=\n{\n\n  \nif\n \n(\ntrigger\n \n==\n \ntrue\n)\n \n{\n\n    \nPromise\n.\nall\n([\ndburlPromise\n,\ndbtablePromise\n,\ndbuserPromise\n,\ndbpassPromise\n,\ndbdbPromise\n]).\nthen\n(([\ndburl\n,\ndbtable\n,\ndbuser\n,\ndbpass\n,\ndbdb\n])\n=\n \n{\n\n      \nlet\n \nheaders\n \n=\n \nnew\n \nHeaders\n();\n\n      \nheaders\n.\nappend\n(\nContent-Type\n,\n \napplication/x-www-form-urlencoded\n);\n\n      \nlet\n \nbody\n \n=\n \n{\n\n        \nhost\n: \ndburl\n,\n\n        \ntable\n: \ndbtable\n,\n\n        \nusername\n: \ndbuser\n,\n\n        \npassword\n: \ndbpass\n,\n\n        \ndbdb\n: \ndbdb\n,\n\n        \nshow\n:\nall\n\n      \n};\n\n\n\n\n\n\n\n\n\nthis\n.\nstorage\n.\nget\n(\ntrigger\n).\nthen\n((\ntrigger\n)\n=\n{\n r\u00e9cup\u00e8re la valeur locale de \ntrigger\n et execute apr\u00e8s avoir r\u00e9cup\u00e9r\u00e9 la valeur, les fonctions suivantes.\n\n\nPromise\n.\nall\n([\npromisesList\n]).\nthen\n(([\npromisesResult\n])\n=\n \n{\n rassemble toutes les promises et leurs r\u00e9sultats en une fonction.\n\n\nheaders\n.\nappend\n(\nContent-Type\n,\n \napplication/x-www-form-urlencoded\n);\n d\u00e9finie dans le header de la requete POST que les parametre sont pass\u00e9s dans un \nstring g\u00e9ant\n dans l\nurl sous la forme \nkey1=value1\nkey2=value2\nkey3=\n\n\nlet\n \nbody\n \n=\n \n{\nhost\n: \ndburl\n,...};\n assigne les r\u00e9sultats des promises \u00e0 des cl\u00e9s dans le corps de la requete (la construit)\n\n\n\n\nPartie 3 - Communiquer avec la BDD\n\n\n 1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\n14\n15\nthis\n.\nhttp\n.\npost\n(\nhttps://phoenix3.srv1.rochodc.eu/API/show.php\n,\n \nJSON\n.\nstringify\n(\nbody\n),\n \n{\nheaders\n: \nheaders\n})\n\n  \n.\nmap\n(\nres\n \n=\n \nres\n.\njson\n())\n\n  \n.\nsubscribe\n(\ndata\n \n=\n \n{\n\n    \nif\n \n(\ndata\n \n==\n \nerror\n)\n \n{\n\n      \nvoidReturn\n \n=\n \nerror2\n;\n\n    \n}\n \nelse\n \n{\n\n      \nlet\n \ntmp\n \n=\n \n0\n;\n\n      \nfor\n \n(\nlet\n \ni\n \nof\n \ndata\n)\n \n{\n\n        \nitems\n[\ntmp\n]\n \n=\n \ni\n;\n\n        \ntmp\n \n++\n;\n\n      \n}\n\n      \nvoidReturn\n \n=\n \nworked\n;\n\n    \n}\n\n  \n});\n\n\n});\n\n\n\n\n\n\n\n\n\nthis\n.\nhttp\n.\npost\n(\nhttps://phoenix3.srv1.rochodc.eu/API/show.php\n,\n \nJSON\n.\nstringify\n(\nbody\n),\n \n{\nheaders\n: \nheaders\n})\n Execute une requete POST sur l\nurl donn\u00e9e avec les donn\u00e9es contenues dans \nbody\n encod\u00e9es en JSON, et le header sp\u00e9cifi\u00e9 dans la variable \nheaders\n\n\n.\nmap\n(\nres\n \n=\n \nres\n.\njson\n())\n transforme la r\u00e9ponse de la requete en json\n\n\n.\nsubscribe\n(\ndata\n \n=\n \n{\n exploite le r\u00e9sultat en json\n\n\n\n\neradication\n\n\nLe code source \u00e9tant trop grand a mettre ici, il a \u00e9t\u00e9 d\u00e9plac\u00e9 \nici\n\n\nUne grande partie du principe est le meme que pour \nshowDB\n\n\naddentry\n\n\nLe code source \u00e9tant trop grand a mettre ici, il a \u00e9t\u00e9 d\u00e9plac\u00e9 \nici\n\n\nUne grande partie du principe est le meme que pour \nshowDB\n\n\n1\n2\n3\n4\n5\n6\n7\nif\n \n((\ndata\n.\ntextcontent\n \n==\n \nundefined\n)\n \n||\n \n(\ndata\n.\nprice\n \n==\n \nundefined\n)\n \n||\n \n(\ndata\n.\nnb\n \n==\n \nundefined\n)\n \n||\n \n(\ndata\n.\ndatevalue\n \n==\n \nundefined\n))\n \n{\n\n  \nthis\n.\npopup\n(\nPlease fill all the form\n);\n\n  \nreturn\n \n0\n;\n\n\n}\n \nelse\n \n{\n\n  \nif\n \n(\ndata\n.\npic\n \n==\n \nundefined\n \n||\n \ndata\n.\npic\n \n==\n \n)\n \n{\n\n    \ndata\n.\npic\n \n=\n \nhttp://git.kuro.ml/sample.jpg\n;\n\n  \n}\n\n\n\n\n\nCette partie teste si les parametre sur la page sont d\u00e9finis ou pas et si la photo n\nest pas pr\u00e9cis\u00e9e en rajoute une de test.\n\n\neditentry\n\n\nLe code source \u00e9tant trop grand a mettre ici, il a \u00e9t\u00e9 d\u00e9plac\u00e9 \nici\n\n\nUne grande partie du principe est le meme que pour \nshowDB", 
             "title": "Data"
         }, 
         {
-            "location": "/APP/trans/", 
+            "location": "/APP/data/#gestion-des-donnees", 
             "text": "", 
+            "title": "Gestion des donn\u00e9es"
+        }, 
+        {
+            "location": "/APP/data/#code-source", 
+            "text": "Lien du raw sur  github   (Pour le telecharger voir dans la partie  Support  de la doc)", 
+            "title": "Code source"
+        }, 
+        {
+            "location": "/APP/data/#explication-du-fonctionnement", 
+            "text": "Le code est en typescript, pour vous remettre dedans ou pour d\u00e9buter rapidement (si vous avez d\u00e9j\u00e0 de  bonnes  bases en programmation)  TypeScript in Ymin", 
+            "title": "Explication du fonctionnement"
+        }, 
+        {
+            "location": "/APP/data/#imports", 
+            "text": "1\n2\n3\n4\n5\n6 import   {   Injectable   }   from   @angular/core ;  import   {   Http ,   Headers   }   from   @angular/http ;  import   {   AlertController ,   Events   }   from   ionic-angular ;  import   rxjs/add/operator/map ;  import   {   Database   }   from   ../pages/database/database  import   {   Storage   }   from   @ionic/storage ;     L ensemble  permet d importer les composants n\u00e9cessaires \u00e0 la suite du code (les libs)  import   {   Database   }   from   ../pages/database/database  pour permettre de rediriger l utilisateur sur la page  Database", 
+            "title": "Imports"
+        }, 
+        {
+            "location": "/APP/data/#declarations", 
+            "text": "1\n2\n3\n4\n5\n6\n7 export   class   Data   { \n   public   items :  any ; \n   itemtmp :  any ; \n   public   voidReturn : any ; \n   public   login : any ; \n   public   output : any ; \n   public   trigger : boolean ;     export   class   Data   {  permet de d\u00e9clarer la classe Data qui ici d\u00e9finie le module de gestion des donn\u00e9es  public  ou  private   (si la variable est accessible partout ou pas)  suivi du nom de la variable et de son type  nomvariable :  type ;", 
+            "title": "D\u00e9clarations"
+        }, 
+        {
+            "location": "/APP/data/#construisons-les-modules-exploites-par-la-classe", 
+            "text": "1\n2\n3 constructor ( public   events :  Events ,   public   http :  Http ,   public   alertCtrl :  AlertController ,   public   storage :  Storage )   { \n   this . showDB ( false );  }     constructor ( public   nomModule :  nomImporte ,...){  permet de d\u00e9finir un surnom pour les modules utilis\u00e9s dans la classe  this . showDB ( false );  appelle la fonction  showDB  de la classe actuelle, avec le parametre  false  pour ne pas r\u00e9initialiser le tableau des donn\u00e9es ( a voir apr\u00e8s )", 
+            "title": "Construisons les modules exploit\u00e9s par la classe"
+        }, 
+        {
+            "location": "/APP/data/#definition-des-fonctions", 
+            "text": "", 
+            "title": "D\u00e9finition des fonctions"
+        }, 
+        {
+            "location": "/APP/data/#itemchoose", 
+            "text": "1\n2\n3 itemChoose ( item )   { \n   this . itemtmp   =   item ;  }     this . itemtmp   =   item  transforme le parametre item en variable globale appartenant \u00e0 la classe  Data  C est une petite astuce pour sortir une variable d une promise ( ne fonctionne pas tout le temps  et est  d\u00e9conseill\u00e9 )", 
+            "title": "itemChoose"
+        }, 
+        {
+            "location": "/APP/data/#filteritems", 
+            "text": "1\n2\n3\n4\n5 filterItems ( searchTerm ){ \n     return   this . items . filter (( item )   =   { \n         return   item . textcontent . toLowerCase (). indexOf ( searchTerm . toLowerCase ())     - 1 ; \n     });  }     return   this . items . filer (( item )   =   {  retourne un nouveau tableau contenant les \u00e9l\u00e9ments qui passent le teste de la Promise  return   item . textcontent . toLowerCase (). indexOf ( searchTerm . toLowerCase ())     - 1 ;  valide la promise pour les \u00e9l\u00e9ments o\u00f9  textcontent   (peut importe majuscule ou miniscule)  est \u00e9gal \u00e0  searchTerm   (toujours peut importe maj ou min)", 
+            "title": "filterItems"
+        }, 
+        {
+            "location": "/APP/data/#showdb", 
+            "text": "Le code source \u00e9tant trop grand a mettre ici, il a \u00e9t\u00e9 d\u00e9plac\u00e9  ici", 
+            "title": "showDB"
+        }, 
+        {
+            "location": "/APP/data/#partie-1-recuperer-les-donnees", 
+            "text": "1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12 function   showDB ( test )   { \n   let   voidReturn   =   ; \n   let   items   =   [{}]; \n   var   dburlPromise   =   this . storage . get ( dburl ); \n   var   dbtablePromise   =   this . storage . get ( dbtable ); \n   var   dbuserPromise   =   this . storage . get ( dbuser ); \n   var   dbpassPromise   =   this . storage . get ( dbpass ); \n   var   dbdbPromise   =   this . storage . get ( dbdb ); \n\n   if   ( test   ==   true   ||   this . items   ==   undefined )   { \n     this . items   =   [{}]; \n   }     var   promiseName   =   this . storage . get ( variable );  associe la promise retourn\u00e9e par  this . storage . get ( var );   (qui r\u00e9cup\u00e8re la valeur de  var  dans les donn\u00e9es locales de l application)  \u00e0 une variable plus facile \u00e0 manipuler  if ( test   ==   true   ||   this . items   ==   undefined )   {   this . items   =   [{}];   }  si le parametre de  showDB  est  true  ou que  this.items  n a pas de valeur ; d\u00e9finie  this.items  \u00e0 un tableau vide.", 
+            "title": "Partie 1 - recuperer les donn\u00e9es"
+        }, 
+        {
+            "location": "/APP/data/#partie-2-se-preparer-a-communiquer", 
+            "text": "1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13 this . storage . get ( trigger ). then (( trigger ) = { \n   if   ( trigger   ==   true )   { \n     Promise . all ([ dburlPromise , dbtablePromise , dbuserPromise , dbpassPromise , dbdbPromise ]). then (([ dburl , dbtable , dbuser , dbpass , dbdb ]) =   { \n       let   headers   =   new   Headers (); \n       headers . append ( Content-Type ,   application/x-www-form-urlencoded ); \n       let   body   =   { \n         host :  dburl , \n         table :  dbtable , \n         username :  dbuser , \n         password :  dbpass , \n         dbdb :  dbdb , \n         show : all \n       };     this . storage . get ( trigger ). then (( trigger ) = {  r\u00e9cup\u00e8re la valeur locale de  trigger  et execute apr\u00e8s avoir r\u00e9cup\u00e9r\u00e9 la valeur, les fonctions suivantes.  Promise . all ([ promisesList ]). then (([ promisesResult ]) =   {  rassemble toutes les promises et leurs r\u00e9sultats en une fonction.  headers . append ( Content-Type ,   application/x-www-form-urlencoded );  d\u00e9finie dans le header de la requete POST que les parametre sont pass\u00e9s dans un  string g\u00e9ant  dans l url sous la forme  key1=value1 key2=value2 key3=  let   body   =   { host :  dburl ,...};  assigne les r\u00e9sultats des promises \u00e0 des cl\u00e9s dans le corps de la requete (la construit)", 
+            "title": "Partie 2 - Se pr\u00e9parer \u00e0 communiquer"
+        }, 
+        {
+            "location": "/APP/data/#partie-3-communiquer-avec-la-bdd", 
+            "text": "1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\n14\n15 this . http . post ( https://phoenix3.srv1.rochodc.eu/API/show.php ,   JSON . stringify ( body ),   { headers :  headers }) \n   . map ( res   =   res . json ()) \n   . subscribe ( data   =   { \n     if   ( data   ==   error )   { \n       voidReturn   =   error2 ; \n     }   else   { \n       let   tmp   =   0 ; \n       for   ( let   i   of   data )   { \n         items [ tmp ]   =   i ; \n         tmp   ++ ; \n       } \n       voidReturn   =   worked ; \n     } \n   });  });     this . http . post ( https://phoenix3.srv1.rochodc.eu/API/show.php ,   JSON . stringify ( body ),   { headers :  headers })  Execute une requete POST sur l url donn\u00e9e avec les donn\u00e9es contenues dans  body  encod\u00e9es en JSON, et le header sp\u00e9cifi\u00e9 dans la variable  headers  . map ( res   =   res . json ())  transforme la r\u00e9ponse de la requete en json  . subscribe ( data   =   {  exploite le r\u00e9sultat en json", 
+            "title": "Partie 3 - Communiquer avec la BDD"
+        }, 
+        {
+            "location": "/APP/data/#eradication", 
+            "text": "Le code source \u00e9tant trop grand a mettre ici, il a \u00e9t\u00e9 d\u00e9plac\u00e9  ici  Une grande partie du principe est le meme que pour  showDB", 
+            "title": "eradication"
+        }, 
+        {
+            "location": "/APP/data/#addentry", 
+            "text": "Le code source \u00e9tant trop grand a mettre ici, il a \u00e9t\u00e9 d\u00e9plac\u00e9  ici  Une grande partie du principe est le meme que pour  showDB  1\n2\n3\n4\n5\n6\n7 if   (( data . textcontent   ==   undefined )   ||   ( data . price   ==   undefined )   ||   ( data . nb   ==   undefined )   ||   ( data . datevalue   ==   undefined ))   { \n   this . popup ( Please fill all the form ); \n   return   0 ;  }   else   { \n   if   ( data . pic   ==   undefined   ||   data . pic   ==   )   { \n     data . pic   =   http://git.kuro.ml/sample.jpg ; \n   }   \nCette partie teste si les parametre sur la page sont d\u00e9finis ou pas et si la photo n est pas pr\u00e9cis\u00e9e en rajoute une de test.", 
+            "title": "addentry"
+        }, 
+        {
+            "location": "/APP/data/#editentry", 
+            "text": "Le code source \u00e9tant trop grand a mettre ici, il a \u00e9t\u00e9 d\u00e9plac\u00e9  ici  Une grande partie du principe est le meme que pour  showDB", 
+            "title": "editentry"
+        }, 
+        {
+            "location": "/APP/trans/", 
+            "text": "Traduction\n\n\nPas r\u00e9dig\u00e9, ni cod\u00e9 pour le moment", 
             "title": "Trans"
+        }, 
+        {
+            "location": "/APP/trans/#traduction", 
+            "text": "Pas r\u00e9dig\u00e9, ni cod\u00e9 pour le moment", 
+            "title": "Traduction"
         }, 
         {
             "location": "/license/", 
@@ -217,17 +417,17 @@
         }, 
         {
             "location": "/release/", 
-            "text": "[04-05-2017]\n Cr\u00e9ation de la documentation.", 
+            "text": "[04-05-2017]\n Cr\u00e9ation de la documentation. \n\n\n[09-05-2017]\n Premi\u00e8re \nrelease\n de l\napplication. \n\n\n[04-06-2017]\n Documentation utilisable", 
             "title": "Notes dev."
         }, 
         {
             "location": "/credit/", 
-            "text": "Atom\n for the IDE.\n\n\nIonic 2\n for the framework of the app.\n\n\nAndroid Studio\n for the compilation to Android.\n\n\nMkDocs\n for the documentation generator.\n\n\nMartin Donath\n for the material theme of MkDocs.\n\n\nIsaac Muse\n for the amazing \n extensions of MkDocs.\n\n\nLearn X in Y minutes\n I\nve just discovered it now and it\ns just awesome \n.", 
+            "text": "Atom\n for the IDE.\n\n\nGithub\n for the hosting of the documentation and the source.\n\n\nIonic 2\n for the framework of the app.\n\n\nAndroid Studio\n for the compilation to Android.\n\n\nMkDocs\n for the documentation generator.\n\n\nMartin Donath\n for the material theme of MkDocs.\n\n\nIsaac Muse\n for the amazings \n extensions of MkDocs.\n\n\nLearn X in Y minutes\n I\nve just discovered it now and it\ns just awesome.", 
             "title": "Credit"
         }, 
         {
             "location": "/help/", 
-            "text": "Ou ?\n\n\n\n\nSur la page \nbegin\n de Ionic.\n\n\nSur la \ndocumentation\n de Ionic 2.\n\n\nEn ouvrant une issue sur le \ngithub\n du projet.\n\n\nOu en me contactant par un des liens sur la page \nd\naccueil\n \n(je ne sais pas quand je pourrais r\u00e9pondre \n)\n\n\n\n\nPour t\u00e9l\u00e9charger le code depuis raw.github\n\n\n\n\nRight Button\n puis \nEnregistrer sous\n\n\nou \nCtrl\n+\nS\n\n\nou encore \nwget \nhttp://urldelapage\n\n\nou bien \ncurl -O \nhttp://urldelapage\n\n\n\n\nConseils pour la pr\u00e9paration du Project\n\n\n1.\n Installez nodejs et npm\n\n\n\n\nPar exemple pour linux: \napt install nodejs-legacy\n\n\nPour windows et mac t\u00e9l\u00e9chargez \nl\ninstalleur\n\n\n\n\n2.\n Installez cordova (ouvrer un invit\u00e9 de commande, pour windows \nWin\n+\nR\n puis tapez \ncmd\n et \nEnter\n) ensuite dans l\ninvite de commande, \nnpm install cordova -g\n\n\n3.\n Ensuite au tour de Ionic (toujours dans l\ninvite de commande) \nnpm install ionic -g\n\n\n4.\n Allez \u00e0 l\nendroit ou vous avez t\u00e9l\u00e9charg\u00e9 mon code source, puis dans le dossier \nphoenix3/src_code_v2/phoenix\n\n\n\n\nPour rappel pour le t\u00e9l\u00e9charger: \ngit clone https://github.com/blackksoulls/phoenix3.git\n (Et pour passer au code de l\nAPI, un simple petit \ngit checkout api\n dans le d\u00e9pot t\u00e9l\u00e9charg\u00e9, \nremplacez api par master pour repasser sur la branche principale\n)\n\n\nOu alors vous t\u00e9l\u00e9chargez l\narchive \ndirectement\n. (Pour l\nAPI ce sera \nici\n)\n\n\n\n\n5.\n Faites un \nnpm install\n pour installer les d\u00e9pendances.\n\n\n6.\n Et enfin \nionic serve --lab\n\n\n7.\n Vous pouvez maintenant aller voir l\napplication dans votre \nnavigateur\n.\n\n\nCompiler l\napplication pour Android\n\n\n1.\n Telecharger le \nSDK Android\n. \n(et l\nextraire \u00e0 l\nendroit que vous preferez \nC:/android-sdk\n ou encore \n/home/user/android-sdk\n)\n\n\n2.\n Ajouter le SDK \u00e0 votre path.\n\n\n\n\nPour linux ajoutez dans \n~/.bashrc\n \n(ou equivalent)\n:\n\n\n1\n2\nexport\n \nANDROID_HOME\n=\n/path/to/android-sdk\n\n\nexport\n \nPATH\n=\n$PATH\n:\n$ANDROID_HOME\n/tools:\n$ANDROID_HOME\n/platform-tools:/home/kuro/android-studio/gradle/gradle-3.2/bin/\n\n\n\n\n\n\nPour window: \ntuto\n et ajoutez une autre variable \nANDROID_HOME\n contenant le chemin vers le sdk.\n\n\n\n\n3.\n Ensuite allez dans le dossier de l\napplication.\n\n\n4.\n Executez la commande suivante: \ncordova platform add android@6.2.3\n \n(cela ajoute la possibilite de compiler avec le dernier sdk de google)\n\n\n5.\n Ensuite \nbranchez votre telephone a l\nordinateur\n et un petit \nadb devices\n, regardez que \nvotre telephone soit dans la liste et marque comme \ndevice\n \n(sinon acceptez la demande d\nauthorisation sur votre telephone)\n, pour activer adb sur votre telephone allez dans les options de developpement. Et activez \nD\u00e9bogage USB\n. \n(Pour activer les options de dev. c\nest \nici\n)\n\n\n6.\n Vous pouvez maintenant faire un \nionic run android\n pour installer l\napplication par usb sur votre telephone.\n\n\n7.\n Si vous voulez juste le fichier .apk: \nionic build android\n et ensuite allez dans \nplatforms/android/build/outputs/apk/\n c\nest le fichier \nandroid-debug.apk\n qui s\ny trouve.", 
+            "text": "Ou ?\n\n\n\n\nSur la page \nbegin\n de Ionic.\n\n\nSur la \ndocumentation\n de Ionic 2.\n\n\nEn ouvrant une issue sur le \ngithub\n du projet.\n\n\nOu en me contactant par un des liens sur la page \nd\naccueil\n \n(je ne sais pas quand je pourrais r\u00e9pondre \n)\n\n\n\n\nPour t\u00e9l\u00e9charger le code depuis raw.github\n\n\n\n\nRight Button\n puis \nEnregistrer sous\n\n\nou \nCtrl\n+\nS\n\n\nou encore \nwget \nhttp://urldelapage\n\n\nou bien \ncurl -O \nhttp://urldelapage\n\n\n\n\nConseils pour la pr\u00e9paration du Project\n\n\n1.\n Installez nodejs et npm\n\n\n\n\nPar exemple pour linux: \napt install nodejs-legacy\n\n\nPour windows et mac t\u00e9l\u00e9chargez \nl\ninstalleur\n\n\n\n\n2.\n Installez cordova (ouvrer un invit\u00e9 de commande, pour windows \nWin\n+\nR\n puis tapez \ncmd\n et \nEnter\n) ensuite dans l\ninvite de commande, \nnpm install cordova -g\n\n\n3.\n Ensuite au tour de Ionic (toujours dans l\ninvite de commande) \nnpm install ionic -g\n\n\n4.\n Allez \u00e0 l\nendroit ou vous avez t\u00e9l\u00e9charg\u00e9 mon code source, puis dans le dossier \nphoenix3/src_code_v2/phoenix\n\n\n\n\nPour rappel pour le t\u00e9l\u00e9charger: \ngit clone https://github.com/blackksoulls/phoenix3.git\n puis \ngit checkout prod\n(Et pour passer au code de l\nAPI, un simple petit \ngit checkout api\n dans le d\u00e9pot t\u00e9l\u00e9charg\u00e9, \nremplacez api par master pour repasser sur la branche principale\n)\n\n\nOu alors vous t\u00e9l\u00e9chargez l\narchive \ndirectement\n. (Pour l\nAPI ce sera \nici\n)\n\n\n\n\n5.\n Faites un \nnpm install\n pour installer les d\u00e9pendances.\n\n\n6.\n Et enfin \nionic serve --lab\n\n\n7.\n Vous pouvez maintenant aller voir l\napplication dans votre \nnavigateur\n.\n\n\nCompiler l\napplication pour Android\n\n\n1.\n Telecharger le \nSDK Android\n. \n(et l\nextraire \u00e0 l\nendroit que vous preferez \nC:/android-sdk\n ou encore \n/home/user/android-sdk\n)\n\n\n2.\n Ajouter le SDK \u00e0 votre path.\n\n\n\n\nPour linux ajoutez dans \n~/.bashrc\n \n(ou equivalent)\n:\n\n\n1\n2\nexport\n \nANDROID_HOME\n=\n/path/to/android-sdk\n\n\nexport\n \nPATH\n=\n$PATH\n:\n$ANDROID_HOME\n/tools:\n$ANDROID_HOME\n/platform-tools:/home/kuro/android-studio/gradle/gradle-3.2/bin/\n\n\n\n\n\n\nPour window: \ntuto\n et ajoutez une autre variable \nANDROID_HOME\n contenant le chemin vers le sdk.\n\n\n\n\n3.\n Ensuite allez dans le dossier de l\napplication.\n\n\n4.\n Executez la commande suivante: \ncordova platform add android@6.2.3\n \n(cela ajoute la possibilite de compiler avec le dernier sdk de google)\n\n\n5.\n Ensuite \nbranchez votre telephone a l\nordinateur\n et un petit \nadb devices\n, regardez que \nvotre telephone soit dans la liste et marque comme \ndevice\n \n(sinon acceptez la demande d\nauthorisation sur votre telephone)\n, pour activer adb sur votre telephone allez dans les options de developpement. Et activez \nD\u00e9bogage USB\n. \n(Pour activer les options de dev. c\nest \nici\n)\n\n\n6.\n Vous pouvez maintenant faire un \nionic run android\n pour installer l\napplication par usb sur votre telephone.\n\n\n7.\n Si vous voulez juste le fichier .apk: \nionic build android\n et ensuite allez dans \nplatforms/android/build/outputs/apk/\n c\nest le fichier \nandroid-debug.apk\n qui s\ny trouve.", 
             "title": "Support"
         }, 
         {
@@ -242,7 +442,7 @@
         }, 
         {
             "location": "/help/#conseils-pour-la-preparation-du-project", 
-            "text": "1.  Installez nodejs et npm   Par exemple pour linux:  apt install nodejs-legacy  Pour windows et mac t\u00e9l\u00e9chargez  l installeur   2.  Installez cordova (ouvrer un invit\u00e9 de commande, pour windows  Win + R  puis tapez  cmd  et  Enter ) ensuite dans l invite de commande,  npm install cordova -g  3.  Ensuite au tour de Ionic (toujours dans l invite de commande)  npm install ionic -g  4.  Allez \u00e0 l endroit ou vous avez t\u00e9l\u00e9charg\u00e9 mon code source, puis dans le dossier  phoenix3/src_code_v2/phoenix   Pour rappel pour le t\u00e9l\u00e9charger:  git clone https://github.com/blackksoulls/phoenix3.git  (Et pour passer au code de l API, un simple petit  git checkout api  dans le d\u00e9pot t\u00e9l\u00e9charg\u00e9,  remplacez api par master pour repasser sur la branche principale )  Ou alors vous t\u00e9l\u00e9chargez l archive  directement . (Pour l API ce sera  ici )   5.  Faites un  npm install  pour installer les d\u00e9pendances.  6.  Et enfin  ionic serve --lab  7.  Vous pouvez maintenant aller voir l application dans votre  navigateur .", 
+            "text": "1.  Installez nodejs et npm   Par exemple pour linux:  apt install nodejs-legacy  Pour windows et mac t\u00e9l\u00e9chargez  l installeur   2.  Installez cordova (ouvrer un invit\u00e9 de commande, pour windows  Win + R  puis tapez  cmd  et  Enter ) ensuite dans l invite de commande,  npm install cordova -g  3.  Ensuite au tour de Ionic (toujours dans l invite de commande)  npm install ionic -g  4.  Allez \u00e0 l endroit ou vous avez t\u00e9l\u00e9charg\u00e9 mon code source, puis dans le dossier  phoenix3/src_code_v2/phoenix   Pour rappel pour le t\u00e9l\u00e9charger:  git clone https://github.com/blackksoulls/phoenix3.git  puis  git checkout prod (Et pour passer au code de l API, un simple petit  git checkout api  dans le d\u00e9pot t\u00e9l\u00e9charg\u00e9,  remplacez api par master pour repasser sur la branche principale )  Ou alors vous t\u00e9l\u00e9chargez l archive  directement . (Pour l API ce sera  ici )   5.  Faites un  npm install  pour installer les d\u00e9pendances.  6.  Et enfin  ionic serve --lab  7.  Vous pouvez maintenant aller voir l application dans votre  navigateur .", 
             "title": "Conseils pour la pr\u00e9paration du Project"
         }, 
         {

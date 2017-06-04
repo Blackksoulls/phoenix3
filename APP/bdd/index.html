@@ -21,7 +21,7 @@
     
     
       
-        <title>BDD - Phoenix3 APP Doc</title>
+        <title>APP - Database</title>
       
     
     
@@ -343,10 +343,80 @@
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        BDD
+      </label>
     
     <a href="./" title="BDD" class="md-nav__link md-nav__link--active">
       BDD
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Sommaire</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#code-source" title="Code source" class="md-nav__link">
+    Code source
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#explication-du-fonctionnement" title="Explication du fonctionnement" class="md-nav__link">
+    Explication du fonctionnement
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#constructeur" title="Constructeur" class="md-nav__link">
+    Constructeur
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ionviewwillload" title="ionViewWillLoad" class="md-nav__link">
+    ionViewWillLoad
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ionviewdidload" title="ionViewDidLoad" class="md-nav__link">
+    ionViewDidLoad
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#context-menu" title="Context menu" class="md-nav__link">
+    Context menu
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -519,6 +589,63 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
+  
+    <label class="md-nav__title" for="toc">Sommaire</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#code-source" title="Code source" class="md-nav__link">
+    Code source
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#explication-du-fonctionnement" title="Explication du fonctionnement" class="md-nav__link">
+    Explication du fonctionnement
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#constructeur" title="Constructeur" class="md-nav__link">
+    Constructeur
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ionviewwillload" title="ionViewWillLoad" class="md-nav__link">
+    ionViewWillLoad
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ionviewdidload" title="ionViewDidLoad" class="md-nav__link">
+    ionViewDidLoad
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#context-menu" title="Context menu" class="md-nav__link">
+    Context menu
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
   
 </nav>
                   </div>
@@ -531,9 +658,132 @@
               
                 
                 
-                  <h1>BDD</h1>
-                
-                
+                <h1 id="page-affichage-base-de-donnee">Page affichage base de donnée</h1>
+<h2 id="code-source">Code source</h2>
+<p>Lien du raw sur <a href="https://raw.githubusercontent.com/Blackksoulls/phoenix3/prod/phoenix/src/pages/database/database.ts">github</a> <em>(Pour le telecharger voir dans la partie <a href="../../help/">Support</a> de la doc)</em></p>
+<h2 id="explication-du-fonctionnement">Explication du fonctionnement</h2>
+<p><em>Le code est en typescript, pour vous remettre dedans ou pour débuter rapidement (si vous avez déjà de <ins>bonnes</ins> bases en programmation) <a href="https://learnxinyminutes.com/docs/typescript/">TypeScript in Ymin</a></em></p>
+<h3 id="constructeur">Constructeur</h3>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">events</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(</span><span class="s1">&#39;dbReloader&#39;</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">dataService</span><span class="p">.</span><span class="nx">showDB</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">navCtrl</span><span class="p">.</span><span class="nx">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nx">Database</span><span class="p">).</span><span class="nx">then</span><span class="p">(()</span><span class="o">=&gt;</span><span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">navCtrl</span><span class="p">.</span><span class="nx">pop</span><span class="p">();</span>
+  <span class="p">});</span>
+<span class="p">});</span>
+</pre></div>
+</td></tr></table>
+
+<ul>
+<li><code class="codehilite"><span class="nx">events</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(</span><span class="s1">&#39;dbReloader&#39;</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span></code> écoute les appels de l&rsquo;évenement <mark>dbReloader</mark> et execute la fonction suivante si appelé</li>
+<li><code class="codehilite"><span class="k">this</span><span class="p">.</span><span class="nx">dataService</span><span class="p">.</span><span class="nx">showDB</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span></code> actualise la base de donnée locale</li>
+<li><code class="codehilite"><span class="k">this</span><span class="p">.</span><span class="nx">navCtrl</span><span class="p">.</span><span class="nx">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nx">Database</span><span class="p">).</span><span class="nx">then</span><span class="p">(()</span><span class="o">=&gt;</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">navCtrl</span><span class="p">.</span><span class="nx">pop</span><span class="p">();});</span></code> ajoute la page <em>Database</em> en premier donc sous la page actuelle et enlève la page actuelle (ici <em>Database</em> aussi)</li>
+</ul>
+<h3 id="ionviewwillload">ionViewWillLoad</h3>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">ionViewWillLoad() {</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">dataService</span><span class="p">.</span><span class="nx">showDB</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">items</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">dataService</span><span class="p">.</span><span class="nx">items</span><span class="p">;</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">storage</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;trigger&#39;</span><span class="p">).</span><span class="nx">then</span><span class="p">((</span><span class="nx">data</span><span class="p">)</span><span class="o">=&gt;</span><span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">navCtrl</span><span class="p">.</span><span class="nx">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nx">Test</span><span class="p">).</span><span class="nx">then</span><span class="p">(()</span><span class="o">=&gt;</span><span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">navCtrl</span><span class="p">.</span><span class="nx">pop</span><span class="p">();</span>
+      <span class="p">});</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">dataService</span><span class="p">.</span><span class="nx">voidReturn</span> <span class="o">==</span> <span class="s2">&quot;error&quot;</span><span class="p">){</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">navCtrl</span><span class="p">.</span><span class="nx">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nx">Test</span><span class="p">).</span><span class="nx">then</span><span class="p">(()</span><span class="o">=&gt;</span><span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">navCtrl</span><span class="p">.</span><span class="nx">pop</span><span class="p">();</span>
+      <span class="p">});</span>
+    <span class="p">}</span>
+  <span class="p">});</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<ul>
+<li><code class="codehilite"><span class="k">this</span><span class="p">.</span><span class="nx">items</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">dataService</span><span class="p">.</span><span class="nx">items</span><span class="p">;</span></code> actualise la variable <mark>items</mark> de la page avec la variable <mark>items</mark> du gestionnaire de données <mark>dataService</mark></li>
+<li><code class="codehilite"><span class="k">this</span><span class="p">.</span><span class="nx">storage</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;trigger&#39;</span><span class="p">).</span><span class="nx">then</span><span class="p">((</span><span class="nx">data</span><span class="p">)</span><span class="o">=&gt;</span><span class="p">{</span></code> permet de récuperer la valeur de <mark>trigger</mark> stocké en local. Grace à la promise retournée par <ins>storage.get</ins></li>
+</ul>
+<h3 id="ionviewdidload">ionViewDidLoad</h3>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">ionViewDidLoad() {</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">dataService</span><span class="p">.</span><span class="nx">showDB</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">search</span><span class="p">();</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">searchControl</span><span class="p">.</span><span class="nx">valueChanges</span><span class="p">.</span><span class="nx">debounceTime</span><span class="p">(</span><span class="mi">700</span><span class="p">).</span><span class="nx">subscribe</span><span class="p">(</span><span class="nx">search</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">search</span><span class="p">();</span>
+  <span class="p">});</span>
+<span class="p">}</span>
+<span class="nx">search() {</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">items</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">dataService</span><span class="p">.</span><span class="nx">filterItems</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">searchTerm</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<ul>
+<li>Cette fonction est appelée une fois lorsque la page est chargée en cache</li>
+<li><code class="codehilite"><span class="k">this</span><span class="p">.</span><span class="nx">items</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">dataService</span><span class="p">.</span><span class="nx">filterItems</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">searchTerm</span><span class="p">);</span></code> assigne à la variable <mark>items</mark> la valeur retournée par le gestionnaire de données en filtrant en fonction du terme entré</li>
+<li><code class="codehilite"><span class="k">this</span><span class="p">.</span><span class="nx">searchControl</span><span class="p">.</span><span class="nx">valueChanges</span><span class="p">.</span><span class="nx">debounceTime</span><span class="p">(</span><span class="mi">700</span><span class="p">).</span><span class="nx">subscribe</span><span class="p">(</span><span class="nx">search</span> <span class="o">=&gt;</span> <span class="p">{</span></code> en cas de changement sur la variable <mark>searchControl</mark> execute le code suivant, en ignorant tout les changement durant les prochaines 700ms (pour eviter la surcharge d&rsquo;appels sur la fonction)</li>
+</ul>
+<h3 id="context-menu">Context menu</h3>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">showAction</span><span class="p">(</span><span class="nx">item</span><span class="p">,</span> <span class="nx">itemC</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">itemChoosed</span> <span class="o">=</span> <span class="nx">itemC</span><span class="p">;</span>
+    <span class="kd">let</span> <span class="nx">actionSheet</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">actionSheetCtrl</span><span class="p">.</span><span class="nx">create</span><span class="p">({</span>
+    <span class="nx">title</span><span class="o">:</span> <span class="s1">&#39;texte nommant le menu&#39;</span><span class="p">,</span>
+    <span class="nx">buttons</span><span class="o">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+        <span class="nx">text</span><span class="o">:</span> <span class="s1">&#39;texte sur le bouton&#39;</span><span class="p">,</span>
+        <span class="nx">handler</span><span class="o">:</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+            <span class="c1">//something to execute</span>
+        <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="p">}]</span>
+    <span class="p">});</span>
+  <span class="nx">actionSheet</span><span class="p">.</span><span class="nx">present</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<ul>
+<li><code class="codehilite"><span class="nx">actionSheet</span><span class="p">.</span><span class="nx">present</span><span class="p">();</span></code> permet d&rsquo;activer <em>l&rsquo;actionSheet</em></li>
+</ul>
                 
                   
                 

@@ -21,7 +21,7 @@
     
     
       
-        <title>Acceuil - Phoenix3 APP Doc</title>
+        <title>APP - Main page</title>
       
     
     
@@ -331,10 +331,59 @@
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Acceuil
+      </label>
     
     <a href="./" title="Acceuil" class="md-nav__link md-nav__link--active">
       Acceuil
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Sommaire</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#code-source" title="Code source" class="md-nav__link">
+    Code source
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#explication-du-fonctionnement" title="Explication du fonctionnement" class="md-nav__link">
+    Explication du fonctionnement
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ionviewdidenter" title="ionViewDidEnter" class="md-nav__link">
+    ionViewDidEnter
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -519,6 +568,42 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
+  
+    <label class="md-nav__title" for="toc">Sommaire</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#code-source" title="Code source" class="md-nav__link">
+    Code source
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#explication-du-fonctionnement" title="Explication du fonctionnement" class="md-nav__link">
+    Explication du fonctionnement
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ionviewdidenter" title="ionViewDidEnter" class="md-nav__link">
+    ionViewDidEnter
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
   
 </nav>
                   </div>
@@ -531,9 +616,56 @@
               
                 
                 
-                  <h1>Acceuil</h1>
-                
-                
+                <h1 id="acceuil">Acceuil</h1>
+<h2 id="code-source">Code source</h2>
+<p>Lien du raw sur <a href="https://raw.githubusercontent.com/Blackksoulls/phoenix3/prod/phoenix/src/pages/home/home.ts">github</a> <em>(Pour le telecharger voir dans la partie <a href="../../help/">Support</a> de la doc)</em></p>
+<h2 id="explication-du-fonctionnement">Explication du fonctionnement</h2>
+<p><em>Le code est en typescript, pour vous remettre dedans ou pour débuter rapidement (si vous avez déjà de <ins>bonnes</ins> bases en programmation) <a href="https://learnxinyminutes.com/docs/typescript/">TypeScript in Ymin</a></em></p>
+<h3 id="ionviewdidenter">ionViewDidEnter</h3>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">ionViewDidEnter() {</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">nbadd</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">nbtot</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">storage</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;trigger&#39;</span><span class="p">).</span><span class="nx">then</span><span class="p">((</span><span class="nx">data</span><span class="p">)</span><span class="o">=&gt;</span><span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">dataService</span><span class="p">.</span><span class="nx">showDB</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">dataService</span><span class="p">.</span><span class="nx">voidReturn</span> <span class="o">==</span> <span class="s2">&quot;worked&quot;</span><span class="p">)</span> <span class="p">{</span>
+          <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="k">in</span> <span class="k">this</span><span class="p">.</span><span class="nx">dataService</span><span class="p">.</span><span class="nx">items</span><span class="p">)</span> <span class="p">{</span>
+              <span class="k">this</span><span class="p">.</span><span class="nx">nbtot</span> <span class="o">++</span><span class="p">;</span>
+          <span class="p">}</span>
+          <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="k">in</span> <span class="k">this</span><span class="p">.</span><span class="nx">dataService</span><span class="p">.</span><span class="nx">items</span><span class="p">)</span> <span class="p">{</span>
+              <span class="k">this</span><span class="p">.</span><span class="nx">nbadd</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">nbadd</span> <span class="o">+</span> <span class="nb">Number</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">dataService</span><span class="p">.</span><span class="nx">items</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">nb</span><span class="p">);</span>
+          <span class="p">}</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">});</span>
+  <span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<ul>
+<li><code class="codehilite"><span class="nx">ionViewDidEnter() {</span></code> permet que lorsque la page est chargé et l&rsquo;utilisateur dessus executer la fonction</li>
+<li><code class="codehilite"><span class="k">this</span><span class="p">.</span><span class="nx">storage</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;trigger&#39;</span><span class="p">).</span><span class="nx">then</span><span class="p">((</span><span class="nx">data</span><span class="p">)</span><span class="o">=&gt;</span><span class="p">{</span></code> permet de récuperer la valeur de <mark>trigger</mark> stocké en local. Grace à la promise retournée par <ins>storage.get</ins></li>
+<li><code class="codehilite"><span class="k">this</span><span class="p">.</span><span class="nx">dataService</span><span class="p">.</span><span class="nx">showDB</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span></code> vas actualiser la base de donnée locale</li>
+<li><code class="codehilite"><span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">dataService</span><span class="p">.</span><span class="nx">voidReturn</span> <span class="o">==</span> <span class="s2">&quot;worked&quot;</span><span class="p">)</span> <span class="p">{</span></code> si la valeur <mark>voidReturn</mark> du gestionnaire <mark>dataService</mark> est égale à <em>worked</em> alors execute la fonction</li>
+<li><code class="codehilite"><span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="k">in</span> <span class="k">this</span><span class="p">.</span><span class="nx">dataService</span><span class="p">.</span><span class="nx">items</span><span class="p">)</span> <span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">nbtot</span> <span class="o">++</span><span class="p">;}</span></code> pour chaque élément dans le tableau <mark>items</mark> du gestionnaire de données (dataService) augmente le total d&rsquo;éléments différents</li>
+<li><code class="codehilite"><span class="k">for</span> <span class="p">(...){</span><span class="k">this</span><span class="p">.</span><span class="nx">nbadd</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">nbadd</span> <span class="o">+</span> <span class="nb">Number</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">dataService</span><span class="p">.</span><span class="nx">items</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">nb</span><span class="p">);}</span></code> pour chaque élément dans le tableau <mark>items</mark> du gestionnaire de données ajoute au nombre total d&rsquo;éléments la valeur convertie en nombre de la clé nb de l&rsquo;élément itéré par la boucle <strong>for</strong></li>
+</ul>
                 
                   
                 

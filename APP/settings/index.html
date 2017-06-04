@@ -21,7 +21,7 @@
     
     
       
-        <title>Params - Phoenix3 APP Doc</title>
+        <title>APP - Parametres</title>
       
     
     
@@ -355,10 +355,87 @@
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Params
+      </label>
     
     <a href="./" title="Params" class="md-nav__link md-nav__link--active">
       Params
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Sommaire</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#code-source" title="Code source" class="md-nav__link">
+    Code source
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#explication-du-fonctionnement" title="Explication du fonctionnement" class="md-nav__link">
+    Explication du fonctionnement
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ionviewdidload" title="ionViewDidLoad" class="md-nav__link">
+    ionViewDidLoad
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#savedata" title="saveData" class="md-nav__link">
+    saveData
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loadstorage" title="loadStorage" class="md-nav__link">
+    loadStorage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#savedblogin" title="saveDBLogin" class="md-nav__link">
+    saveDBLogin
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#langselected-non-exploite-pour-le-moment" title="langSelected (non exploité pour le moment)" class="md-nav__link">
+    langSelected (non exploité pour le moment)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -519,6 +596,70 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
+  
+    <label class="md-nav__title" for="toc">Sommaire</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#code-source" title="Code source" class="md-nav__link">
+    Code source
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#explication-du-fonctionnement" title="Explication du fonctionnement" class="md-nav__link">
+    Explication du fonctionnement
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ionviewdidload" title="ionViewDidLoad" class="md-nav__link">
+    ionViewDidLoad
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#savedata" title="saveData" class="md-nav__link">
+    saveData
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loadstorage" title="loadStorage" class="md-nav__link">
+    loadStorage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#savedblogin" title="saveDBLogin" class="md-nav__link">
+    saveDBLogin
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#langselected-non-exploite-pour-le-moment" title="langSelected (non exploité pour le moment)" class="md-nav__link">
+    langSelected (non exploité pour le moment)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
   
 </nav>
                   </div>
@@ -531,9 +672,129 @@
               
                 
                 
-                  <h1>Params</h1>
-                
-                
+                <h1 id="page-des-parametres">Page des parametres</h1>
+<h2 id="code-source">Code source</h2>
+<p>Lien du raw sur <a href="https://raw.githubusercontent.com/Blackksoulls/phoenix3/prod/phoenix/src/pages/option/option.ts">github</a> <em>(Pour le telecharger voir dans la partie <a href="../../help/">Support</a> de la doc)</em></p>
+<h2 id="explication-du-fonctionnement">Explication du fonctionnement</h2>
+<p><em>Le code est en typescript, pour vous remettre dedans ou pour débuter rapidement (si vous avez déjà de <ins>bonnes</ins> bases en programmation) <a href="https://learnxinyminutes.com/docs/typescript/">TypeScript in Ymin</a></em></p>
+<h3 id="ionviewdidload">ionViewDidLoad</h3>
+<p><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">ionViewDidLoad() {</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">loadStorage</span><span class="p">();</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">langSelected</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table><br />
+Lorsque la page charge en cache, actualise la langue selectionnée et les différents parametres existants</p>
+<h3 id="savedata">saveData</h3>
+<p><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">saveData() {</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">storage</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s1">&#39;langSwitch&#39;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">langSwitch</span><span class="p">);</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">storage</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s1">&#39;theme&#39;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">theme</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table><br />
+Enregistre la langue et le thème en local</p>
+<h3 id="loadstorage">loadStorage</h3>
+<p><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">loadStorage() {</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">storage</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;variablelocale&#39;</span><span class="p">).</span><span class="nx">then</span><span class="p">((</span><span class="nx">data</span><span class="p">)</span><span class="o">=&gt;</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">variablelocale</span><span class="o">=</span><span class="nx">data</span><span class="p">;});</span>
+
+  <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">variablelocale</span> <span class="o">==</span> <span class="s1">&#39;undefined&#39;</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">variablelocale</span> <span class="o">=</span> <span class="s1">&#39;default&#39;</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">storage</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s1">&#39;variablelocale&#39;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">variablelocale</span><span class="p">);</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">storage</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;variablelocale&#39;</span><span class="p">).</span><span class="nx">then</span><span class="p">((</span><span class="nx">data</span><span class="p">)</span><span class="o">=&gt;</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">variablelocale</span><span class="o">=</span><span class="nx">data</span><span class="p">;});</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table><br />
+Voilà comment sauvegarder les données à l&rsquo;écran, charge la variable locale, puis regarde sa valeur si <code class="codehilite"><span class="kc">undefined</span></code> alors la met à sa valeur par défaut et la sauvegarde en local. Sinon actualise la variable a l&rsquo;écran</p>
+<h3 id="savedblogin">saveDBLogin</h3>
+<p><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">saveDBLogin() {</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">storage</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s1">&#39;dburl&#39;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">dburl</span><span class="p">);</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">storage</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s1">&#39;dbtable&#39;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">dbtable</span><span class="p">);</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">storage</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s1">&#39;dbuser&#39;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">dbuser</span><span class="p">);</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">storage</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s1">&#39;dbdb&#39;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">dbdb</span><span class="p">);</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">storage</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s1">&#39;dbpass&#39;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">dbpass</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table><br />
+Stocke les variables à l&rsquo;écran en local</p>
+<h3 id="langselected-non-exploite-pour-le-moment">langSelected (non exploité pour le moment)</h3>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">langSelected() {</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">storage</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;langSwitch&#39;</span><span class="p">).</span><span class="nx">then</span><span class="p">((</span><span class="nx">data</span><span class="p">)</span><span class="o">=&gt;</span><span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">langSwitch</span><span class="o">=</span><span class="nx">data</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">langSwitch</span> <span class="o">==</span> <span class="s1">&#39;default&#39;</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">langState</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">Plat</span><span class="p">.</span><span class="nx">lang</span><span class="p">();</span>
+      <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">langState</span> <span class="o">==</span> <span class="s1">&#39;en-US&#39;</span> <span class="o">||</span> <span class="k">this</span><span class="p">.</span><span class="nx">langState</span> <span class="o">==</span> <span class="s1">&#39;en-UK&#39;</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">langState</span> <span class="o">=</span> <span class="s1">&#39;en&#39;</span><span class="p">;</span>
+      <span class="p">}</span>
+      <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">langState</span> <span class="o">==</span> <span class="s1">&#39;fr-FR&#39;</span> <span class="o">||</span> <span class="k">this</span><span class="p">.</span><span class="nx">langState</span> <span class="o">==</span> <span class="s1">&#39;fr-CA&#39;</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">langState</span> <span class="o">=</span> <span class="s1">&#39;fr&#39;</span><span class="p">;</span>
+      <span class="p">}</span>
+      <span class="k">else</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">langState</span> <span class="o">=</span> <span class="s1">&#39;en&#39;</span><span class="p">;</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">langSwitch</span> <span class="o">==</span> <span class="s1">&#39;fr&#39;</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">langState</span> <span class="o">=</span> <span class="s1">&#39;fr&#39;</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">langSwitch</span> <span class="o">==</span> <span class="s1">&#39;en&#39;</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">langState</span> <span class="o">=</span> <span class="s1">&#39;en&#39;</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">trans</span><span class="p">.</span><span class="nx">langChoose</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">langState</span><span class="p">);</span>
+  <span class="p">});</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<ul>
+<li><code class="codehilite"><span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">langSwitch</span> <span class="o">==</span> <span class="s1">&#39;default&#39;</span><span class="p">)</span> <span class="p">{...}</span></code> si l&rsquo;option de langue est à défaut, utilise la langue du sytème</li>
+<li><code class="codehilite"><span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">langState</span> <span class="o">==</span> <span class="s1">&#39;en-US&#39;</span> <span class="o">||</span> <span class="k">this</span><span class="p">.</span><span class="nx">langState</span> <span class="o">==</span> <span class="s1">&#39;en-UK&#39;</span><span class="p">)</span> <span class="p">{...}</span></code> en fonction du code de langue du système définie <mark>langState</mark> à soit <ins>fr</ins> soit <ins>en</ins></li>
+<li><code class="codehilite"><span class="k">this</span><span class="p">.</span><span class="nx">trans</span><span class="p">.</span><span class="nx">langChoose</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">langState</span><span class="p">);</span></code> définie les traductions à utiliser en fonction de <mark>langState</mark> qui est soit à <ins>fr</ins> soit à <ins>en</ins></li>
+</ul>
                 
                   
                 

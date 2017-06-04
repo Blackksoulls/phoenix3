@@ -21,7 +21,7 @@
     
     
       
-        <title>A propos - Phoenix3 APP Doc</title>
+        <title>APP - About page</title>
       
     
     
@@ -367,10 +367,59 @@
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        A propos
+      </label>
     
     <a href="./" title="A propos" class="md-nav__link md-nav__link--active">
       A propos
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Sommaire</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#code-source" title="Code source" class="md-nav__link">
+    Code source
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#explication-du-fonctionnement" title="Explication du fonctionnement" class="md-nav__link">
+    Explication du fonctionnement
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#la-seule-fonction-gotolink" title="La seule fonction: GotoLink" class="md-nav__link">
+    La seule fonction: GotoLink
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -519,6 +568,42 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
+  
+    <label class="md-nav__title" for="toc">Sommaire</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#code-source" title="Code source" class="md-nav__link">
+    Code source
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#explication-du-fonctionnement" title="Explication du fonctionnement" class="md-nav__link">
+    Explication du fonctionnement
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#la-seule-fonction-gotolink" title="La seule fonction: GotoLink" class="md-nav__link">
+    La seule fonction: GotoLink
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
   
 </nav>
                   </div>
@@ -531,9 +616,20 @@
               
                 
                 
-                  <h1>A propos</h1>
-                
-                
+                <h1 id="a-propos-page-inapp">A propos (page &lsquo;inapp&rsquo;)</h1>
+<h2 id="code-source">Code source</h2>
+<p>Lien du raw sur <a href="https://raw.githubusercontent.com/Blackksoulls/phoenix3/prod/phoenix/src/pages/about/about.ts">github</a> <em>(Pour le telecharger voir dans la partie <a href="../../help/">Support</a> de la doc)</em></p>
+<h2 id="explication-du-fonctionnement">Explication du fonctionnement</h2>
+<p><em>Le code est en typescript, pour vous remettre dedans ou pour débuter rapidement (si vous avez déjà de <ins>bonnes</ins> bases en programmation) <a href="https://learnxinyminutes.com/docs/typescript/">TypeScript in Ymin</a></em></p>
+<h3 id="la-seule-fonction-gotolink">La seule fonction: GotoLink</h3>
+<p><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">GotoLink</span><span class="p">(</span><span class="nx">link</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nb">window</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="nx">link</span><span class="p">,</span><span class="s1">&#39;_system&#39;</span><span class="p">);</span>
+<span class="p">};</span>
+</pre></div>
+</td></tr></table><br />
+Cette fonction permet d&rsquo;ouvrir les liens dans l&rsquo;application, dans le navigateur par défaut</p>
                 
                   
                 
