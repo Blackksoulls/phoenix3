@@ -1,1 +1,3 @@
 - ==[04-05-2017]== Création de la documentation. :yum:
+- ==[09-05-2017]== Première [release](https://github.com/Blackksoulls/phoenix3/releases/tag/v2.2) de l'application. :smile:
+- ==[04-06-2017]== Documentation utilisable :wink:

@@ -24,8 +24,8 @@ title: ► Aide ◄
 
 **4.** Allez à l'endroit ou vous avez téléchargé mon code source, puis dans le dossier ==*phoenix3/src_code_v2/phoenix*==
 
-- Pour rappel pour le télécharger: `#!shell git clone https://github.com/blackksoulls/phoenix3.git` (Et pour passer au code de l'API, un simple petit `#!shell git checkout api` dans le dépot téléchargé, *remplacez api par master pour repasser sur la branche principale*)
-- Ou alors vous téléchargez l'archive [directement](https://github.com/Blackksoulls/phoenix3/archive/master.zip). (Pour l'API ce sera [ici](https://github.com/Blackksoulls/phoenix3/archive/api.zip))
+- Pour rappel pour le télécharger: `#!shell git clone https://github.com/blackksoulls/phoenix3.git` puis `#!shell git checkout prod`(Et pour passer au code de l'API, un simple petit `#!shell git checkout api` dans le dépot téléchargé, *remplacez api par master pour repasser sur la branche principale*)
+- Ou alors vous téléchargez l'archive [directement](https://github.com/Blackksoulls/phoenix3/archive/prod.zip). (Pour l'API ce sera [ici](https://github.com/Blackksoulls/phoenix3/archive/api.zip))
 
 **5.** Faites un `#!shell npm install` pour installer les dépendances.
 

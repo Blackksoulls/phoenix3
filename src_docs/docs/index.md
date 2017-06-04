@@ -9,7 +9,6 @@ Bienvenue sur la documentation de l'application mobile de Phoenix3.
 - [Credit](credit.md)
 
 ^^**Pour me contacter:**^^
-- [Twitter](https://twitter.com/Blackksoulls/)
 - blackksoulls@gmail.com
 
 ## Phoenix3 Project
